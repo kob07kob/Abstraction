@@ -46,4 +46,71 @@ public class Bound {
 		else
 			return -1;
 	}
+
+	/*
+	 * returns the bigger bound
+	 */
+	public static Bound max(final Bound b1, final Bound b2) {
+		if (b1.isInfinite() == 1 || b2.isInfinite() == 1) {
+			return new Bound(true, 1);
+		} else if ((b1.infinite && b1.value < 0) || (b1.value < b2.value && !b2.infinite)) {
+			return b2;
+		} else
+			return b1;
+	}
+
+	/*
+	 * returns the smaller bound
+	 */
+	public static Bound min(final Bound b1, final Bound b2) {
+		if (b1.isInfinite() == -1 || b2.isInfinite() == -1) {
+			return new Bound(true, -1);
+		} else if ((b1.isInfinite() == 1) || (b1.value > b2.value && !b2.infinite)) {
+			return b2;
+		} else
+			return b1;
+	}
+
+	public boolean isSmaller(final Bound than) {
+		if (!infinite && !than.infinite && value < than.value)
+			return true;
+		if (isInfinite() == -1 && than.isInfinite() != -1)
+			return true;
+		if (!infinite && than.isInfinite() == 1)
+			return true;
+		return false;
+	}
+
+	public boolean isBigger(final Bound than) {
+		if (!infinite && !than.infinite && value > than.value)
+			return true;
+		if (isInfinite() == 1 && than.isInfinite() != 1)
+			return true;
+		if (!infinite && than.isInfinite() == -1)
+			return true;
+		return false;
+	}
+
+	@Override
+	public boolean equals(final Object other) {
+		if (other instanceof Bound) {
+			if (isBigger((Bound) other) || isSmaller((Bound) other))
+				return false;
+			return true;
+		}
+		return false;
+	}
+
+	public static Bound of(final int a) {
+		return new Bound(false, a);
+	}
+
+	public static Bound positiveInfinite() {
+		return new Bound(true, 1);
+	}
+
+	public static Bound negativeInfinite() {
+		return new Bound(true, -1);
+	}
+
 }

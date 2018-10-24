@@ -26,4 +26,20 @@ public class IntervalRepresentation {
 		return new IntervalRepresentation(vars);
 	}
 
+	public void setVarInterval(final VarDecl<?> var, final Interval interval) {
+		intervals.put(var, interval);
+	}
+
+	public Map<VarDecl<?>, Interval> getMap() {
+		return intervals;
+	}
+
+	public Interval getVarInterval(final VarDecl<?> var) {
+		return intervals.get(var);
+	}
+
+	public Collection<VarDecl<?>> getVars() {
+		return variables;
+	}
+
 }

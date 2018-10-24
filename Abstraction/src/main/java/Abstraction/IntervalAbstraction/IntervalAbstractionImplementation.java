@@ -15,6 +15,11 @@ public class IntervalAbstractionImplementation extends AbstractIntervalAbstracti
 		pt = partitioningTactic;
 	}
 
+	public static IntervalAbstractionImplementation create(final WideningTactic wideningTactic,
+			final PartitioningTactic partitioningTactic) {
+		return new IntervalAbstractionImplementation(wideningTactic, partitioningTactic);
+	}
+
 	@Override
 	public Collection<IntervalRepresentation> wideningConvert(final Collection<IntervalRepresentation> sourceIntervals,
 			final Stmt stmt, final Collection<IntervalRepresentation> targetIntervals) {
