@@ -3,15 +3,16 @@ package Abstraction.IntervalAbstraction;
 import java.util.Collection;
 import java.util.Map;
 
+import Abstraction.AbstractionLabel;
 import Utils.Interval;
 import hu.bme.mit.theta.core.decl.VarDecl;
 import hu.bme.mit.theta.core.type.inttype.IntType;
 
-public class IntervalRepresentation {
+public class IntervalRepresentation extends AbstractionLabel {
 	private Collection<VarDecl<?>> variables;
 	private Map<VarDecl<?>, Interval> intervals;
 
-	private IntervalRepresentation(final Collection<VarDecl<?>> vars) {
+	public IntervalRepresentation(final Collection<VarDecl<?>> vars) {
 		for (final VarDecl<?> var : vars) {
 
 			if (var.getType() instanceof IntType) {
@@ -22,9 +23,10 @@ public class IntervalRepresentation {
 		}
 	}
 
-	public static IntervalRepresentation createInitialRepresentation(final Collection<VarDecl<?>> vars) {
-		return new IntervalRepresentation(vars);
-	}
+	/*
+	 * @Override public AbstractionLabel createInitialLabel(final
+	 * Collection<VarDecl<?>> vars) { return new IntervalRepresentation(vars); }
+	 */
 
 	public void setVarInterval(final VarDecl<?> var, final Interval interval) {
 		intervals.put(var, interval);
@@ -40,6 +42,20 @@ public class IntervalRepresentation {
 
 	public Collection<VarDecl<?>> getVars() {
 		return variables;
+	}
+
+	@Override
+	public boolean equals(final Object o) {
+		if (o instanceof IntervalRepresentation) {
+			return ((IntervalRepresentation) o).getMap().equals(intervals);
+		}
+		return false;
+	}
+
+	@Override
+	public AbstractionLabel createInitialLabel(final Collection<VarDecl<?>> vars) {
+
+		return new IntervalRepresentation(vars);
 	}
 
 }

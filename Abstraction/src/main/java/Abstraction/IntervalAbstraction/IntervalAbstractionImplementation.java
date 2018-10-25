@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import hu.bme.mit.theta.core.stmt.Stmt;
 
-public class IntervalAbstractionImplementation extends AbstractIntervalAbstraction {
+public class IntervalAbstractionImplementation extends AbstractionAnalysis {
 
 	WideningTactic wt;
 	PartitioningTactic pt;

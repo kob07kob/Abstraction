@@ -1,8 +1,5 @@
 package Abstraction.IntervalAbstraction.Impl;
 
-import java.util.Collection;
-import java.util.HashSet;
-
 import Abstraction.IntervalAbstraction.IntervalRepresentation;
 import Abstraction.IntervalAbstraction.PartitioningTactic;
 import Utils.Interval;
@@ -13,19 +10,16 @@ import hu.bme.mit.theta.core.stmt.HavocStmt;
 import hu.bme.mit.theta.core.stmt.SkipStmt;
 import hu.bme.mit.theta.core.stmt.Stmt;
 
-public class NoPartitioningTactic implements PartitioningTactic {
+public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresentation> {
 
 	@Override
-	public Collection<IntervalRepresentation> addStmtToInterval(final IntervalRepresentation sourceInterval,
-			final Stmt stmt) {
+	public IntervalRepresentation addStmtToLabel(final IntervalRepresentation sourceInterval, final Stmt stmt) {
 		final IntervalRepresentation newInterval = sourceInterval;
 		final StmtApplier stmtApplier = new StmtApplier(sourceInterval.getMap());
 		for (final VarDecl<?> var : sourceInterval.getVars()) {
 			newInterval.setVarInterval(var, applyStmt(stmt, sourceInterval.getVarInterval(var), var, stmtApplier));
 		}
-		final Collection<IntervalRepresentation> result = new HashSet<>();
-		result.add(newInterval);
-		return result;
+		return newInterval;
 	}
 
 	public Interval applyStmt(final Stmt stmt, final Interval interval, final VarDecl<?> var,
@@ -55,9 +49,8 @@ public class NoPartitioningTactic implements PartitioningTactic {
 	}
 
 	@Override
-	public Collection<IntervalRepresentation> mergePartitions(final Collection<IntervalRepresentation> intervals) {
-		// TODO Auto-generated method stub
-		return null;
+	public IntervalRepresentation mergePartitions(final IntervalRepresentation labels) {
+		return labels;
 	}
 
 }

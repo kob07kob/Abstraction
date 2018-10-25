@@ -1,12 +1,11 @@
 package Abstraction.IntervalAbstraction;
 
-import java.util.Collection;
-
+import Abstraction.AbstractionLabel;
 import hu.bme.mit.theta.core.stmt.Stmt;
 
-public interface PartitioningTactic {
-	public Collection<IntervalRepresentation> addStmtToInterval(IntervalRepresentation sourceInterval, Stmt stmt);
+public interface PartitioningTactic<LabelType extends AbstractionLabel> {
+	public LabelType addStmtToLabel(LabelType sourceLabel, Stmt stmt);
 
-	public Collection<IntervalRepresentation> mergePartitions(Collection<IntervalRepresentation> intervals);
+	public LabelType mergePartitions(LabelType label);
 
 }

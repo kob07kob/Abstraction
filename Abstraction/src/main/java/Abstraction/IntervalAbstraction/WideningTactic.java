@@ -1,10 +1,8 @@
 package Abstraction.IntervalAbstraction;
 
-import java.util.Collection;
-
+import Abstraction.AbstractionLabel;
 import hu.bme.mit.theta.core.stmt.Stmt;
 
-public interface WideningTactic {
-	public Collection<IntervalRepresentation> wideningConvert(Collection<IntervalRepresentation> sourceIntervals,
-			Stmt stmt, Collection<IntervalRepresentation> targetIntervals);
+public interface WideningTactic<LabelType extends AbstractionLabel> {
+	public LabelType wideningConvert(LabelType sourceLabel, Stmt stmt, LabelType targetLabel);
 }
