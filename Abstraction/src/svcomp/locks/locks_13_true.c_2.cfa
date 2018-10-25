@@ -1,0 +1,156 @@
+main process cfa {
+	var p11 : int
+	var p2 : int
+	var p3 : int
+	var lk10 : int
+	var p4 : int
+	var p10 : int
+	var p5 : int
+	var lk11 : int
+	var lk4 : int
+	var lk3 : int
+	var lk2 : int
+	var p1 : int
+	var cond : int
+	var tmp_13 : int
+	var tmp_10 : int
+	var lk8 : int
+	var lk7 : int
+	var lk6 : int
+	var lk5 : int
+	var p6 : int
+	var p7 : int
+	var p8 : int
+	var p9 : int
+	var lk9 : int
+
+	final loc L1
+	loc L12
+	loc L14
+	loc L19
+	loc L15
+	error loc L2
+	loc L8
+	loc L29
+	loc L21
+	init loc L0
+	loc L4
+	loc L23
+	loc L16
+	loc L22
+	loc L5
+	loc L10
+	loc L11
+	loc L20
+	loc L3
+
+	L16 -> L11 {
+		assume not (p11 /= 0)
+	}
+	L15 -> L20 {
+		assume p8 /= 0
+		lk8 := 1
+	}
+	L3 -> L16 {
+		assume not (p11 /= 0)
+	}
+	L15 -> L20 {
+		assume not (p8 /= 0)
+	}
+	L20 -> L4 {
+		assume p9 /= 0
+		lk9 := 1
+	}
+	L4 -> L3 {
+		assume p10 /= 0
+		lk10 := 1
+	}
+	L8 -> L2 {
+		assume not false
+	}
+	L10 -> L14 {
+		assume not (p3 /= 0)
+	}
+	L21 -> L22 {
+		assume not (p5 /= 0)
+	}
+	L20 -> L4 {
+		assume not (p9 /= 0)
+	}
+	L0 -> L11 {
+		havoc tmp_10
+		p11 := tmp_10
+	}
+	L29 -> L12 {
+		assume not (cond = 0)
+		lk11 := 0
+	}
+	L23 -> L10 {
+		assume not (p2 /= 0)
+	}
+	L8 -> L11 {
+		assume false
+	}
+	L3 -> L16 {
+		assume p11 /= 0
+		lk11 := 1
+	}
+	L23 -> L10 {
+		assume p2 /= 0
+		lk2 := 1
+	}
+	L4 -> L3 {
+		assume not (p10 /= 0)
+	}
+	L12 -> L3 {
+		assume p1 /= 0
+	}
+	L14 -> L21 {
+		assume p4 /= 0
+		lk4 := 1
+	}
+	L14 -> L21 {
+		assume not (p4 /= 0)
+	}
+	L21 -> L22 {
+		assume p5 /= 0
+		lk5 := 1
+	}
+	L29 -> L1 {
+		assume cond = 0
+	}
+	L11 -> L29 {
+		havoc tmp_13
+		cond := tmp_13
+	}
+	L10 -> L14 {
+		assume p3 /= 0
+		lk3 := 1
+	}
+	L12 -> L23 {
+		assume not (p1 /= 0)
+	}
+	L5 -> L11 {
+		assume not (lk11 /= 1)
+	}
+	L19 -> L15 {
+		assume p7 /= 0
+		lk7 := 1
+	}
+	L22 -> L19 {
+		assume p6 /= 0
+		lk6 := 1
+	}
+	L19 -> L15 {
+		assume not (p7 /= 0)
+	}
+	L5 -> L8 {
+		assume lk11 /= 1
+	}
+	L22 -> L19 {
+		assume not (p6 /= 0)
+	}
+	L16 -> L5 {
+		assume p11 /= 0
+	}
+}

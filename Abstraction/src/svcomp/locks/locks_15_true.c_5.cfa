@@ -1,0 +1,146 @@
+main process cfa {
+	var p2 : int
+	var p3 : int
+	var lk10 : int
+	var p4 : int
+	var p10 : int
+	var p5 : int
+	var lk4 : int
+	var lk3 : int
+	var lk2 : int
+	var p1 : int
+	var cond : int
+	var tmp_15 : int
+	var lk8 : int
+	var lk7 : int
+	var lk6 : int
+	var lk5 : int
+	var p6 : int
+	var tmp_9 : int
+	var p7 : int
+	var p8 : int
+	var p9 : int
+	var lk9 : int
+
+	loc L25
+	loc L12
+	loc L28
+	error loc L2
+	loc L20
+	loc L14
+	final loc L1
+	loc L26
+	loc L17
+	loc L9
+	loc L4
+	loc L22
+	loc L16
+	loc L11
+	loc L27
+	init loc L0
+	loc L24
+	loc L15
+
+	L22 -> L11 {
+		assume not (cond = 0)
+		lk10 := 0
+	}
+	L17 -> L15 {
+		assume p10 /= 0
+		lk10 := 1
+	}
+	L12 -> L28 {
+		assume p3 /= 0
+		lk3 := 1
+	}
+	L26 -> L22 {
+		havoc tmp_15
+		cond := tmp_15
+	}
+	L28 -> L20 {
+		assume p4 /= 0
+		lk4 := 1
+	}
+	L24 -> L2 {
+		assume not false
+	}
+	L15 -> L9 {
+		assume p10 /= 0
+	}
+	L16 -> L25 {
+		assume not (p7 /= 0)
+	}
+	L20 -> L14 {
+		assume p5 /= 0
+		lk5 := 1
+	}
+	L12 -> L28 {
+		assume not (p3 /= 0)
+	}
+	L25 -> L4 {
+		assume p8 /= 0
+		lk8 := 1
+	}
+	L16 -> L25 {
+		assume p7 /= 0
+		lk7 := 1
+	}
+	L9 -> L26 {
+		assume not (lk10 /= 1)
+	}
+	L14 -> L16 {
+		assume p6 /= 0
+		lk6 := 1
+	}
+	L22 -> L1 {
+		assume cond = 0
+	}
+	L25 -> L4 {
+		assume not (p8 /= 0)
+	}
+	L11 -> L27 {
+		assume not (p1 /= 0)
+	}
+	L11 -> L17 {
+		assume p1 /= 0
+	}
+	L27 -> L12 {
+		assume not (p2 /= 0)
+	}
+	L17 -> L15 {
+		assume not (p10 /= 0)
+	}
+	L4 -> L17 {
+		assume not (p9 /= 0)
+	}
+	L9 -> L24 {
+		assume lk10 /= 1
+	}
+	L20 -> L14 {
+		assume not (p5 /= 0)
+	}
+	L27 -> L12 {
+		assume p2 /= 0
+		lk2 := 1
+	}
+	L28 -> L20 {
+		assume not (p4 /= 0)
+	}
+	L15 -> L26 {
+		assume not (p10 /= 0)
+	}
+	L0 -> L26 {
+		havoc tmp_9
+		p10 := tmp_9
+	}
+	L14 -> L16 {
+		assume not (p6 /= 0)
+	}
+	L24 -> L26 {
+		assume false
+	}
+	L4 -> L17 {
+		assume p9 /= 0
+		lk9 := 1
+	}
+}

@@ -1,0 +1,2293 @@
+main process cfa {
+	var a20 : int
+	var a22 : int
+	var a10 : int
+	var a8 : int
+	var a12 : int
+	var a26 : int
+	var a14 : int
+	var a3 : int
+	var a16 : int
+	var a5 : int
+	var a18 : int
+	var tmp_0 : int
+	var a1 : int
+	var input_m : int
+	var a11 : int
+	var input : int
+	var a21 : int
+	var a7 : int
+	var a13 : int
+	var a23 : int
+	var a15 : int
+	var a25 : int
+	var a17 : int
+	var a27 : int
+	var a4 : int
+	var a19 : int
+	var a6 : int
+	var a29 : int
+	var a0 : int
+	var a2 : int
+
+	loc L63
+	loc L317
+	loc L945
+	loc L913
+	loc L825
+	loc L887
+	loc L1086
+	loc L826
+	loc L1186
+	loc L903
+	loc L796
+	loc L960
+	loc L175
+	loc L928
+	loc L535
+	loc L442
+	loc L857
+	loc L430
+	loc L766
+	loc L331
+	loc L496
+	loc L861
+	loc L1218
+	init loc L0
+	loc L993
+	loc L783
+	loc L624
+	loc L172
+	loc L359
+	loc L989
+	loc L884
+	loc L881
+	loc L308
+	loc L673
+	loc L1093
+	loc L791
+	loc L299
+	loc L478
+	loc L1041
+	loc L814
+	loc L1244
+	loc L242
+	loc L994
+	loc L105
+	loc L640
+	loc L1138
+	loc L754
+	loc L361
+	loc L752
+	loc L967
+	loc L653
+	loc L507
+	loc L1215
+	loc L354
+	loc L737
+	loc L641
+	loc L506
+	loc L6
+	error loc L2
+	loc L813
+	loc L1081
+	loc L273
+	loc L349
+	loc L891
+	loc L663
+	loc L959
+	final loc L1
+	loc L1163
+	loc L916
+	loc L662
+	loc L415
+	loc L894
+	loc L167
+	loc L834
+	loc L465
+	loc L1198
+	loc L364
+	loc L281
+	loc L812
+	loc L1000
+	loc L229
+	loc L597
+	loc L1022
+	loc L1170
+	loc L1187
+	loc L254
+	loc L138
+	loc L589
+	loc L929
+	loc L877
+	loc L147
+	loc L160
+	loc L875
+	loc L217
+	loc L690
+	loc L738
+	loc L455
+	loc L646
+	loc L11
+	loc L1222
+	loc L232
+	loc L1172
+	loc L250
+	loc L3
+	loc L120
+	loc L38
+	loc L97
+	loc L710
+	loc L1007
+	loc L318
+	loc L882
+	loc L441
+	loc L1219
+	loc L1018
+	loc L798
+	loc L1035
+	loc L949
+	loc L363
+	loc L950
+	loc L1171
+	loc L27
+	loc L345
+	loc L435
+	loc L286
+	loc L1091
+	loc L1043
+	loc L919
+	loc L930
+	loc L745
+	loc L297
+	loc L337
+	loc L722
+	loc L132
+	loc L613
+	loc L896
+	loc L997
+	loc L1195
+	loc L1197
+	loc L692
+	loc L91
+	loc L355
+	loc L48
+	loc L416
+	loc L566
+	loc L327
+	loc L379
+	loc L90
+	loc L162
+	loc L718
+	loc L957
+	loc L385
+	loc L178
+	loc L228
+	loc L787
+	loc L226
+	loc L238
+	loc L1231
+	loc L407
+	loc L245
+	loc L809
+	loc L550
+	loc L86
+	loc L977
+	loc L135
+	loc L336
+	loc L487
+	loc L1020
+	loc L49
+	loc L744
+	loc L40
+	loc L127
+
+	L496 -> L754 {
+		assume (not (a6 = 1)) and (not (a8 = 1)) and (a16 = 1) and (a22 = 1) and (a26 = 1) and (not (a11 = 1)) and (input = 6) and (a18 = 1) and (not (a27 = 1)) and ((not (a1 = 1)) or ((a22 = 1) and (not (a12 = 1)) and (a0 = 1))) and (a3 = 1) and (a10 = 1) and (a5 = 1)
+		a27 := 1
+		a3 := 0
+		a6 := 1
+		a12 := 1
+		a29 := 1
+		a19 := 0
+		a4 := 1
+		a11 := 1
+	}
+	L787 -> L364 {
+		assume not ((a12 = 1) and ((a2 = 1) or (a10 = 1)) and (not (a25 = 1)) and (a3 = 0) and (a18 = 1) and (not (a23 = 1)) and (a15 = 1) and (a29 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 1) and (not (a5 = 1)) and (a11 = 1) and (a1 = 1) and (a6 = 1))
+	}
+	L796 -> L754 {
+		assume (a12 = 1) and (a3 = 2) and ((not (a1 = 1)) or (not (a22 = 1)) or ((a11 = 1) and (a4 = 1) and (a6 = 1) and ((a4 = 1) or (not (a15 = 1)))) or (a2 = 1)) and (a29 = 1) and (a18 = 1) and (a5 = 1) and (((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4)
+		a23 := 0
+		a10 := 1
+		a3 := 0
+		a27 := 1
+		a4 := 1
+		a26 := 1
+	}
+	L861 -> L754 {
+		assume (a15 = 1) and (((a11 = 1) and (((a5 = 1) and ((not (a10 = 1)) or (a1 = 1)) and (a3 = 2)) or (a7 = 1))) or (not (a22 = 1))) and (a18 = 1) and (not (a6 = 1)) and (not (a12 = 1)) and (input = 3) and (a1 = 1) and (a29 = 1) and (a27 = 1) and (not (a26 = 1))
+		a2 := 0
+		a0 := 1
+		a10 := 1
+	}
+	L913 -> L754 {
+		assume a13 = 1
+		a4 := 0
+		a5 := 1
+		a26 := 1
+		a11 := 1
+		a12 := 0
+		a2 := 1
+		a3 := 0
+		a27 := 0
+		a6 := 1
+	}
+	L48 -> L379 {
+		assume (a6 = 1) and ((a19 = 1) or ((not (a19 = 1)) and (a29 = 1)) or (a20 = 1)) and (not (a5 = 1)) and (a18 = 1) and (a11 = 1) and (not (a23 = 1)) and (a10 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (input = 3) and (not (a12 = 1)) and (a3 = 0) and (not (a20 = 1))
+	}
+	L877 -> L752 {
+		assume not ((not (a26 = 1)) and ((not (a22 = 1)) or (not (a1 = 1)) or ((not (a8 = 1)) and (a29 = 1)) or (a7 = 1)) and (a29 = 1) and (a3 = 1) and (a27 = 1) and (not (a12 = 1)) and (not (a11 = 1)) and (a18 = 1) and (input = 6) and (a5 = 1) and (not (a6 = 1)) and (not (a19 = 1)))
+	}
+	L977 -> L754 {
+		assume (a18 = 1) and (not (a8 = 1)) and (a6 = 1) and (input = 5) and (not (a23 = 1)) and (a12 = 1) and (a5 = 1) and (a16 = 1) and (not (a27 = 1)) and (not (a2 = 1)) and ((a20 = 1) or ((not (a26 = 1)) and (not (a11 = 1)) and ((not (a15 = 1)) or ((a10 = 1) and (a3 = 2)))))
+		a6 := 0
+		a22 := 1
+		a11 := 1
+		a27 := 1
+		a12 := 0
+		a19 := 0
+		a16 := 1
+	}
+	L435 -> L415 {
+		assume not ((not (a2 = 1)) and (a3 = 2) and (a5 = 1) and (a12 = 1) and (not (a11 = 1)) and (a6 = 1) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a15 = 1) and (a10 = 1) and ((not (a0 = 1)) or ((not (a7 = 1)) and (a4 = 1) and (a22 = 1) and (a18 = 1))))
+	}
+	L349 -> L754 {
+		assume (not (a23 = 1)) and (a1 = 1) and (not (a27 = 1)) and (input = 2) and (a18 = 1) and (a0 = 1) and (a12 = 1) and (a3 = 2) and (not (a11 = 1)) and (a5 = 1) and ((a2 = 1) or ((a10 = 1) and ((a15 = 1) or (a7 = 1)))) and (not (a26 = 1)) and (a6 = 1)
+		a29 := 1
+		a4 := 1
+		a27 := 1
+		a17 := 0
+		a6 := 0
+		a3 := 1
+		a26 := 1
+		a11 := 1
+	}
+	L977 -> L228 {
+		assume not ((a18 = 1) and (not (a8 = 1)) and (a6 = 1) and (input = 5) and (not (a23 = 1)) and (a12 = 1) and (a5 = 1) and (a16 = 1) and (not (a27 = 1)) and (not (a2 = 1)) and ((a20 = 1) or ((not (a26 = 1)) and (not (a11 = 1)) and ((not (a15 = 1)) or ((a10 = 1) and (a3 = 2))))))
+	}
+	L1163 -> L754 {
+		assume not (a22 = 1)
+		a27 := 1
+		a3 := 2
+		a2 := 1
+		a11 := 0
+		a10 := 0
+		a16 := 0
+		a26 := 0
+		a5 := 1
+	}
+	L798 -> L929 {
+		assume not (((((not (a16 = 1)) or ((a5 = 1) and (((a22 = 1) and (not (a23 = 1))) or (not (a22 = 1))) and (a6 = 1) and (a16 = 1))) and (a18 = 1)) or (a2 = 1)) and (a3 = 2) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (a16 = 1) and (a11 = 1))
+	}
+	L812 -> L407 {
+		assume not ((not (a17 = 1)) and (not (a11 = 1)) and (a1 = 1) and (a18 = 1) and (a6 = 1) and (a3 = 2) and (a4 = 1) and (a16 = 1) and (not (a20 = 1)) and (a15 = 1) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a14 = 1)) and (a5 = 1) and (not (a12 = 1)))
+	}
+	L653 -> L63 {
+		assume not ((a27 = 1) and (a22 = 1) and (not (a17 = 1)) and (not (a20 = 1)) and (a3 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (a5 = 1) and (a29 = 1) and (a18 = 1) and (input = 1) and (not (a26 = 1)) and (not (a12 = 1)) and (not (a6 = 1)) and (a10 = 1) and (a4 = 1))
+	}
+	L613 -> L809 {
+		assume not ((a0 = 1) and (not (a6 = 1)) and (((a3 = 1) and (not (a12 = 1)) and ((a8 = 1) or ((a22 = 1) and (not (a23 = 1))))) or (not (a10 = 1))) and (not (a11 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a14 = 1)) and (input = 1) and (a5 = 1) and (a29 = 1) and (a18 = 1))
+	}
+	L589 -> L754 {
+		assume (a16 = 1) and (a3 = 2) and (a11 = 1) and ((a20 = 1) or ((a16 = 1) and (a18 = 1))) and (a22 = 1) and (a15 = 1) and (a22 = 1) and (a5 = 1) and (((not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 2) and (not (a17 = 1)) and (not (a12 = 1)) and (a6 = 1)
+		a7 := 0
+		a1 := 1
+		a3 := 0
+		a12 := 1
+		a26 := 1
+		a27 := 1
+		a14 := 0
+	}
+	L624 -> L997 {
+		assume not (((not (a10 = 1)) or (((not (a1 = 1)) or (((a23 = 1) or ((a11 = 1) and (a29 = 1) and (not (a12 = 1)) and (not (a8 = 1)))) and (a6 = 1) and (a3 = 0))) and (a18 = 1))) and (input = 6) and (((not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (not (a7 = 1)) and (not (a5 = 1)) and (not (a2 = 1)))
+	}
+	L90 -> L949 {
+		assume not ((a1 = 1) and (a5 = 1) and (not (a26 = 1)) and (a0 = 1) and (not (a6 = 1)) and (not (a23 = 1)) and (not (a11 = 1)) and (a3 = 1) and (input = 2) and (not (a27 = 1)) and (not (a12 = 1)) and (a0 = 1) and (not (a19 = 1)) and (not (a17 = 1)) and (a18 = 1) and (a16 = 1))
+	}
+	L167 -> L465 {
+		assume not ((not (a7 = 1)) and (not (a20 = 1)) and (a6 = 1) and (a3 = 2) and (input = 3) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (not (a12 = 1)) and (a4 = 1) and (a11 = 1) and (a18 = 1) and ((not (a10 = 1)) or (((a15 = 1) or (a25 = 1)) and (a5 = 1))) and (not (a2 = 1)))
+	}
+	L887 -> L507 {
+		assume not ((a3 = 2) and ((((a29 = 1) or (a14 = 1)) and (not (a6 = 1))) or (a23 = 1) or (not (a4 = 1))) and (a5 = 1) and (not (a27 = 1)) and (a12 = 1) and (not (a2 = 1)) and (a22 = 1) and (input = 1) and ((a26 = 1) or (not (a26 = 1))) and (a18 = 1) and (a11 = 1) and (not (a14 = 1)))
+	}
+	L945 -> L754 {
+		assume (not (a11 = 1)) and (a1 = 1) and (a29 = 1) and (a12 = 1) and (not (a2 = 1)) and (not (a6 = 1)) and (not (a17 = 1)) and (a3 = 2) and (a18 = 1) and (input = 6) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a0 = 1) and (a15 = 1) and (a22 = 1) and (a5 = 1)
+		a10 := 1
+		a19 := 0
+		a27 := 1
+		a2 := 0
+		a6 := 1
+		a26 := 1
+		a3 := 0
+		a11 := 1
+	}
+	L0 -> L754 {
+		a1 := 1
+		a4 := 1
+		a0 := 1
+		a15 := 1
+		a29 := 1
+		a10 := 1
+		a16 := 1
+		a22 := 1
+		a2 := 0
+		a17 := 0
+		a25 := 0
+		a7 := 0
+		a14 := 0
+		a19 := 0
+		a20 := 0
+		a8 := 0
+		a23 := 0
+		a21 := 1
+		a13 := 1
+		a26 := 0
+		a6 := 0
+		a27 := 1
+		a12 := 0
+		a3 := 1
+		a11 := 0
+		a5 := 1
+		a18 := 1
+	}
+	L1197 -> L38 {
+		assume not ((a1 = 1) and (input = 6) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (a1 = 1) and (a5 = 1) and (a16 = 1) and (a3 = 2) and (not (a11 = 1)) and ((not (a1 = 1)) or ((not (a6 = 1)) and (a0 = 1) and (not (a20 = 1)))) and (a18 = 1) and (not (a17 = 1)))
+	}
+	L1186 -> L754 {
+		assume false
+	}
+	L138 -> L48 {
+		assume not ((a6 = 1) and (not (a19 = 1)) and (a0 = 1) and (not (a5 = 1)) and (input = 3) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (a10 = 1) and (not (a25 = 1)) and (a3 = 0) and (a11 = 1) and (a18 = 1) and (a4 = 1) and ((not (a4 = 1)) or (a15 = 1)))
+	}
+	L884 -> L754 {
+		assume (a18 = 1) and (((not (a12 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (a3 = 2) and (not (a11 = 1)) and (a5 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a12 = 1) and (a27 = 1) and (a26 = 1) and (a6 = 1) and (a11 = 1))) and (input = 3) and (not (a20 = 1)) and (not (a23 = 1)) and ((not (a29 = 1)) or (not (a1 = 1)) or (not (a15 = 1)) or ((not (a17 = 1)) and (a4 = 1)))
+		a19 := 1
+		a12 := 1
+		a5 := 1
+		a26 := 1
+		a11 := 0
+		a6 := 0
+		a27 := 1
+		a3 := 0
+	}
+	L535 -> L754 {
+		assume ((a7 = 1) or ((not (a8 = 1)) and (not (a12 = 1)) and (a0 = 1) and (a3 = 0) and (not (a19 = 1)) and (a11 = 1))) and (not (a5 = 1)) and (a18 = 1) and (a6 = 1) and (a10 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (input = 4) and (a1 = 1) and (a22 = 1)
+		a26 := 0
+		a15 := 0
+		a29 := 0
+		a27 := 0
+		a5 := 1
+		a6 := 0
+		a12 := 1
+	}
+	L120 -> L754 {
+		assume (a3 = 2) and (a6 = 1) and (not (a23 = 1)) and (not (a25 = 1)) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 2) and (not (a11 = 1)) and (a16 = 1) and (a18 = 1) and (a5 = 1) and ((a25 = 1) or ((a4 = 1) and (a22 = 1))) and (not (a25 = 1)) and (not (a12 = 1))
+		a6 := 0
+		a29 := 1
+		a11 := 1
+		a26 := 1
+		a7 := 0
+		a27 := 1
+	}
+	L1007 -> L754 {
+		assume (not (a7 = 1)) and (input = 3) and (a5 = 1) and (a16 = 1) and (a18 = 1) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a11 = 1)) and (not (a17 = 1)) and (a3 = 1) and (not (a23 = 1)) and ((not (a16 = 1)) or (a10 = 1) or (a14 = 1)) and (not (a12 = 1)) and (not (a6 = 1))
+		a6 := 1
+		a10 := 1
+		a3 := 2
+		a0 := 1
+		a11 := 1
+		a26 := 1
+	}
+	L662 -> L250 {
+		assume not (((a16 = 1) or (not (a16 = 1)) or (a25 = 1)) and (a18 = 1) and (not (a2 = 1)) and (a22 = 1) and (input = 5) and (((a5 = 1) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 2) and (not (a11 = 1))) or ((not (a5 = 1)) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (a12 = 1) and (a3 = 0) and (a11 = 1))) and (a16 = 1) and (not (a7 = 1)))
+	}
+	L967 -> L105 {
+		assume not ((a0 = 1) and (a6 = 1) and (not (a5 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 2) and (not (a2 = 1)) and (a3 = 0) and (a22 = 1) and (a12 = 1) and (a18 = 1) and (((a22 = 1) and (a11 = 1) and (not (a23 = 1))) or (not (a4 = 1))) and (not (a7 = 1)))
+	}
+	L1007 -> L127 {
+		assume not ((not (a7 = 1)) and (input = 3) and (a5 = 1) and (a16 = 1) and (a18 = 1) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a11 = 1)) and (not (a17 = 1)) and (a3 = 1) and (not (a23 = 1)) and ((not (a16 = 1)) or (a10 = 1) or (a14 = 1)) and (not (a12 = 1)) and (not (a6 = 1)))
+	}
+	L997 -> L754 {
+		assume (not (a14 = 1)) and (a18 = 1) and (input = 4) and (((not (a11 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (a3 = 2) and (a5 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a12 = 1) and (a26 = 1) and (a6 = 1) and (a27 = 1) and (a11 = 1))) and (not (a25 = 1)) and (not (a2 = 1)) and (a10 = 1) and (not (a7 = 1)) and (a10 = 1) and (not (a19 = 1))
+		a5 := 1
+		a19 := 1
+		a27 := 1
+		a12 := 0
+		a26 := 0
+		a21 := 0
+		a3 := 2
+		a6 := 1
+		a11 := 0
+	}
+	L355 -> L754 {
+		assume (not (a20 = 1)) and (a5 = 1) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 5) and (not (a17 = 1)) and (a22 = 1) and (a3 = 2) and (not (a11 = 1)) and ((a25 = 1) or ((a18 = 1) and (a0 = 1) and (not (a14 = 1)) and (not (a6 = 1)))) and (a22 = 1)
+		a4 := 0
+		a12 := 0
+		a6 := 1
+		a26 := 0
+		a0 := 0
+		a27 := 1
+		a3 := 0
+		a11 := 1
+	}
+	L967 -> L754 {
+		assume (a0 = 1) and (a6 = 1) and (not (a5 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 2) and (not (a2 = 1)) and (a3 = 0) and (a22 = 1) and (a12 = 1) and (a18 = 1) and (((a22 = 1) and (a11 = 1) and (not (a23 = 1))) or (not (a4 = 1))) and (not (a7 = 1))
+		a27 := 0
+		a3 := 2
+		a26 := 0
+		a5 := 1
+		a7 := 1
+		a11 := 0
+		a2 := 1
+	}
+	L226 -> L754 {
+		assume a18 = 1
+		a2 := 0
+		a27 := 1
+		a25 := 0
+		a19 := 0
+		a26 := 1
+		a11 := 0
+		a12 := 0
+	}
+	L994 -> L945 {
+		assume not ((a3 = 2) and (a18 = 1) and (a1 = 1) and (not (a19 = 1)) and (a15 = 1) and (input = 3) and (((a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (not (a11 = 1))) or ((not (a12 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a6 = 1)) and (a11 = 1)) or ((a11 = 1) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)))) and (a5 = 1) and (not (a17 = 1)) and (a10 = 1) and (a16 = 1) and (a0 = 1))
+	}
+	L385 -> L455 {
+		assume not ((a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L1187 -> L550 {
+		assume (((a18 = 1) and (not (a20 = 1)) and (a0 = 1) and (a12 = 1)) or (not (a1 = 1))) and (a11 = 1) and (not (a23 = 1)) and (not (a5 = 1)) and (input = 6) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (not (a14 = 1)) and (not (a20 = 1)) and (a6 = 1) and (a3 = 0) and (a1 = 1)
+	}
+	L178 -> L754 {
+		assume ((((a2 = 1) or ((a5 = 1) and (a3 = 2) and (a10 = 1))) and (a18 = 1)) or (not (a1 = 1))) and (not (a12 = 1)) and (not (a7 = 1)) and (not (a14 = 1)) and (not (a11 = 1)) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4) and (a4 = 1) and (not (a6 = 1)) and (a10 = 1)
+		a21 := 0
+		a26 := 1
+		a13 := 0
+		a4 := 0
+		a6 := 1
+		a27 := 0
+	}
+	L361 -> L754 {
+		assume (((not (a19 = 1)) and (((a4 = 1) and (not (a26 = 1))) or (not (a4 = 1))) and (not (a11 = 1)) and (not (a6 = 1))) or (a23 = 1)) and (not (a27 = 1)) and (a5 = 1) and (a22 = 1) and (a3 = 1) and (input = 5) and (not (a12 = 1)) and (not (a25 = 1)) and (a1 = 1) and (a18 = 1)
+		a11 := 1
+		a12 := 1
+		a6 := 1
+		a1 := 1
+		a15 := 1
+		a10 := 1
+		a27 := 1
+		a3 := 0
+		a26 := 1
+	}
+	L881 -> L754 {
+		assume a5 = 1
+		a3 := 1
+		a26 := 1
+		a22 := 0
+		a15 := 0
+		a5 := 1
+		a21 := 1
+		a27 := 0
+	}
+	L737 -> L754 {
+		assume not ((not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (a12 = 1) and (a3 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1))
+	}
+	L250 -> L959 {
+		assume not ((a18 = 1) and (a5 = 1) and (not (a12 = 1)) and (not (a20 = 1)) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (a0 = 1) and (a3 = 2) and (not (a11 = 1)) and (((a22 = 1) and ((a14 = 1) or ((not (a6 = 1)) and ((a10 = 1) or (a14 = 1))))) or (a2 = 1)))
+	}
+	L798 -> L754 {
+		assume ((((not (a16 = 1)) or ((a5 = 1) and (((a22 = 1) and (not (a23 = 1))) or (not (a22 = 1))) and (a6 = 1) and (a16 = 1))) and (a18 = 1)) or (a2 = 1)) and (a3 = 2) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (a16 = 1) and (a11 = 1)
+		a3 := 0
+		a27 := 1
+		a16 := 1
+		a12 := 1
+		a19 := 0
+		a26 := 1
+		a22 := 1
+	}
+	L48 -> L363 {
+		assume not ((a6 = 1) and ((a19 = 1) or ((not (a19 = 1)) and (a29 = 1)) or (a20 = 1)) and (not (a5 = 1)) and (a18 = 1) and (a11 = 1) and (not (a23 = 1)) and (a10 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (input = 3) and (not (a12 = 1)) and (a3 = 0) and (not (a20 = 1)))
+	}
+	L407 -> L791 {
+		assume not ((a1 = 1) and (((a18 = 1) and (not (a27 = 1)) and (a29 = 1) and (a10 = 1)) or (a7 = 1)) and (not (a19 = 1)) and (a5 = 1) and (a11 = 1) and (input = 3) and ((a26 = 1) or (not (a26 = 1))) and (not (a6 = 1)) and (a12 = 1) and (a3 = 2) and (a16 = 1) and (a0 = 1))
+	}
+	L959 -> L754 {
+		assume (not (a27 = 1)) and (a3 = 2) and ((((not (a16 = 1)) or (a29 = 1)) and (a22 = 1)) or (not (a22 = 1))) and (a10 = 1) and (not (a8 = 1)) and (not (a25 = 1)) and (not (a26 = 1)) and (input = 1) and (a6 = 1) and (not (a11 = 1)) and (a5 = 1) and (a12 = 1) and (a18 = 1)
+		a26 := 1
+		a2 := 0
+		a29 := 1
+		a6 := 0
+		a11 := 1
+		a23 := 0
+		a3 := 0
+	}
+	L929 -> L930 {
+		assume not ((a18 = 1) and (a4 = 1) and ((a14 = 1) or ((not (a5 = 1)) and (a16 = 1)) or (not (a1 = 1))) and (a11 = 1) and (a12 = 1) and (a6 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 5) and (not (a8 = 1)) and (not (a14 = 1)) and (a3 = 0) and (not (a2 = 1)))
+	}
+	L710 -> L1138 {
+		assume not ((a3 = 2) and (not (a17 = 1)) and (a18 = 1) and ((a17 = 1) or (a16 = 1)) and (a5 = 1) and (not (a25 = 1)) and (not (a11 = 1)) and (((not (a12 = 1)) and (not (a26 = 1)) and (a6 = 1) and (not (a27 = 1))) or ((a12 = 1) and (not (a6 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 5) and (not (a7 = 1)) and (not (a19 = 1)) and (not (a7 = 1)))
+	}
+	L345 -> L754 {
+		assume (not (a17 = 1)) and (a1 = 1) and (a15 = 1) and (not (a11 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (a15 = 1) and (a12 = 1) and (a18 = 1) and (a16 = 1) and (a3 = 2) and (a22 = 1) and (a5 = 1) and (a6 = 1) and (not (a8 = 1))
+		a11 := 1
+		a0 := 1
+		a27 := 0
+		a12 := 0
+		a6 := 0
+		a23 := 0
+		a16 := 1
+		a3 := 0
+		a26 := 1
+	}
+	L826 -> L754 {
+		assume (not (a14 = 1)) and (a0 = 1) and (a15 = 1) and (not (a8 = 1)) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a25 = 1)) and (a5 = 1) and (not (a6 = 1)) and (a18 = 1) and (not (a11 = 1)) and (a3 = 2) and (a12 = 1) and (a10 = 1) and (not (a23 = 1))
+		a11 := 1
+		a26 := 1
+		a23 := 0
+		a27 := 1
+		a19 := 0
+		a12 := 0
+	}
+	L891 -> L754 {
+		assume not (a0 = 1)
+		a27 := 0
+		a1 := 0
+		a3 := 1
+		a6 := 0
+		a15 := 0
+		a5 := 1
+		a26 := 1
+	}
+	L359 -> L754 {
+		assume (a22 = 1) and ((a29 = 1) or (not (a4 = 1)) or (a17 = 1)) and (a18 = 1) and (a11 = 1) and (not (a6 = 1)) and (a12 = 1) and (a3 = 2) and (a4 = 1) and (a5 = 1) and (a27 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 2) and (not (a8 = 1)) and (a15 = 1)
+		a25 := 0
+		a1 := 1
+		a3 := 0
+		a7 := 0
+		a26 := 1
+		a6 := 1
+	}
+	L930 -> L1187 {
+		assume not ((not (a20 = 1)) and ((not (a10 = 1)) or ((a6 = 1) and ((not (a0 = 1)) or (a10 = 1)) and (not (a2 = 1))) or (not (a1 = 1))) and (not (a14 = 1)) and (a11 = 1) and (a18 = 1) and (a12 = 1) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a5 = 1)) and (a3 = 0))
+	}
+	L327 -> L754 {
+		assume (not (a22 = 1)) and (a5 = 1) and (a3 = 2) and (not (a22 = 1)) and (a17 = 1) and (a10 = 1) and (a12 = 1) and (not (a11 = 1)) and (not (a15 = 1)) and (a18 = 1) and (input = 4) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a20 = 1) and (a6 = 1) and (not (a4 = 1))
+		a26 := 1
+		a29 := 0
+		a11 := 1
+		a6 := 0
+		a27 := 0
+		a25 := 1
+	}
+	L566 -> L754 {
+		assume (a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L6 -> L754 {
+		assume (a18 = 1) and (a1 = 1) and (a0 = 1) and (not (a6 = 1)) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (input = 3) and (not (a11 = 1)) and (a0 = 1) and (a16 = 1) and (a3 = 2) and (a5 = 1) and (a0 = 1) and (a1 = 1) and (a16 = 1)
+		a12 := 0
+		a26 := 1
+		a4 := 0
+		a13 := 0
+		a25 := 1
+		a27 := 1
+		a11 := 1
+	}
+	L1198 -> L754 {
+		assume (a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L337 -> L138 {
+		assume not ((a3 = 1) and ((a23 = 1) or (a15 = 1) or (not (a15 = 1))) and (a26 = 1) and (not (a14 = 1)) and (not (a19 = 1)) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (a5 = 1) and (a0 = 1) and (a10 = 1) and (input = 4) and (a18 = 1) and (not (a11 = 1)))
+	}
+	L718 -> L754 {
+		assume not (a10 = 1)
+		a23 := 0
+		a0 := 1
+		a6 := 0
+		a25 := 0
+		a11 := 1
+		a26 := 1
+		a27 := 1
+	}
+	L752 -> L308 {
+		assume (a11 = 1) and (not (a8 = 1)) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 6) and (not (a5 = 1)) and (a3 = 0) and (a18 = 1) and ((not (a4 = 1)) or ((a1 = 1) and (not (a8 = 1)) and (a6 = 1)) or (a14 = 1) or (not (a0 = 1))) and (a4 = 1)
+	}
+	L834 -> L132 {
+		assume not ((not (a26 = 1)) and (a3 = 1) and (a1 = 1) and (not (a6 = 1)) and (a5 = 1) and (input = 6) and (a18 = 1) and (not (a11 = 1)) and (not (a12 = 1)) and (a0 = 1) and (((a0 = 1) and (a10 = 1)) or (not (a10 = 1))) and (a22 = 1) and (a29 = 1) and (not (a27 = 1)))
+	}
+	L135 -> L1172 {
+		assume not (((a10 = 1) or (not (a16 = 1))) and (a0 = 1) and (not (a25 = 1)) and (not (a17 = 1)) and (a18 = 1) and (not (a19 = 1)) and (input = 1) and (((a5 = 1) and (not (a11 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (not (a12 = 1)) and (a3 = 2)) or ((a11 = 1) and (a3 = 0) and (a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (not (a5 = 1)))) and (not (a25 = 1)))
+	}
+	L299 -> L754 {
+		assume (not (a12 = 1)) and (not (a11 = 1)) and (a6 = 1) and (not (a17 = 1)) and (a5 = 1) and (not (a2 = 1)) and (input = 6) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (not (a7 = 1)) and (a29 = 1) and ((((not (a16 = 1)) or (a1 = 1)) and (a3 = 2)) or (a2 = 1)) and (a18 = 1)
+		a26 := 1
+		a10 := 1
+		a29 := 1
+		a27 := 0
+		a1 := 1
+	}
+	L1018 -> L506 {
+		assume not (((not (a16 = 1)) or ((not (a8 = 1)) and ((not (a0 = 1)) or ((a16 = 1) and (a6 = 1) and (a11 = 1))))) and (a16 = 1) and (a18 = 1) and (a3 = 2) and (a4 = 1) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 6) and (a22 = 1) and (a5 = 1))
+	}
+	L994 -> L754 {
+		assume (a3 = 2) and (a18 = 1) and (a1 = 1) and (not (a19 = 1)) and (a15 = 1) and (input = 3) and (((a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (not (a11 = 1))) or ((not (a12 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a6 = 1)) and (a11 = 1)) or ((a11 = 1) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)))) and (a5 = 1) and (not (a17 = 1)) and (a10 = 1) and (a16 = 1) and (a0 = 1)
+		a26 := 0
+		a27 := 1
+		a20 := 0
+		a29 := 1
+		a10 := 1
+		a11 := 1
+		a6 := 0
+		a12 := 0
+	}
+	L105 -> L1007 {
+		assume not ((not (a11 = 1)) and (not (a6 = 1)) and (input = 4) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a8 = 1)) and (a18 = 1) and (a16 = 1) and (not (a17 = 1)) and (a1 = 1) and ((a20 = 1) or ((a5 = 1) and (a3 = 2) and (a1 = 1) and (a12 = 1)) or (not (a4 = 1))))
+	}
+	L809 -> L993 {
+		assume not (((a20 = 1) or ((a4 = 1) and ((a20 = 1) or ((a29 = 1) and (a5 = 1)))) or (not (a22 = 1))) and (a3 = 2) and (a27 = 1) and (not (a14 = 1)) and (not (a26 = 1)) and (a1 = 1) and (a18 = 1) and (not (a12 = 1)) and (input = 1) and (a11 = 1) and (not (a6 = 1)))
+	}
+	L960 -> L1022 {
+		assume not ((a18 = 1) and (((a22 = 1) and (a4 = 1)) or (a2 = 1)) and (a0 = 1) and (a11 = 1) and (a3 = 2) and (not (a8 = 1)) and (a5 = 1) and (a6 = 1) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (input = 5) and (not (a2 = 1)) and (not (a25 = 1)))
+	}
+	L172 -> L754 {
+		assume (a18 = 1) and (not (a2 = 1)) and (input = 5) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a26 = 1) and (a27 = 1))) and (not (a7 = 1)) and (a29 = 1) and (a0 = 1) and (a11 = 1) and (a6 = 1) and ((a7 = 1) or (not (a10 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a0 = 1)))
+		a14 := 1
+		a10 := 0
+		a6 := 0
+		a5 := 1
+		a11 := 0
+		a12 := 1
+		a26 := 1
+		a27 := 1
+	}
+	L894 -> L496 {
+		assume not (((not (a15 = 1)) or ((not (a23 = 1)) and (((a0 = 1) and (not (a11 = 1))) or (a20 = 1)) and (a5 = 1) and (a6 = 1) and (a1 = 1)) or (a8 = 1)) and (a0 = 1) and (a3 = 2) and (input = 3) and (a12 = 1) and (not (a27 = 1)) and (a18 = 1) and (not (a26 = 1)))
+	}
+	L1086 -> L754 {
+		assume ((not (a1 = 1)) or ((a10 = 1) and (a4 = 1) and (not (a8 = 1)))) and (not (a11 = 1)) and (not (a14 = 1)) and (a18 = 1) and (not (a12 = 1)) and (a3 = 2) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 5) and (not (a8 = 1)) and (a16 = 1) and (a6 = 1) and (a5 = 1)
+		a4 := 1
+		a26 := 0
+		a25 := 0
+		a2 := 0
+		a27 := 1
+	}
+	L1022 -> L754 {
+		assume (a5 = 1) and (a20 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 6) and (not (a15 = 1)) and (a3 = 2) and (not (a1 = 1)) and (a18 = 1) and (a19 = 1) and (a0 = 1) and (not (a16 = 1)) and (a12 = 1) and (a14 = 1) and (a6 = 1) and (not (a11 = 1))
+		a26 := 1
+		a3 := 0
+		a27 := 0
+		a17 := 1
+		a25 := 1
+		a19 := 1
+		a11 := 1
+	}
+	L1171 -> L160 {
+		assume not (((a26 = 1) or (not (a26 = 1))) and (input = 4) and (a5 = 1) and (a27 = 1) and (not (a19 = 1)) and (a18 = 1) and (a16 = 1) and ((not (a16 = 1)) or ((((a11 = 1) and (a15 = 1) and (a3 = 2) and (not (a6 = 1))) or (not (a22 = 1))) and (a12 = 1))) and (not (a25 = 1)) and (a16 = 1))
+	}
+	L738 -> L754 {
+		assume (a17 = 1) and (a20 = 1) and (not (a11 = 1)) and (a6 = 1) and (a18 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a0 = 1)) and (a12 = 1) and (not (a16 = 1)) and (a5 = 1) and (a15 = 1) and (a3 = 2) and (not (a22 = 1)) and (a23 = 1)
+		a3 := 0
+		a6 := 0
+		a4 := 0
+		a26 := 0
+		a27 := 0
+		a8 := 1
+		a22 := 0
+	}
+	L1000 -> L754 {
+		assume (a4 = 1) and (not (a20 = 1)) and (not (a19 = 1)) and (((a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1) and (not (a11 = 1))) or ((a11 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a6 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (a11 = 1))) and (input = 5) and (a5 = 1) and (not (a7 = 1)) and (a3 = 2) and (a18 = 1) and (a15 = 1) and (a1 = 1) and (a4 = 1)
+		a0 := 1
+		a6 := 0
+		a26 := 0
+		a12 := 0
+		a25 := 0
+		a27 := 1
+		a11 := 1
+		a20 := 0
+	}
+	L949 -> L754 {
+		assume (not (a6 = 1)) and (not (a8 = 1)) and (not (a7 = 1)) and (input = 4) and (a11 = 1) and (a5 = 1) and (not (a8 = 1)) and (a18 = 1) and (((not (a12 = 1)) and (((a3 = 2) and (a0 = 1)) or (not (a0 = 1)) or (not (a1 = 1))) and (a26 = 1) and (a27 = 1)) or (not (a16 = 1)))
+		a11 := 0
+		a6 := 1
+		a1 := 1
+		a2 := 0
+		a19 := 0
+	}
+	L1000 -> L653 {
+		assume not ((a4 = 1) and (not (a20 = 1)) and (not (a19 = 1)) and (((a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1) and (not (a11 = 1))) or ((a11 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a6 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (a11 = 1))) and (input = 5) and (a5 = 1) and (not (a7 = 1)) and (a3 = 2) and (a18 = 1) and (a15 = 1) and (a1 = 1) and (a4 = 1))
+	}
+	L744 -> L989 {
+		assume not ((a15 = 1) and (a3 = 2) and (a5 = 1) and (input = 1) and (((not (a12 = 1)) and (a6 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a6 = 1)) and (a12 = 1))) and (not (a11 = 1)) and (a29 = 1) and ((a8 = 1) or ((a18 = 1) and (not (a7 = 1)) and (a15 = 1) and (not (a19 = 1)) and (a22 = 1))))
+	}
+	L363 -> L754 {
+		assume (a18 = 1) and (a6 = 1) and (input = 2) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (not (a23 = 1)) and (a11 = 1) and (a0 = 1) and (not (a8 = 1)) and (((not (a7 = 1)) and (a3 = 2) and ((a15 = 1) or (a14 = 1)) and (a5 = 1)) or (not (a0 = 1)))
+		a3 := 0
+		a23 := 0
+		a12 := 1
+		a27 := 1
+		a1 := 1
+		a26 := 1
+	}
+	L597 -> L662 {
+		assume not ((a4 = 1) and (a18 = 1) and (a11 = 1) and (((a26 = 1) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 6) and (a10 = 1) and (a22 = 1) and (not (a25 = 1)) and (a3 = 2) and (a6 = 1) and (a5 = 1) and (a12 = 1) and (a15 = 1) and (a1 = 1) and (not (a7 = 1)))
+	}
+	L147 -> L754 {
+		assume (((a5 = 1) and (a3 = 2) and (a1 = 1) and (a18 = 1) and (a22 = 1) and (not (a11 = 1))) or (not (a0 = 1))) and (a12 = 1) and (a6 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 4) and (not (a8 = 1)) and (a4 = 1) and (not (a23 = 1)) and (a29 = 1)
+		a12 := 0
+		a10 := 1
+		a27 := 1
+		a6 := 0
+		a23 := 0
+		a26 := 0
+		a8 := 0
+		a3 := 0
+	}
+	L877 -> L754 {
+		assume (not (a26 = 1)) and ((not (a22 = 1)) or (not (a1 = 1)) or ((not (a8 = 1)) and (a29 = 1)) or (a7 = 1)) and (a29 = 1) and (a3 = 1) and (a27 = 1) and (not (a12 = 1)) and (not (a11 = 1)) and (a18 = 1) and (input = 6) and (a5 = 1) and (not (a6 = 1)) and (not (a19 = 1))
+		a3 := 0
+		a11 := 1
+		a12 := 1
+		a8 := 0
+		a20 := 0
+		a26 := 1
+		a6 := 1
+		a29 := 1
+	}
+	L1018 -> L754 {
+		assume ((not (a16 = 1)) or ((not (a8 = 1)) and ((not (a0 = 1)) or ((a16 = 1) and (a6 = 1) and (a11 = 1))))) and (a16 = 1) and (a18 = 1) and (a3 = 2) and (a4 = 1) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 6) and (a22 = 1) and (a5 = 1)
+		a16 := 1
+		a3 := 0
+		a26 := 1
+		a22 := 1
+		a7 := 0
+		a27 := 1
+		a12 := 1
+	}
+	L442 -> L331 {
+		assume not ((a4 = 1) and (((not (a12 = 1)) and (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (a11 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (a11 = 1)) or ((not (a11 = 1)) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1))) and (input = 4) and (a5 = 1) and (a18 = 1) and (not (a19 = 1)) and ((a17 = 1) or ((not (a25 = 1)) and (a3 = 2) and (a29 = 1)) or (a23 = 1)) and (a1 = 1))
+	}
+	L766 -> L299 {
+		assume not ((((((not (a7 = 1)) and (a16 = 1)) or (not (a10 = 1)) or (not (a15 = 1))) and (not (a6 = 1))) or (not (a22 = 1))) and (not (a12 = 1)) and (a3 = 2) and (a18 = 1) and (not (a11 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 6) and (a5 = 1) and (a29 = 1) and (a0 = 1))
+	}
+	L385 -> L754 {
+		assume (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L550 -> L754 {
+		assume not (a21 = 1)
+		a5 := 1
+		a11 := 0
+		a7 := 1
+		a3 := 2
+		a4 := 0
+		a27 := 1
+		a12 := 0
+		a26 := 0
+	}
+	L690 -> L754 {
+		assume (a29 = 1) and (a22 = 1) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 5) and (a6 = 1) and (a5 = 1) and (a3 = 2) and (not (a20 = 1)) and (not (a2 = 1)) and (a11 = 1) and ((not (a16 = 1)) or (a1 = 1)) and (not (a25 = 1)) and (a18 = 1) and (a12 = 1)
+		a15 := 1
+		a27 := 1
+		a3 := 0
+		a16 := 1
+		a22 := 1
+		a26 := 1
+	}
+	L662 -> L754 {
+		assume ((a16 = 1) or (not (a16 = 1)) or (a25 = 1)) and (a18 = 1) and (not (a2 = 1)) and (a22 = 1) and (input = 5) and (((a5 = 1) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 2) and (not (a11 = 1))) or ((not (a5 = 1)) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (a12 = 1) and (a3 = 0) and (a11 = 1))) and (a16 = 1) and (not (a7 = 1))
+		a13 := 1
+		a25 := 1
+		a12 := 1
+		a26 := 0
+		a3 := 1
+		a27 := 0
+		a20 := 1
+		a11 := 1
+		a6 := 1
+		a5 := 1
+	}
+	L959 -> L826 {
+		assume not ((not (a27 = 1)) and (a3 = 2) and ((((not (a16 = 1)) or (a29 = 1)) and (a22 = 1)) or (not (a22 = 1))) and (a10 = 1) and (not (a8 = 1)) and (not (a25 = 1)) and (not (a26 = 1)) and (input = 1) and (a6 = 1) and (not (a11 = 1)) and (a5 = 1) and (a12 = 1) and (a18 = 1))
+	}
+	L160 -> L91 {
+		assume not ((a5 = 1) and (a18 = 1) and (a0 = 1) and (a16 = 1) and (input = 2) and (((not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a27 = 1) and (not (a6 = 1)) and (a26 = 1))) and (not (a25 = 1)) and (not (a2 = 1)) and (a3 = 2) and (a22 = 1) and (not (a11 = 1)) and ((a29 = 1) or (not (a1 = 1))))
+	}
+	L950 -> L361 {
+		assume not ((not (a11 = 1)) and (a12 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 3) and (not (a8 = 1)) and (not (a19 = 1)) and (not (a14 = 1)) and (a0 = 1) and (a3 = 2) and (((a5 = 1) and (not (a6 = 1)) and (a29 = 1)) or (a17 = 1)) and (a16 = 1) and (a18 = 1))
+	}
+	L814 -> L754 {
+		assume not (a0 = 1)
+		a5 := 1
+		a12 := 1
+		a27 := 0
+		a16 := 0
+		a2 := 1
+		a26 := 1
+	}
+	L834 -> L646 {
+		assume (not (a26 = 1)) and (a3 = 1) and (a1 = 1) and (not (a6 = 1)) and (a5 = 1) and (input = 6) and (a18 = 1) and (not (a11 = 1)) and (not (a12 = 1)) and (a0 = 1) and (((a0 = 1) and (a10 = 1)) or (not (a10 = 1))) and (a22 = 1) and (a29 = 1) and (not (a27 = 1))
+	}
+	L407 -> L754 {
+		assume (a1 = 1) and (((a18 = 1) and (not (a27 = 1)) and (a29 = 1) and (a10 = 1)) or (a7 = 1)) and (not (a19 = 1)) and (a5 = 1) and (a11 = 1) and (input = 3) and ((a26 = 1) or (not (a26 = 1))) and (not (a6 = 1)) and (a12 = 1) and (a3 = 2) and (a16 = 1) and (a0 = 1)
+		a26 := 1
+		a6 := 1
+		a11 := 0
+		a22 := 1
+		a15 := 1
+		a8 := 0
+	}
+	L86 -> L40 {
+		assume not ((a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (a12 = 1) and (a3 = 0) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L416 -> L919 {
+		assume not ((not (a23 = 1)) and (((not (a2 = 1)) and (((a5 = 1) and (a29 = 1)) or (not (a1 = 1)) or (not (a22 = 1)))) or (a8 = 1)) and (a0 = 1) and (a18 = 1) and (not (a12 = 1)) and (not (a26 = 1)) and (a3 = 2) and (a27 = 1) and (input = 6) and (a11 = 1) and (not (a6 = 1)))
+	}
+	L465 -> L281 {
+		assume not ((a11 = 1) and (a16 = 1) and (a6 = 1) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (a18 = 1) and (a3 = 0) and (a10 = 1) and (((not (a5 = 1)) and ((a15 = 1) or (a25 = 1))) or (a7 = 1)) and (not (a2 = 1)) and (not (a25 = 1)))
+	}
+	L364 -> L754 {
+		assume (a3 = 2) and (a29 = 1) and (input = 6) and ((a26 = 1) or (not (a26 = 1))) and (a4 = 1) and (a29 = 1) and (not (a20 = 1)) and ((not (a4 = 1)) or ((a11 = 1) and (a5 = 1) and (a18 = 1) and (a12 = 1) and (a27 = 1) and (a29 = 1) and (a10 = 1) and (not (a6 = 1))))
+		a8 := 0
+		a4 := 1
+		a6 := 1
+		a3 := 0
+		a26 := 1
+		a15 := 1
+	}
+	L354 -> L754 {
+		assume (not (a11 = 1)) and (a5 = 1) and (input = 5) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (a23 = 1) and (a3 = 2) and (a23 = 1) and (not (a4 = 1)) and (a18 = 1) and (a12 = 1) and (a29 = 1) and (not (a22 = 1)) and (not (a0 = 1)) and (a19 = 1) and (a6 = 1)
+		a27 := 1
+		a0 := 0
+		a12 := 0
+		a11 := 1
+		a29 := 0
+		a26 := 0
+	}
+	L692 -> L960 {
+		assume not ((input_m /= 1) and (input_m /= 2) and (input_m /= 3) and (input_m /= 4) and (input_m /= 5) and (input_m /= 6))
+		input := input_m
+	}
+	L254 -> L877 {
+		assume not ((a11 = 1) and (a18 = 1) and (a22 = 1) and (not (a23 = 1)) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 6) and (not (a12 = 1)) and ((not (a22 = 1)) or ((a6 = 1) and (((a22 = 1) and (a5 = 1) and ((a4 = 1) or (not (a10 = 1))) and (a3 = 2)) or (not (a22 = 1))))))
+	}
+	L1195 -> L597 {
+		assume not ((((a3 = 2) and (a5 = 1) and ((a7 = 1) or (a22 = 1)) and (not (a6 = 1)) and (not (a27 = 1))) or (not (a4 = 1))) and (a12 = 1) and (a11 = 1) and (a18 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 6) and (not (a19 = 1)) and (not (a7 = 1)) and (a16 = 1) and (a0 = 1))
+	}
+	L242 -> L754 {
+		assume (not (a14 = 1)) and (a5 = 1) and (not (a6 = 1)) and (input = 4) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (not (a23 = 1)) and ((a2 = 1) or (((not (a1 = 1)) or ((a18 = 1) and (a1 = 1) and (not (a11 = 1)) and (a29 = 1) and (a3 = 2))) and (not (a8 = 1))))
+		a27 := 1
+		a16 := 0
+		a26 := 1
+		a12 := 0
+		a8 := 1
+		a6 := 1
+		a3 := 1
+		a23 := 1
+	}
+	L1138 -> L754 {
+		assume (a1 = 1) and (not (a23 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a18 = 1) and (not (a20 = 1)) and (input = 1) and (a11 = 1) and (not (a23 = 1)) and (not (a19 = 1)) and (not (a20 = 1)) and (a3 = 2) and (a5 = 1) and (not (a6 = 1)) and (a16 = 1) and (a26 = 1)
+		a11 := 0
+		a6 := 1
+		a14 := 0
+		a10 := 1
+		a27 := 0
+		a23 := 0
+	}
+	L1231 -> L754 {
+		assume (not (a26 = 1)) and (((a27 = 1) and (a10 = 1) and (not (a25 = 1)) and (a22 = 1)) or (not (a16 = 1))) and (not (a2 = 1)) and (not (a7 = 1)) and (a5 = 1) and (a18 = 1) and (a0 = 1) and (not (a11 = 1)) and (input = 2) and (a3 = 1) and (not (a6 = 1)) and (not (a12 = 1))
+		a11 := 1
+		a14 := 0
+		a6 := 1
+		a15 := 1
+		a23 := 0
+		a26 := 1
+		a3 := 0
+		a12 := 1
+	}
+	L506 -> L754 {
+		assume (a6 = 1) and (not (a7 = 1)) and (a11 = 1) and (input = 5) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a18 = 1) and (not (a2 = 1)) and (not (a19 = 1)) and (a10 = 1) and (not (a12 = 1)) and (a3 = 0) and ((not (a0 = 1)) or ((a22 = 1) and (not (a8 = 1)))) and (not (a5 = 1))
+		a3 := 1
+		a1 := 0
+		a5 := 1
+		a12 := 1
+		a11 := 0
+		a26 := 1
+		a27 := 0
+		a29 := 0
+		a6 := 0
+	}
+	L884 -> L1035 {
+		assume not ((a18 = 1) and (((not (a12 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (a3 = 2) and (not (a11 = 1)) and (a5 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a12 = 1) and (a27 = 1) and (a26 = 1) and (a6 = 1) and (a11 = 1))) and (input = 3) and (not (a20 = 1)) and (not (a23 = 1)) and ((not (a29 = 1)) or (not (a1 = 1)) or (not (a15 = 1)) or ((not (a17 = 1)) and (a4 = 1))))
+	}
+	L722 -> L217 {
+		assume (not (a19 = 1)) and (a11 = 1) and (not (a5 = 1)) and (input = 1) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a12 = 1)) and (a22 = 1) and (a6 = 1) and (a18 = 1) and (a10 = 1) and (a3 = 0) and ((not (a16 = 1)) or (a22 = 1) or (not (a10 = 1)) or (not (a29 = 1)))
+	}
+	L641 -> L3 {
+		assume not ((not (a26 = 1)) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 0) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1))
+	}
+	L754 -> L692 {
+		havoc tmp_0
+		input_m := tmp_0
+	}
+	L331 -> L754 {
+		assume (a3 = 2) and (a18 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a10 = 1) and (a15 = 1) and ((a23 = 1) or (a20 = 1) or ((not (a25 = 1)) and (a5 = 1) and (a4 = 1) and (not (a8 = 1)) and (a12 = 1))) and (not (a11 = 1)) and (not (a6 = 1))
+		a26 := 1
+		a10 := 1
+		a27 := 1
+		a3 := 0
+		a6 := 1
+		a11 := 1
+		a19 := 0
+		a23 := 0
+	}
+	L597 -> L754 {
+		assume (a4 = 1) and (a18 = 1) and (a11 = 1) and (((a26 = 1) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 6) and (a10 = 1) and (a22 = 1) and (not (a25 = 1)) and (a3 = 2) and (a6 = 1) and (a5 = 1) and (a12 = 1) and (a15 = 1) and (a1 = 1) and (not (a7 = 1))
+		a3 := 0
+		a10 := 1
+		a27 := 1
+		a26 := 1
+		a1 := 1
+		a8 := 0
+	}
+	L857 -> L1093 {
+		assume not ((not (a16 = 1)) and (a3 = 2) and (not (a22 = 1)) and (not (a10 = 1)) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (a12 = 1) and (a25 = 1) and (a20 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1) and (a1 = 1) and (not (a15 = 1)) and (a6 = 1))
+	}
+	L1043 -> L1219 {
+		assume not ((a16 = 1) and (not (a5 = 1)) and (a3 = 0) and (input = 2) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (a6 = 1) and ((not (a29 = 1)) or (a17 = 1) or (((a17 = 1) or ((a15 = 1) and (a11 = 1)) or (not (a10 = 1))) and (a18 = 1)) or (a7 = 1)))
+	}
+	L673 -> L754 {
+		assume (not (a19 = 1)) and (a4 = 1) and (a18 = 1) and (a0 = 1) and (a11 = 1) and (not (a5 = 1)) and (a10 = 1) and (a15 = 1) and (not (a14 = 1)) and (a6 = 1) and (a3 = 0) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 1) and (a16 = 1)
+		a27 := 0
+		a25 := 1
+		a2 := 1
+		a23 := 1
+		a26 := 1
+		a12 := 1
+		a5 := 1
+	}
+	L135 -> L913 {
+		assume ((a10 = 1) or (not (a16 = 1))) and (a0 = 1) and (not (a25 = 1)) and (not (a17 = 1)) and (a18 = 1) and (not (a19 = 1)) and (input = 1) and (((a5 = 1) and (not (a11 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (not (a12 = 1)) and (a3 = 2)) or ((a11 = 1) and (a3 = 0) and (a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1) and (not (a5 = 1)))) and (not (a25 = 1))
+	}
+	L1186 -> L2 {
+		assume not false
+	}
+	L245 -> L754 {
+		assume (a6 = 1) and ((a19 = 1) or (((a8 = 1) or ((not (a12 = 1)) and (((a5 = 1) and (a10 = 1)) or (not (a4 = 1))))) and (a11 = 1))) and (a18 = 1) and (not (a19 = 1)) and (a1 = 1) and (input = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (a3 = 2) and (not (a20 = 1))
+		a0 := 1
+		a12 := 1
+		a26 := 1
+		a2 := 0
+		a27 := 1
+		a1 := 1
+		a3 := 0
+	}
+	L254 -> L754 {
+		assume (a11 = 1) and (a18 = 1) and (a22 = 1) and (not (a23 = 1)) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 6) and (not (a12 = 1)) and ((not (a22 = 1)) or ((a6 = 1) and (((a22 = 1) and (a5 = 1) and ((a4 = 1) or (not (a10 = 1))) and (a3 = 2)) or (not (a22 = 1)))))
+		a27 := 1
+		a17 := 0
+		a10 := 1
+		a3 := 0
+		a8 := 0
+		a26 := 1
+		a12 := 1
+	}
+	L97 -> L754 {
+		assume (not (a19 = 1)) and (a16 = 1) and (not (a7 = 1)) and (not (a20 = 1)) and (input = 2) and (((not (a11 = 1)) and (a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1)) or ((a11 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (a26 = 1) and (not (a12 = 1))) or ((a11 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)))) and (not (a17 = 1)) and (a18 = 1) and ((a17 = 1) or ((a15 = 1) and (a3 = 2) and (a5 = 1)))
+		a12 := 0
+		a11 := 1
+		a27 := 0
+		a6 := 0
+		a26 := 0
+		a25 := 0
+		a16 := 1
+		a20 := 0
+	}
+	L1138 -> L1170 {
+		assume not ((a1 = 1) and (not (a23 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a18 = 1) and (not (a20 = 1)) and (input = 1) and (a11 = 1) and (not (a23 = 1)) and (not (a19 = 1)) and (not (a20 = 1)) and (a3 = 2) and (a5 = 1) and (not (a6 = 1)) and (a16 = 1) and (a26 = 1))
+	}
+	L766 -> L754 {
+		assume (((((not (a7 = 1)) and (a16 = 1)) or (not (a10 = 1)) or (not (a15 = 1))) and (not (a6 = 1))) or (not (a22 = 1))) and (not (a12 = 1)) and (a3 = 2) and (a18 = 1) and (not (a11 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 6) and (a5 = 1) and (a29 = 1) and (a0 = 1)
+		a27 := 1
+		a15 := 0
+		a14 := 1
+		a3 := 1
+		a26 := 0
+		a6 := 1
+	}
+	L430 -> L928 {
+		assume not ((a3 = 0) and (not (a5 = 1)) and (not (a14 = 1)) and ((((a0 = 1) or (a23 = 1)) and (not (a25 = 1))) or (not (a1 = 1)) or (not (a29 = 1))) and (a6 = 1) and (a11 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1)) or ((not (a26 = 1)) and (not (a27 = 1)))) and (input = 2) and (a18 = 1) and (not (a20 = 1)) and (not (a12 = 1)))
+	}
+	L91 -> L754 {
+		assume (a12 = 1) and (not (a6 = 1)) and (a11 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 5) and (a3 = 2) and (not (a14 = 1)) and ((not (a15 = 1)) or ((a15 = 1) and ((not (a0 = 1)) or ((((a18 = 1) and (a5 = 1) and (a1 = 1)) or (a19 = 1)) and (a27 = 1)))) or (a2 = 1))
+		a26 := 1
+		a16 := 1
+		a15 := 1
+		a6 := 1
+		a3 := 0
+	}
+	L993 -> L710 {
+		assume not ((((a11 = 1) and (a6 = 1) and (not (a7 = 1)) and (a22 = 1) and (a18 = 1) and (a5 = 1)) or (a14 = 1)) and (a16 = 1) and (a29 = 1) and (a10 = 1) and (not (a2 = 1)) and (((a26 = 1) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 1) and (a3 = 2) and (a12 = 1))
+	}
+	L127 -> L385 {
+		assume not ((a27 = 1) and (not (a12 = 1)) and (a11 = 1) and (not (a2 = 1)) and (a18 = 1) and (not (a25 = 1)) and (a3 = 2) and (input = 2) and (a15 = 1) and (a29 = 1) and (a15 = 1) and (not (a25 = 1)) and (a5 = 1) and (a10 = 1) and (a26 = 1) and (not (a6 = 1)))
+	}
+	L162 -> L478 {
+		assume not ((((a22 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (a22 = 1) and (a3 = 1) and (not (a12 = 1)) and (a0 = 1) and (not (a20 = 1))) or (not (a16 = 1))) and (not (a26 = 1)) and (a29 = 1) and (not (a14 = 1)) and (not (a11 = 1)) and (a5 = 1) and (input = 4) and (a18 = 1))
+	}
+	L361 -> L442 {
+		assume not ((((not (a19 = 1)) and (((a4 = 1) and (not (a26 = 1))) or (not (a4 = 1))) and (not (a11 = 1)) and (not (a6 = 1))) or (a23 = 1)) and (not (a27 = 1)) and (a5 = 1) and (a22 = 1) and (a3 = 1) and (input = 5) and (not (a12 = 1)) and (not (a25 = 1)) and (a1 = 1) and (a18 = 1))
+	}
+	L349 -> L435 {
+		assume not ((not (a23 = 1)) and (a1 = 1) and (not (a27 = 1)) and (input = 2) and (a18 = 1) and (a0 = 1) and (a12 = 1) and (a3 = 2) and (not (a11 = 1)) and (a5 = 1) and ((a2 = 1) or ((a10 = 1) and ((a15 = 1) or (a7 = 1)))) and (not (a26 = 1)) and (a6 = 1))
+	}
+	L507 -> L896 {
+		assume not ((not (a2 = 1)) and (input = 3) and (((a26 = 1) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (a6 = 1) and (a18 = 1) and (a3 = 2) and (not (a23 = 1)) and (a5 = 1) and ((((a17 = 1) or (a22 = 1)) and (not (a25 = 1))) or (a20 = 1)) and (a4 = 1) and (a12 = 1) and (a11 = 1))
+	}
+	L1219 -> L624 {
+		assume not ((not (a14 = 1)) and (a0 = 1) and (a18 = 1) and (a16 = 1) and (not (a19 = 1)) and (not (a23 = 1)) and (a5 = 1) and (a3 = 2) and (input = 6) and (((a11 = 1) and (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1))) or ((a11 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (not (a11 = 1)))) and (not (a19 = 1)) and (a16 = 1))
+	}
+	L228 -> L745 {
+		assume not ((a4 = 1) and (a12 = 1) and (a6 = 1) and (a18 = 1) and (a10 = 1) and (a16 = 1) and (a0 = 1) and (a5 = 1) and (not (a11 = 1)) and (not (a17 = 1)) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a20 = 1)) and (a3 = 2) and (a16 = 1))
+	}
+	L379 -> L754 {
+		assume not (a15 = 1)
+		a20 := 1
+		a5 := 1
+		a12 := 1
+		a16 := 0
+		a27 := 1
+		a26 := 0
+	}
+	L3 -> L754 {
+		assume (a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 0) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1)
+	}
+	L364 -> L882 {
+		assume not ((a3 = 2) and (a29 = 1) and (input = 6) and ((a26 = 1) or (not (a26 = 1))) and (a4 = 1) and (a29 = 1) and (not (a20 = 1)) and ((not (a4 = 1)) or ((a11 = 1) and (a5 = 1) and (a18 = 1) and (a12 = 1) and (a27 = 1) and (a29 = 1) and (a10 = 1) and (not (a6 = 1)))))
+	}
+	L825 -> L1091 {
+		assume not ((a18 = 1) and ((a7 = 1) or ((not (a2 = 1)) and (((a16 = 1) and (a11 = 1) and (a6 = 1) and (not (a23 = 1))) or (a23 = 1)))) and (a5 = 1) and (a3 = 2) and (not (a14 = 1)) and (a12 = 1) and (input = 2) and (((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a22 = 1))
+	}
+	L331 -> L416 {
+		assume not ((a3 = 2) and (a18 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a10 = 1) and (a15 = 1) and ((a23 = 1) or (a20 = 1) or ((not (a25 = 1)) and (a5 = 1) and (a4 = 1) and (not (a8 = 1)) and (a12 = 1))) and (not (a11 = 1)) and (not (a6 = 1)))
+	}
+	L646 -> L754 {
+		assume a7 = 1
+		a23 := 0
+		a3 := 2
+		a6 := 1
+		a1 := 1
+	}
+	L308 -> L754 {
+		assume a29 = 1
+		a12 := 1
+		a26 := 1
+		a5 := 1
+		a0 := 0
+		a27 := 1
+		a3 := 2
+		a21 := 1
+		a6 := 0
+		a29 := 0
+	}
+	L928 -> L754 {
+		assume (not (a27 = 1)) and (not (a23 = 1)) and (not (a11 = 1)) and (a12 = 1) and (not (a26 = 1)) and (a3 = 2) and (input = 4) and (a4 = 1) and (a15 = 1) and ((a23 = 1) or ((a6 = 1) and (not (a8 = 1)) and ((a23 = 1) or ((a18 = 1) and (a22 = 1))))) and (a5 = 1)
+		a11 := 1
+		a4 := 1
+		a26 := 1
+		a23 := 0
+		a12 := 0
+		a19 := 0
+		a27 := 1
+		a3 := 1
+	}
+	L916 -> L754 {
+		assume (a3 = 2) and (not (a11 = 1)) and (not (a17 = 1)) and ((a19 = 1) or ((a4 = 1) and (a1 = 1) and (not (a12 = 1)))) and (not (a7 = 1)) and (a5 = 1) and (a18 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a23 = 1)) and (not (a6 = 1)) and (not (a2 = 1))
+		a12 := 1
+		a27 := 0
+		a26 := 1
+		a21 := 1
+	}
+	L175 -> L754 {
+		assume (a18 = 1) and (a27 = 1) and (not (a11 = 1)) and (input = 4) and (not (a2 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (not (a26 = 1)) and ((a25 = 1) or ((not (a8 = 1)) and ((a19 = 1) or (a16 = 1)) and (not (a17 = 1)) and (not (a8 = 1)))) and (a3 = 1) and (a5 = 1)
+		a27 := 0
+		a17 := 0
+		a22 := 1
+		a26 := 1
+		a0 := 1
+	}
+	L796 -> L354 {
+		assume not ((a12 = 1) and (a3 = 2) and ((not (a1 = 1)) or (not (a22 = 1)) or ((a11 = 1) and (a4 = 1) and (a6 = 1) and ((a4 = 1) or (not (a15 = 1)))) or (a2 = 1)) and (a29 = 1) and (a18 = 1) and (a5 = 1) and (((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4))
+	}
+	L415 -> L337 {
+		assume not ((a0 = 1) and (not (a17 = 1)) and (a0 = 1) and (input = 5) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a2 = 1)) and (not (a12 = 1)) and (a1 = 1) and (((a18 = 1) and (a11 = 1) and (a22 = 1) and (a6 = 1) and (a5 = 1) and (a3 = 2)) or (not (a29 = 1))))
+	}
+	L882 -> L754 {
+		assume ((not (a16 = 1)) or ((not (a26 = 1)) and (a15 = 1) and (a3 = 2) and (not (a17 = 1)))) and (a29 = 1) and (a5 = 1) and (not (a23 = 1)) and (not (a23 = 1)) and (a27 = 1) and (not (a12 = 1)) and (not (a6 = 1)) and (input = 4) and (a18 = 1) and (a11 = 1) and (a16 = 1)
+		a6 := 1
+		a27 := 0
+		a16 := 1
+		a23 := 0
+		a26 := 1
+		a20 := 0
+	}
+	L945 -> L178 {
+		assume not ((not (a11 = 1)) and (a1 = 1) and (a29 = 1) and (a12 = 1) and (not (a2 = 1)) and (not (a6 = 1)) and (not (a17 = 1)) and (a3 = 2) and (a18 = 1) and (input = 6) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a0 = 1) and (a15 = 1) and (a22 = 1) and (a5 = 1))
+	}
+	L1041 -> L754 {
+		assume ((not (a29 = 1)) or ((a4 = 1) and (a5 = 1) and ((a17 = 1) or (a22 = 1)) and (a1 = 1))) and (not (a12 = 1)) and (a26 = 1) and (a27 = 1) and (a3 = 2) and (a11 = 1) and (not (a8 = 1)) and (not (a25 = 1)) and (input = 5) and (a18 = 1) and (not (a6 = 1))
+		a4 := 1
+		a22 := 1
+		a7 := 0
+	}
+	L178 -> L229 {
+		assume not (((((a2 = 1) or ((a5 = 1) and (a3 = 2) and (a10 = 1))) and (a18 = 1)) or (not (a1 = 1))) and (not (a12 = 1)) and (not (a7 = 1)) and (not (a14 = 1)) and (not (a11 = 1)) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4) and (a4 = 1) and (not (a6 = 1)) and (a10 = 1))
+	}
+	L566 -> L487 {
+		assume not ((a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L496 -> L834 {
+		assume not ((not (a6 = 1)) and (not (a8 = 1)) and (a16 = 1) and (a22 = 1) and (a26 = 1) and (not (a11 = 1)) and (input = 6) and (a18 = 1) and (not (a27 = 1)) and ((not (a1 = 1)) or ((a22 = 1) and (not (a12 = 1)) and (a0 = 1))) and (a3 = 1) and (a10 = 1) and (a5 = 1))
+	}
+	L1081 -> L754 {
+		assume (a1 = 1) and (input = 3) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (not (a7 = 1)) and (a18 = 1) and (a4 = 1) and (a6 = 1) and (a5 = 1) and ((a20 = 1) or (not (a1 = 1)) or ((a3 = 2) and ((a10 = 1) or (not (a10 = 1))) and (a11 = 1)))
+		a26 := 0
+		a3 := 0
+		a6 := 0
+		a12 := 1
+		a27 := 0
+		a2 := 0
+		a14 := 0
+		a11 := 0
+		a8 := 0
+	}
+	L317 -> L754 {
+		assume not (a20 = 1)
+		a10 := 1
+		a17 := 0
+		a14 := 0
+	}
+	L455 -> L754 {
+		assume (a26 = 1) and (a6 = 1) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L1244 -> L238 {
+		assume not ((((a1 = 1) and (not (a27 = 1)) and (a18 = 1) and (a16 = 1)) or (a8 = 1) or (a20 = 1)) and (a3 = 2) and (not (a19 = 1)) and (not (a11 = 1)) and (input = 6) and (a5 = 1) and (a16 = 1) and (a12 = 1) and (not (a26 = 1)) and (not (a19 = 1)) and (a6 = 1))
+	}
+	L232 -> L175 {
+		assume not ((a15 = 1) and (not (a25 = 1)) and (a3 = 2) and (a5 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a2 = 1)) and (not (a11 = 1)) and (a12 = 1) and (a18 = 1) and (not (a17 = 1)) and ((not (a16 = 1)) or ((a1 = 1) and (not (a6 = 1)))) and (a4 = 1))
+	}
+	L1022 -> L1086 {
+		assume not ((a5 = 1) and (a20 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 6) and (not (a15 = 1)) and (a3 = 2) and (not (a1 = 1)) and (a18 = 1) and (a19 = 1) and (a0 = 1) and (not (a16 = 1)) and (a12 = 1) and (a14 = 1) and (a6 = 1) and (not (a11 = 1)))
+	}
+	L238 -> L754 {
+		assume (((a29 = 1) and (a15 = 1)) or (a14 = 1)) and (a4 = 1) and (not (a5 = 1)) and (a18 = 1) and (a12 = 1) and (not (a2 = 1)) and (not (a23 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4) and (not (a17 = 1)) and (a3 = 0) and (a6 = 1) and (a11 = 1)
+		a27 := 1
+		a3 := 1
+		a7 := 1
+		a22 := 0
+		a11 := 0
+		a6 := 0
+		a26 := 1
+		a12 := 0
+		a5 := 1
+		a19 := 1
+	}
+	L105 -> L754 {
+		assume (not (a11 = 1)) and (not (a6 = 1)) and (input = 4) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a8 = 1)) and (a18 = 1) and (a16 = 1) and (not (a17 = 1)) and (a1 = 1) and ((a20 = 1) or ((a5 = 1) and (a3 = 2) and (a1 = 1) and (a12 = 1)) or (not (a4 = 1)))
+		a11 := 1
+		a27 := 1
+		a25 := 0
+		a17 := 0
+		a6 := 1
+		a3 := 0
+		a7 := 0
+		a26 := 1
+	}
+	L242 -> L825 {
+		assume not ((not (a14 = 1)) and (a5 = 1) and (not (a6 = 1)) and (input = 4) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (not (a23 = 1)) and ((a2 = 1) or (((not (a1 = 1)) or ((a18 = 1) and (a1 = 1) and (not (a11 = 1)) and (a29 = 1) and (a3 = 2))) and (not (a8 = 1)))))
+	}
+	L550 -> L754 {
+		assume a21 = 1
+		a22 := 0
+		a12 := 0
+		a27 := 1
+		a26 := 1
+		a5 := 1
+	}
+	L1244 -> L754 {
+		assume (((a1 = 1) and (not (a27 = 1)) and (a18 = 1) and (a16 = 1)) or (a8 = 1) or (a20 = 1)) and (a3 = 2) and (not (a19 = 1)) and (not (a11 = 1)) and (input = 6) and (a5 = 1) and (a16 = 1) and (a12 = 1) and (not (a26 = 1)) and (not (a19 = 1)) and (a6 = 1)
+		a27 := 1
+		a12 := 0
+		a0 := 1
+		a23 := 0
+		a29 := 1
+		a3 := 1
+	}
+	L624 -> L754 {
+		assume ((not (a10 = 1)) or (((not (a1 = 1)) or (((a23 = 1) or ((a11 = 1) and (a29 = 1) and (not (a12 = 1)) and (not (a8 = 1)))) and (a6 = 1) and (a3 = 0))) and (a18 = 1))) and (input = 6) and (((not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (not (a7 = 1)) and (not (a5 = 1)) and (not (a2 = 1))
+		a5 := 1
+		a25 := 1
+		a12 := 1
+		a27 := 1
+		a26 := 0
+	}
+	L441 -> L317 {
+		assume (a3 = 2) and (a4 = 1) and (not (a17 = 1)) and (not (a19 = 1)) and (a26 = 1) and (a27 = 1) and (input = 3) and (a18 = 1) and (a0 = 1) and (a4 = 1) and (not (a17 = 1)) and (a5 = 1) and (not (a6 = 1)) and (a15 = 1) and (not (a12 = 1)) and (a11 = 1)
+	}
+	L989 -> L754 {
+		assume (((not (a25 = 1)) and (a1 = 1) and (a0 = 1)) or (a7 = 1)) and (not (a6 = 1)) and (a29 = 1) and (a3 = 2) and (a11 = 1) and (a18 = 1) and (a27 = 1) and (not (a12 = 1)) and (input = 2) and (a29 = 1) and (not (a26 = 1)) and (not (a25 = 1)) and (a5 = 1)
+		a1 := 1
+		a19 := 0
+		a0 := 1
+	}
+	L27 -> L754 {
+		assume (not (a17 = 1)) and (not (a8 = 1)) and (a4 = 1) and (a18 = 1) and (a3 = 2) and (not (a6 = 1)) and (not (a17 = 1)) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 2) and (a5 = 1) and (not (a11 = 1)) and ((a4 = 1) or (a2 = 1) or (not (a10 = 1)))
+		a3 := 1
+		a0 := 0
+		a27 := 0
+		a12 := 0
+		a26 := 1
+	}
+	L535 -> L327 {
+		assume not (((a7 = 1) or ((not (a8 = 1)) and (not (a12 = 1)) and (a0 = 1) and (a3 = 0) and (not (a19 = 1)) and (a11 = 1))) and (not (a5 = 1)) and (a18 = 1) and (a6 = 1) and (a10 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (input = 4) and (a1 = 1) and (a22 = 1))
+	}
+	L896 -> L232 {
+		assume not ((not (a6 = 1)) and (not (a25 = 1)) and (a3 = 1) and (a16 = 1) and (a26 = 1) and (not (a19 = 1)) and (not (a20 = 1)) and (a1 = 1) and (a18 = 1) and (not (a12 = 1)) and (input = 3) and (a5 = 1) and (not (a27 = 1)) and (not (a8 = 1)) and (not (a7 = 1)) and (not (a11 = 1)))
+	}
+	L1215 -> L336 {
+		assume not ((a5 = 1) and (not (a12 = 1)) and ((a16 = 1) or (a14 = 1) or (a19 = 1)) and (not (a17 = 1)) and (not (a25 = 1)) and (not (a11 = 1)) and (a18 = 1) and (a3 = 2) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 3) and (not (a2 = 1)) and (a6 = 1) and (a29 = 1))
+	}
+	L160 -> L754 {
+		assume (a5 = 1) and (a18 = 1) and (a0 = 1) and (a16 = 1) and (input = 2) and (((not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a27 = 1) and (not (a6 = 1)) and (a26 = 1))) and (not (a25 = 1)) and (not (a2 = 1)) and (a3 = 2) and (a22 = 1) and (not (a11 = 1)) and ((a29 = 1) or (not (a1 = 1)))
+		a12 := 1
+		a6 := 1
+		a26 := 1
+		a27 := 1
+		a2 := 0
+		a22 := 1
+		a3 := 0
+		a11 := 1
+	}
+	L281 -> L754 {
+		assume (a11 = 1) and (not (a6 = 1)) and (a27 = 1) and (a0 = 1) and (not (a23 = 1)) and (not (a12 = 1)) and (input = 5) and (not (a26 = 1)) and (a5 = 1) and (a3 = 2) and ((a23 = 1) or ((a4 = 1) and (a18 = 1) and (a15 = 1)) or (not (a0 = 1)) or (not (a29 = 1)))
+		a14 := 0
+		a29 := 1
+		a10 := 1
+	}
+	L1231 -> L349 {
+		assume not ((not (a26 = 1)) and (((a27 = 1) and (a10 = 1) and (not (a25 = 1)) and (a22 = 1)) or (not (a16 = 1))) and (not (a2 = 1)) and (not (a7 = 1)) and (a5 = 1) and (a18 = 1) and (a0 = 1) and (not (a11 = 1)) and (input = 2) and (a3 = 1) and (not (a6 = 1)) and (not (a12 = 1)))
+	}
+	L1215 -> L754 {
+		assume (a5 = 1) and (not (a12 = 1)) and ((a16 = 1) or (a14 = 1) or (a19 = 1)) and (not (a17 = 1)) and (not (a25 = 1)) and (not (a11 = 1)) and (a18 = 1) and (a3 = 2) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 3) and (not (a2 = 1)) and (a6 = 1) and (a29 = 1)
+		a27 := 1
+		a26 := 1
+		a11 := 1
+		a6 := 0
+		a22 := 1
+		a23 := 0
+		a20 := 0
+	}
+	L809 -> L754 {
+		assume ((a20 = 1) or ((a4 = 1) and ((a20 = 1) or ((a29 = 1) and (a5 = 1)))) or (not (a22 = 1))) and (a3 = 2) and (a27 = 1) and (not (a14 = 1)) and (not (a26 = 1)) and (a1 = 1) and (a18 = 1) and (not (a12 = 1)) and (input = 1) and (a11 = 1) and (not (a6 = 1))
+		a27 := 0
+		a1 := 1
+		a25 := 0
+		a6 := 1
+		a26 := 1
+		a3 := 1
+		a15 := 1
+	}
+	L896 -> L754 {
+		assume (not (a6 = 1)) and (not (a25 = 1)) and (a3 = 1) and (a16 = 1) and (a26 = 1) and (not (a19 = 1)) and (not (a20 = 1)) and (a1 = 1) and (a18 = 1) and (not (a12 = 1)) and (input = 3) and (a5 = 1) and (not (a27 = 1)) and (not (a8 = 1)) and (not (a7 = 1)) and (not (a11 = 1))
+		a6 := 1
+		a3 := 0
+		a11 := 1
+		a20 := 0
+		a14 := 0
+		a27 := 1
+		a12 := 1
+		a7 := 0
+	}
+	L63 -> L754 {
+		assume (not (a11 = 1)) and (a5 = 1) and (input = 2) and (a15 = 1) and (a1 = 1) and (a3 = 1) and (not (a12 = 1)) and (not (a6 = 1)) and (a0 = 1) and (not (a19 = 1)) and ((not (a16 = 1)) or ((a26 = 1) and (a15 = 1) and (a18 = 1) and (not (a27 = 1)))) and (not (a17 = 1))
+		a6 := 1
+		a25 := 0
+		a17 := 0
+		a23 := 0
+		a3 := 0
+		a27 := 1
+		a11 := 1
+		a12 := 1
+	}
+	L1187 -> L673 {
+		assume not ((((a18 = 1) and (not (a20 = 1)) and (a0 = 1) and (a12 = 1)) or (not (a1 = 1))) and (a11 = 1) and (not (a23 = 1)) and (not (a5 = 1)) and (input = 6) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (not (a14 = 1)) and (not (a20 = 1)) and (a6 = 1) and (a3 = 0) and (a1 = 1))
+	}
+	L646 -> L754 {
+		assume not (a7 = 1)
+		a19 := 0
+		a26 := 1
+		a0 := 1
+		a12 := 1
+		a3 := 2
+		a11 := 1
+		a27 := 1
+	}
+	L147 -> L97 {
+		assume not ((((a5 = 1) and (a3 = 2) and (a1 = 1) and (a18 = 1) and (a22 = 1) and (not (a11 = 1))) or (not (a0 = 1))) and (a12 = 1) and (a6 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 4) and (not (a8 = 1)) and (a4 = 1) and (not (a23 = 1)) and (a29 = 1))
+	}
+	L722 -> L1222 {
+		assume not ((not (a19 = 1)) and (a11 = 1) and (not (a5 = 1)) and (input = 1) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a12 = 1)) and (a22 = 1) and (a6 = 1) and (a18 = 1) and (a10 = 1) and (a3 = 0) and ((not (a16 = 1)) or (a22 = 1) or (not (a10 = 1)) or (not (a29 = 1))))
+	}
+	L232 -> L754 {
+		assume (a15 = 1) and (not (a25 = 1)) and (a3 = 2) and (a5 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a2 = 1)) and (not (a11 = 1)) and (a12 = 1) and (a18 = 1) and (not (a17 = 1)) and ((not (a16 = 1)) or ((a1 = 1) and (not (a6 = 1)))) and (a4 = 1)
+		a4 := 1
+		a11 := 1
+		a25 := 0
+		a26 := 1
+		a27 := 1
+		a3 := 0
+		a23 := 0
+		a6 := 1
+	}
+	L299 -> L1081 {
+		assume not ((not (a12 = 1)) and (not (a11 = 1)) and (a6 = 1) and (not (a17 = 1)) and (a5 = 1) and (not (a2 = 1)) and (input = 6) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (not (a7 = 1)) and (a29 = 1) and ((((not (a16 = 1)) or (a1 = 1)) and (a3 = 2)) or (a2 = 1)) and (a18 = 1))
+	}
+	L1035 -> L754 {
+		assume (not (a20 = 1)) and (a15 = 1) and (input = 1) and (((a12 = 1) and (not (a27 = 1)) and (not (a26 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (not (a8 = 1)) and (a5 = 1) and (a11 = 1) and (not (a17 = 1)) and (a4 = 1) and (a6 = 1) and (not (a19 = 1)) and (a18 = 1) and (a3 = 2) and (a0 = 1)
+		a16 := 1
+		a22 := 1
+		a8 := 0
+		a3 := 0
+		a26 := 1
+		a12 := 1
+		a27 := 1
+	}
+	L90 -> L754 {
+		assume (a1 = 1) and (a5 = 1) and (not (a26 = 1)) and (a0 = 1) and (not (a6 = 1)) and (not (a23 = 1)) and (not (a11 = 1)) and (a3 = 1) and (input = 2) and (not (a27 = 1)) and (not (a12 = 1)) and (a0 = 1) and (not (a19 = 1)) and (not (a17 = 1)) and (a18 = 1) and (a16 = 1)
+		a3 := 0
+		a12 := 1
+		a11 := 1
+		a6 := 1
+		a14 := 0
+		a27 := 1
+		a0 := 1
+		a7 := 0
+		a26 := 1
+	}
+	L663 -> L754 {
+		assume (not (a26 = 1)) and (a6 = 1) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1)
+	}
+	L752 -> L27 {
+		assume not ((a11 = 1) and (not (a8 = 1)) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 6) and (not (a5 = 1)) and (a3 = 0) and (a18 = 1) and ((not (a4 = 1)) or ((a1 = 1) and (not (a8 = 1)) and (a6 = 1)) or (a14 = 1) or (not (a0 = 1))) and (a4 = 1))
+	}
+	L690 -> L894 {
+		assume not ((a29 = 1) and (a22 = 1) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 5) and (a6 = 1) and (a5 = 1) and (a3 = 2) and (not (a20 = 1)) and (not (a2 = 1)) and (a11 = 1) and ((not (a16 = 1)) or (a1 = 1)) and (not (a25 = 1)) and (a18 = 1) and (a12 = 1))
+	}
+	L1170 -> L1020 {
+		assume not ((a18 = 1) and (not (a14 = 1)) and (a4 = 1) and (a16 = 1) and (input = 3) and ((a26 = 1) or (not (a26 = 1))) and (a22 = 1) and (a11 = 1) and (a5 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1) and (a22 = 1) and (a10 = 1) and (a0 = 1) and (a3 = 2))
+	}
+	L891 -> L754 {
+		assume a0 = 1
+		a17 := 1
+		a3 := 2
+		a20 := 1
+		a27 := 0
+		a26 := 0
+		a12 := 0
+		a11 := 0
+		a5 := 1
+		a1 := 0
+	}
+	L38 -> L318 {
+		assume not ((a18 = 1) and (((not (a20 = 1)) and (a0 = 1)) or (a20 = 1)) and (a1 = 1) and (a3 = 2) and (a1 = 1) and (a5 = 1) and (((a27 = 1) and (a26 = 1) and (a6 = 1) and (a12 = 1) and (not (a11 = 1))) or ((not (a27 = 1)) and (not (a6 = 1)) and (a26 = 1) and (not (a12 = 1)) and (a11 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (a11 = 1))) and (input = 1) and (not (a7 = 1)) and (a15 = 1))
+	}
+	L435 -> L754 {
+		assume (not (a2 = 1)) and (a3 = 2) and (a5 = 1) and (a12 = 1) and (not (a11 = 1)) and (a6 = 1) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a15 = 1) and (a10 = 1) and ((not (a0 = 1)) or ((not (a7 = 1)) and (a4 = 1) and (a22 = 1) and (a18 = 1)))
+		a12 := 0
+		a25 := 0
+		a3 := 0
+		a15 := 1
+		a26 := 1
+		a6 := 0
+		a27 := 1
+	}
+	L1043 -> L814 {
+		assume (a16 = 1) and (not (a5 = 1)) and (a3 = 0) and (input = 2) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (a6 = 1) and ((not (a29 = 1)) or (a17 = 1) or (((a17 = 1) or ((a15 = 1) and (a11 = 1)) or (not (a10 = 1))) and (a18 = 1)) or (a7 = 1))
+	}
+	L783 -> L754 {
+		assume ((a8 = 1) or (a14 = 1) or ((a22 = 1) and (a11 = 1) and (not (a6 = 1)))) and (not (a27 = 1)) and (a12 = 1) and (a16 = 1) and (not (a17 = 1)) and (a5 = 1) and (a4 = 1) and (a3 = 2) and (a0 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 2) and (a18 = 1)
+		a26 := 1
+		a6 := 1
+		a27 := 1
+		a3 := 0
+		a29 := 1
+		a0 := 1
+		a15 := 1
+	}
+	L783 -> L1171 {
+		assume not (((a8 = 1) or (a14 = 1) or ((a22 = 1) and (a11 = 1) and (not (a6 = 1)))) and (not (a27 = 1)) and (a12 = 1) and (a16 = 1) and (not (a17 = 1)) and (a5 = 1) and (a4 = 1) and (a3 = 2) and (a0 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 2) and (a18 = 1))
+	}
+	L132 -> L754 {
+		assume ((not (a29 = 1)) or ((not (a11 = 1)) and (a22 = 1) and (a16 = 1) and (a5 = 1))) and (a10 = 1) and (not (a7 = 1)) and (a29 = 1) and (((not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (a6 = 1)) or ((a12 = 1) and (not (a6 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 4) and (a18 = 1) and (a3 = 2) and (a29 = 1)
+		a22 := 1
+		a6 := 1
+		a4 := 1
+		a3 := 0
+		a0 := 1
+		a11 := 1
+		a12 := 1
+		a26 := 1
+		a27 := 1
+	}
+	L487 -> L754 {
+		assume (a26 = 1) and (a6 = 1) and (a27 = 1) and (a12 = 1) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L336 -> L754 {
+		assume (not (a12 = 1)) and ((((a19 = 1) or ((a22 = 1) and (not (a6 = 1)))) and (a5 = 1)) or (not (a16 = 1))) and (not (a26 = 1)) and (a4 = 1) and (a16 = 1) and (input = 3) and (not (a11 = 1)) and (not (a25 = 1)) and (a27 = 1) and (a18 = 1) and (a10 = 1) and (a3 = 1)
+		a6 := 1
+		a11 := 1
+		a3 := 2
+		a7 := 0
+		a12 := 1
+		a17 := 0
+	}
+	L812 -> L718 {
+		assume (not (a17 = 1)) and (not (a11 = 1)) and (a1 = 1) and (a18 = 1) and (a6 = 1) and (a3 = 2) and (a4 = 1) and (a16 = 1) and (not (a20 = 1)) and (a15 = 1) and (((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a14 = 1)) and (a5 = 1) and (not (a12 = 1))
+	}
+	L930 -> L1163 {
+		assume (not (a20 = 1)) and ((not (a10 = 1)) or ((a6 = 1) and ((not (a0 = 1)) or (a10 = 1)) and (not (a2 = 1))) or (not (a1 = 1))) and (not (a14 = 1)) and (a11 = 1) and (a18 = 1) and (a12 = 1) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a5 = 1)) and (a3 = 0)
+	}
+	L673 -> L967 {
+		assume not ((not (a19 = 1)) and (a4 = 1) and (a18 = 1) and (a0 = 1) and (a11 = 1) and (not (a5 = 1)) and (a10 = 1) and (a15 = 1) and (not (a14 = 1)) and (a6 = 1) and (a3 = 0) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 1) and (a16 = 1))
+	}
+	L281 -> L430 {
+		assume not ((a11 = 1) and (not (a6 = 1)) and (a27 = 1) and (a0 = 1) and (not (a23 = 1)) and (not (a12 = 1)) and (input = 5) and (not (a26 = 1)) and (a5 = 1) and (a3 = 2) and ((a23 = 1) or ((a4 = 1) and (a18 = 1) and (a15 = 1)) or (not (a0 = 1)) or (not (a29 = 1))))
+	}
+	L993 -> L754 {
+		assume (((a11 = 1) and (a6 = 1) and (not (a7 = 1)) and (a22 = 1) and (a18 = 1) and (a5 = 1)) or (a14 = 1)) and (a16 = 1) and (a29 = 1) and (a10 = 1) and (not (a2 = 1)) and (((a26 = 1) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 1) and (a3 = 2) and (a12 = 1)
+		a26 := 1
+		a3 := 0
+		a27 := 1
+		a25 := 0
+		a23 := 0
+		a4 := 1
+	}
+	L318 -> L754 {
+		assume (((a18 = 1) and ((a25 = 1) or ((not (a11 = 1)) and (a4 = 1) and (a3 = 2))) and (a0 = 1) and (a5 = 1)) or (a7 = 1)) and (a10 = 1) and (not (a14 = 1)) and (input = 6) and (((not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a27 = 1) and (not (a6 = 1)) and (a26 = 1))) and (a4 = 1)
+		a11 := 1
+		a26 := 1
+		a12 := 1
+		a3 := 0
+		a7 := 0
+		a27 := 1
+		a4 := 1
+		a0 := 1
+		a6 := 1
+	}
+	L882 -> L861 {
+		assume not (((not (a16 = 1)) or ((not (a26 = 1)) and (a15 = 1) and (a3 = 2) and (not (a17 = 1)))) and (a29 = 1) and (a5 = 1) and (not (a23 = 1)) and (not (a23 = 1)) and (a27 = 1) and (not (a12 = 1)) and (not (a6 = 1)) and (input = 4) and (a18 = 1) and (a11 = 1) and (a16 = 1))
+	}
+	L1020 -> L754 {
+		assume (not (a25 = 1)) and (((a11 = 1) and (not (a14 = 1)) and (not (a27 = 1)) and (a15 = 1) and (a12 = 1) and (a5 = 1) and (a3 = 2) and (not (a2 = 1))) or (not (a15 = 1))) and (not (a6 = 1)) and (a22 = 1) and (a29 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 4) and (a18 = 1)
+		a27 := 1
+		a16 := 1
+		a6 := 1
+		a3 := 0
+		a26 := 1
+		a0 := 1
+		a10 := 1
+	}
+	L132 -> L297 {
+		assume not (((not (a29 = 1)) or ((not (a11 = 1)) and (a22 = 1) and (a16 = 1) and (a5 = 1))) and (a10 = 1) and (not (a7 = 1)) and (a29 = 1) and (((not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (a6 = 1)) or ((a12 = 1) and (not (a6 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 4) and (a18 = 1) and (a3 = 2) and (a29 = 1))
+	}
+	L162 -> L754 {
+		assume (((a22 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (a22 = 1) and (a3 = 1) and (not (a12 = 1)) and (a0 = 1) and (not (a20 = 1))) or (not (a16 = 1))) and (not (a26 = 1)) and (a29 = 1) and (not (a14 = 1)) and (not (a11 = 1)) and (a5 = 1) and (input = 4) and (a18 = 1)
+		a11 := 1
+		a10 := 1
+		a12 := 1
+		a26 := 1
+		a15 := 1
+		a6 := 1
+		a3 := 0
+		a27 := 1
+		a29 := 1
+	}
+	L91 -> L147 {
+		assume not ((a12 = 1) and (not (a6 = 1)) and (a11 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 5) and (a3 = 2) and (not (a14 = 1)) and ((not (a15 = 1)) or ((a15 = 1) and ((not (a0 = 1)) or ((((a18 = 1) and (a5 = 1) and (a1 = 1)) or (a19 = 1)) and (a27 = 1)))) or (a2 = 1)))
+	}
+	L507 -> L754 {
+		assume (not (a2 = 1)) and (input = 3) and (((a26 = 1) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (a6 = 1) and (a18 = 1) and (a3 = 2) and (not (a23 = 1)) and (a5 = 1) and ((((a17 = 1) or (a22 = 1)) and (not (a25 = 1))) or (a20 = 1)) and (a4 = 1) and (a12 = 1) and (a11 = 1)
+		a3 := 0
+		a22 := 1
+		a26 := 1
+		a14 := 0
+		a29 := 1
+		a27 := 1
+	}
+	L737 -> L1186 {
+		assume (not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (a12 = 1) and (a3 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1)
+	}
+	L27 -> L744 {
+		assume not ((not (a17 = 1)) and (not (a8 = 1)) and (a4 = 1) and (a18 = 1) and (a3 = 2) and (not (a6 = 1)) and (not (a17 = 1)) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (input = 2) and (a5 = 1) and (not (a11 = 1)) and ((a4 = 1) or (a2 = 1) or (not (a10 = 1))))
+	}
+	L875 -> L754 {
+		assume (not (a11 = 1)) and (a18 = 1) and (not (a23 = 1)) and (a5 = 1) and (input = 1) and (((a12 = 1) and (not (a27 = 1)) and (not (a26 = 1))) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (not (a6 = 1)) and (not (a14 = 1)) and (a16 = 1) and (a3 = 2) and ((not (a10 = 1)) or (a19 = 1) or ((not (a7 = 1)) and (a0 = 1)))
+		a12 := 0
+		a26 := 1
+		a11 := 1
+		a3 := 0
+		a22 := 0
+		a27 := 1
+		a7 := 1
+	}
+	L228 -> L754 {
+		assume (a4 = 1) and (a12 = 1) and (a6 = 1) and (a18 = 1) and (a10 = 1) and (a16 = 1) and (a0 = 1) and (a5 = 1) and (not (a11 = 1)) and (not (a17 = 1)) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (not (a20 = 1)) and (a3 = 2) and (a16 = 1)
+		a27 := 1
+		a26 := 1
+		a8 := 0
+		a11 := 1
+		a3 := 1
+		a15 := 1
+	}
+	L1222 -> L1244 {
+		assume not ((a4 = 1) and (a22 = 1) and (a11 = 1) and (a0 = 1) and (input = 6) and (a18 = 1) and (a29 = 1) and (not (a6 = 1)) and (a3 = 2) and (a27 = 1) and (((a5 = 1) and (not (a12 = 1)) and (a26 = 1) and (a22 = 1) and (a1 = 1)) or (not (a22 = 1))))
+	}
+	L640 -> L783 {
+		assume not ((a3 = 2) and (a29 = 1) and (a10 = 1) and ((a17 = 1) or ((a15 = 1) and (a22 = 1) and (not (a12 = 1)) and (a29 = 1))) and (a6 = 1) and (not (a11 = 1)) and (((a26 = 1) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 4) and (a29 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L813 -> L754 {
+		assume (a6 = 1) and (a12 = 1) and (a2 = 1) and (a22 = 1) and (a23 = 1) and (a8 = 1) and (a7 = 1) and (not (a11 = 1)) and (a3 = 2) and (a19 = 1) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a5 = 1) and (a18 = 1) and (a17 = 1)
+		a27 := 0
+		a8 := 1
+		a12 := 0
+		a13 := 1
+		a11 := 1
+		a26 := 1
+	}
+	L286 -> L754 {
+		assume not (a11 = 1)
+		a3 := 2
+		a11 := 1
+		a6 := 1
+		a12 := 0
+		a5 := 1
+		a27 := 1
+		a13 := 0
+		a26 := 1
+		a25 := 1
+		a21 := 1
+	}
+	L506 -> L355 {
+		assume not ((a6 = 1) and (not (a7 = 1)) and (a11 = 1) and (input = 5) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a18 = 1) and (not (a2 = 1)) and (not (a19 = 1)) and (a10 = 1) and (not (a12 = 1)) and (a3 = 0) and ((not (a0 = 1)) or ((a22 = 1) and (not (a8 = 1)))) and (not (a5 = 1)))
+	}
+	L1086 -> L957 {
+		assume not (((not (a1 = 1)) or ((a10 = 1) and (a4 = 1) and (not (a8 = 1)))) and (not (a11 = 1)) and (not (a14 = 1)) and (a18 = 1) and (not (a12 = 1)) and (a3 = 2) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 5) and (not (a8 = 1)) and (a16 = 1) and (a6 = 1) and (a5 = 1))
+	}
+	L245 -> L640 {
+		assume not ((a6 = 1) and ((a19 = 1) or (((a8 = 1) or ((not (a12 = 1)) and (((a5 = 1) and (a10 = 1)) or (not (a4 = 1))))) and (a11 = 1))) and (a18 = 1) and (not (a19 = 1)) and (a1 = 1) and (input = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (a3 = 2) and (not (a20 = 1)))
+	}
+	L63 -> L162 {
+		assume not ((not (a11 = 1)) and (a5 = 1) and (input = 2) and (a15 = 1) and (a1 = 1) and (a3 = 1) and (not (a12 = 1)) and (not (a6 = 1)) and (a0 = 1) and (not (a19 = 1)) and ((not (a16 = 1)) or ((a26 = 1) and (a15 = 1) and (a18 = 1) and (not (a27 = 1)))) and (not (a17 = 1)))
+	}
+	L127 -> L754 {
+		assume (a27 = 1) and (not (a12 = 1)) and (a11 = 1) and (not (a2 = 1)) and (a18 = 1) and (not (a25 = 1)) and (a3 = 2) and (input = 2) and (a15 = 1) and (a29 = 1) and (a15 = 1) and (not (a25 = 1)) and (a5 = 1) and (a10 = 1) and (a26 = 1) and (not (a6 = 1))
+		a17 := 0
+		a15 := 1
+		a2 := 0
+	}
+	L1219 -> L754 {
+		assume (not (a14 = 1)) and (a0 = 1) and (a18 = 1) and (a16 = 1) and (not (a19 = 1)) and (not (a23 = 1)) and (a5 = 1) and (a3 = 2) and (input = 6) and (((a11 = 1) and (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1))) or ((a11 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (not (a11 = 1)))) and (not (a19 = 1)) and (a16 = 1)
+		a11 := 1
+		a6 := 0
+		a12 := 0
+		a26 := 0
+		a1 := 1
+		a19 := 0
+		a20 := 0
+		a27 := 0
+	}
+	L903 -> L754 {
+		assume not (a29 = 1)
+		a5 := 1
+		a11 := 0
+		a16 := 0
+		a26 := 0
+		a20 := 1
+		a6 := 0
+		a27 := 1
+	}
+	L229 -> L766 {
+		assume not (((not (a10 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a7 = 1)) and (a22 = 1))) and (not (a6 = 1)) and (a3 = 1) and (not (a11 = 1)) and (not (a20 = 1)) and (a0 = 1) and (not (a2 = 1)) and (a18 = 1) and (a5 = 1) and (input = 5) and (not (a19 = 1)) and (a26 = 1))
+	}
+	L308 -> L754 {
+		assume not (a29 = 1)
+		a29 := 0
+		a3 := 2
+		a26 := 0
+		a4 := 0
+		a12 := 0
+		a5 := 1
+		a27 := 0
+	}
+	L641 -> L754 {
+		assume (not (a26 = 1)) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 0) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1)
+	}
+	L167 -> L754 {
+		assume (not (a7 = 1)) and (not (a20 = 1)) and (a6 = 1) and (a3 = 2) and (input = 3) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1))) or ((not (a27 = 1)) and (not (a26 = 1)))) and (not (a12 = 1)) and (a4 = 1) and (a11 = 1) and (a18 = 1) and ((not (a10 = 1)) or (((a15 = 1) or (a25 = 1)) and (a5 = 1))) and (not (a2 = 1))
+		a10 := 1
+		a12 := 1
+		a27 := 1
+		a29 := 1
+		a14 := 0
+		a3 := 0
+		a26 := 1
+	}
+	L6 -> L1018 {
+		assume not ((a18 = 1) and (a1 = 1) and (a0 = 1) and (not (a6 = 1)) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (input = 3) and (not (a11 = 1)) and (a0 = 1) and (a16 = 1) and (a3 = 2) and (a5 = 1) and (a0 = 1) and (a1 = 1) and (a16 = 1))
+	}
+	L825 -> L754 {
+		assume (a18 = 1) and ((a7 = 1) or ((not (a2 = 1)) and (((a16 = 1) and (a11 = 1) and (a6 = 1) and (not (a23 = 1))) or (a23 = 1)))) and (a5 = 1) and (a3 = 2) and (not (a14 = 1)) and (a12 = 1) and (input = 2) and (((a26 = 1) and (a27 = 1)) or ((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a22 = 1)
+		a17 := 0
+		a19 := 0
+		a6 := 0
+		a26 := 1
+		a27 := 0
+		a1 := 1
+	}
+	L465 -> L754 {
+		assume (a11 = 1) and (a16 = 1) and (a6 = 1) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (a18 = 1) and (a3 = 0) and (a10 = 1) and (((not (a5 = 1)) and ((a15 = 1) or (a25 = 1))) or (a7 = 1)) and (not (a2 = 1)) and (not (a25 = 1))
+		a26 := 1
+		a29 := 0
+		a0 := 0
+		a27 := 0
+		a12 := 1
+		a6 := 0
+		a5 := 1
+		a8 := 1
+	}
+	L745 -> L754 {
+		assume (not (a7 = 1)) and (a6 = 1) and (a5 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a18 = 1) and (a12 = 1) and (not (a8 = 1)) and (((a4 = 1) and (a0 = 1) and (a3 = 2) and (a10 = 1) and (not (a11 = 1)) and (a0 = 1)) or (a8 = 1))
+		a10 := 1
+		a27 := 0
+		a2 := 0
+		a23 := 0
+		a26 := 0
+		a3 := 1
+	}
+	L950 -> L754 {
+		assume (not (a11 = 1)) and (a12 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 3) and (not (a8 = 1)) and (not (a19 = 1)) and (not (a14 = 1)) and (a0 = 1) and (a3 = 2) and (((a5 = 1) and (not (a6 = 1)) and (a29 = 1)) or (a17 = 1)) and (a16 = 1) and (a18 = 1)
+		a7 := 0
+		a22 := 1
+		a16 := 1
+		a3 := 0
+		a26 := 0
+		a27 := 0
+	}
+	L345 -> L887 {
+		assume not ((not (a17 = 1)) and (a1 = 1) and (a15 = 1) and (not (a11 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (a15 = 1) and (a12 = 1) and (a18 = 1) and (a16 = 1) and (a3 = 2) and (a22 = 1) and (a5 = 1) and (a6 = 1) and (not (a8 = 1)))
+	}
+	L692 -> L1 {
+		assume (input_m /= 1) and (input_m /= 2) and (input_m /= 3) and (input_m /= 4) and (input_m /= 5) and (input_m /= 6)
+	}
+	L1163 -> L754 {
+		assume a22 = 1
+		a16 := 0
+		a3 := 2
+		a23 := 1
+		a27 := 0
+		a11 := 0
+		a5 := 1
+		a26 := 1
+		a1 := 0
+	}
+	L1218 -> L754 {
+		assume not (a23 = 1)
+		a27 := 1
+		a26 := 1
+		a25 := 0
+		a11 := 1
+		a4 := 1
+		a6 := 0
+	}
+	L1198 -> L86 {
+		assume not ((a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L826 -> L813 {
+		assume not ((not (a14 = 1)) and (a0 = 1) and (a15 = 1) and (not (a8 = 1)) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a25 = 1)) and (a5 = 1) and (not (a6 = 1)) and (a18 = 1) and (not (a11 = 1)) and (a3 = 2) and (a12 = 1) and (a10 = 1) and (not (a23 = 1)))
+	}
+	L478 -> L754 {
+		assume (a5 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (a29 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 2) and (not (a19 = 1)) and (not (a23 = 1)) and (not (a6 = 1)) and (not (a20 = 1)) and (not (a12 = 1)) and (a29 = 1) and (a22 = 1) and (a3 = 2) and (a18 = 1)
+		a6 := 1
+		a11 := 1
+		a29 := 0
+		a26 := 1
+		a27 := 0
+		a13 := 1
+		a2 := 1
+	}
+	L813 -> L441 {
+		assume not ((a6 = 1) and (a12 = 1) and (a2 = 1) and (a22 = 1) and (a23 = 1) and (a8 = 1) and (a7 = 1) and (not (a11 = 1)) and (a3 = 2) and (a19 = 1) and (input = 3) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a5 = 1) and (a18 = 1) and (a17 = 1))
+	}
+	L791 -> L286 {
+		assume (a16 = 1) and (a18 = 1) and (input = 2) and (((a5 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (a3 = 2) and (not (a11 = 1))) or ((not (a5 = 1)) and (a11 = 1) and (a12 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a3 = 0))) and (a10 = 1) and (a29 = 1) and (a0 = 1) and (a15 = 1) and (not (a14 = 1)) and (not (a2 = 1))
+	}
+	L1172 -> L754 {
+		assume ((not (a22 = 1)) or (a19 = 1) or (not (a10 = 1)) or ((a12 = 1) and (not (a27 = 1)) and (a0 = 1) and (a18 = 1) and (a11 = 1))) and (not (a20 = 1)) and (a10 = 1) and (a5 = 1) and (not (a6 = 1)) and (a0 = 1) and (input = 5) and ((a26 = 1) or (not (a26 = 1))) and (a3 = 2)
+		a6 := 1
+		a23 := 0
+		a7 := 0
+		a15 := 1
+		a3 := 0
+		a26 := 1
+		a27 := 1
+	}
+	L1091 -> L798 {
+		assume not ((a4 = 1) and (a6 = 1) and (a10 = 1) and (not (a11 = 1)) and (a12 = 1) and (not (a7 = 1)) and (a5 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 6) and (a3 = 2) and (a16 = 1) and (not (a23 = 1)) and (a18 = 1) and (a0 = 1) and (not (a19 = 1)))
+	}
+	L337 -> L754 {
+		assume (a3 = 1) and ((a23 = 1) or (a15 = 1) or (not (a15 = 1))) and (a26 = 1) and (not (a14 = 1)) and (not (a19 = 1)) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (a5 = 1) and (a0 = 1) and (a10 = 1) and (input = 4) and (a18 = 1) and (not (a11 = 1))
+		a3 := 0
+		a29 := 1
+		a12 := 1
+		a11 := 1
+		a15 := 1
+		a6 := 1
+		a0 := 1
+		a27 := 1
+	}
+	L787 -> L903 {
+		assume (a12 = 1) and ((a2 = 1) or (a10 = 1)) and (not (a25 = 1)) and (a3 = 0) and (a18 = 1) and (not (a23 = 1)) and (a15 = 1) and (a29 = 1) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (input = 1) and (not (a5 = 1)) and (a11 = 1) and (a1 = 1) and (a6 = 1)
+	}
+	L861 -> L242 {
+		assume not ((a15 = 1) and (((a11 = 1) and (((a5 = 1) and ((not (a10 = 1)) or (a1 = 1)) and (a3 = 2)) or (a7 = 1))) or (not (a22 = 1))) and (a18 = 1) and (not (a6 = 1)) and (not (a12 = 1)) and (input = 3) and (a1 = 1) and (a29 = 1) and (a27 = 1) and (not (a26 = 1)))
+	}
+	L40 -> L754 {
+		assume (a26 = 1) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L613 -> L754 {
+		assume (a0 = 1) and (not (a6 = 1)) and (((a3 = 1) and (not (a12 = 1)) and ((a8 = 1) or ((a22 = 1) and (not (a23 = 1))))) or (not (a10 = 1))) and (not (a11 = 1)) and (not (a27 = 1)) and (a26 = 1) and (not (a14 = 1)) and (input = 1) and (a5 = 1) and (a29 = 1) and (a18 = 1)
+		a1 := 1
+		a11 := 1
+		a12 := 1
+		a3 := 0
+		a27 := 1
+		a19 := 0
+		a6 := 1
+		a2 := 0
+	}
+	L217 -> L754 {
+		assume a2 = 1
+		a12 := 1
+		a15 := 0
+		a2 := 1
+		a27 := 1
+		a6 := 0
+		a26 := 1
+		a3 := 2
+		a5 := 1
+	}
+	L38 -> L754 {
+		assume (a18 = 1) and (((not (a20 = 1)) and (a0 = 1)) or (a20 = 1)) and (a1 = 1) and (a3 = 2) and (a1 = 1) and (a5 = 1) and (((a27 = 1) and (a26 = 1) and (a6 = 1) and (a12 = 1) and (not (a11 = 1))) or ((not (a27 = 1)) and (not (a6 = 1)) and (a26 = 1) and (not (a12 = 1)) and (a11 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (a11 = 1))) and (input = 1) and (not (a7 = 1)) and (a15 = 1)
+		a6 := 0
+		a26 := 1
+		a1 := 1
+		a23 := 0
+		a27 := 1
+		a12 := 0
+		a11 := 1
+		a14 := 0
+		a3 := 1
+	}
+	L1222 -> L754 {
+		assume (a4 = 1) and (a22 = 1) and (a11 = 1) and (a0 = 1) and (input = 6) and (a18 = 1) and (a29 = 1) and (not (a6 = 1)) and (a3 = 2) and (a27 = 1) and (((a5 = 1) and (not (a12 = 1)) and (a26 = 1) and (a22 = 1) and (a1 = 1)) or (not (a22 = 1)))
+		a20 := 0
+		a14 := 0
+		a25 := 0
+	}
+	L903 -> L754 {
+		assume a29 = 1
+		a5 := 1
+		a21 := 0
+		a12 := 0
+		a11 := 0
+		a26 := 0
+		a22 := 0
+		a3 := 1
+		a13 := 0
+		a27 := 0
+	}
+	L589 -> L884 {
+		assume not ((a16 = 1) and (a3 = 2) and (a11 = 1) and ((a20 = 1) or ((a16 = 1) and (a18 = 1))) and (a22 = 1) and (a15 = 1) and (a22 = 1) and (a5 = 1) and (((not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 2) and (not (a17 = 1)) and (not (a12 = 1)) and (a6 = 1))
+	}
+	L913 -> L754 {
+		assume not (a13 = 1)
+		a8 := 1
+		a3 := 2
+		a27 := 1
+		a29 := 0
+		a5 := 1
+		a6 := 0
+		a11 := 0
+		a12 := 1
+		a26 := 0
+	}
+	L919 -> L875 {
+		assume not ((a1 = 1) and (a15 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (not (a14 = 1)) and (input = 3) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a10 = 1) and (not (a6 = 1)) and (a5 = 1) and (a1 = 1) and (a3 = 2) and (not (a12 = 1)) and (a10 = 1) and (a18 = 1))
+	}
+	L229 -> L754 {
+		assume ((not (a10 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a7 = 1)) and (a22 = 1))) and (not (a6 = 1)) and (a3 = 1) and (not (a11 = 1)) and (not (a20 = 1)) and (a0 = 1) and (not (a2 = 1)) and (a18 = 1) and (a5 = 1) and (input = 5) and (not (a19 = 1)) and (a26 = 1)
+		a16 := 1
+		a22 := 1
+		a11 := 1
+		a3 := 2
+		a27 := 1
+		a6 := 1
+	}
+	L894 -> L754 {
+		assume ((not (a15 = 1)) or ((not (a23 = 1)) and (((a0 = 1) and (not (a11 = 1))) or (a20 = 1)) and (a5 = 1) and (a6 = 1) and (a1 = 1)) or (a8 = 1)) and (a0 = 1) and (a3 = 2) and (input = 3) and (a12 = 1) and (not (a27 = 1)) and (a18 = 1) and (not (a26 = 1))
+		a26 := 1
+		a11 := 1
+		a23 := 0
+		a10 := 1
+		a6 := 0
+		a12 := 0
+		a3 := 1
+		a4 := 1
+	}
+	L86 -> L754 {
+		assume (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (a12 = 1) and (a3 = 0) and (a11 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L814 -> L754 {
+		assume a0 = 1
+		a6 := 0
+		a13 := 0
+		a5 := 1
+		a7 := 1
+		a12 := 0
+		a2 := 1
+		a26 := 0
+		a27 := 1
+	}
+	L49 -> L754 {
+		assume (not (a26 = 1)) and (a5 = 1) and (a18 = 1) and (a4 = 1) and (not (a11 = 1)) and (not (a6 = 1)) and (a29 = 1) and (not (a23 = 1)) and (not (a7 = 1)) and (not (a25 = 1)) and (not (a27 = 1)) and (input = 1) and (a3 = 1) and (a10 = 1) and (not (a14 = 1)) and (not (a12 = 1))
+		a26 := 1
+		a11 := 1
+		a3 := 0
+		a27 := 1
+		a6 := 1
+		a12 := 1
+		a15 := 1
+		a4 := 1
+	}
+	L455 -> L663 {
+		assume not ((a26 = 1) and (a6 = 1) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L175 -> L722 {
+		assume not ((a18 = 1) and (a27 = 1) and (not (a11 = 1)) and (input = 4) and (not (a2 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (not (a26 = 1)) and ((a25 = 1) or ((not (a8 = 1)) and ((a19 = 1) or (a16 = 1)) and (not (a17 = 1)) and (not (a8 = 1)))) and (a3 = 1) and (a5 = 1))
+	}
+	L318 -> L950 {
+		assume not ((((a18 = 1) and ((a25 = 1) or ((not (a11 = 1)) and (a4 = 1) and (a3 = 2))) and (a0 = 1) and (a5 = 1)) or (a7 = 1)) and (a10 = 1) and (not (a14 = 1)) and (input = 6) and (((not (a26 = 1)) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1))) or ((a12 = 1) and (a27 = 1) and (not (a6 = 1)) and (a26 = 1))) and (a4 = 1))
+	}
+	L857 -> L754 {
+		assume (not (a16 = 1)) and (a3 = 2) and (not (a22 = 1)) and (not (a10 = 1)) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (a12 = 1) and (a25 = 1) and (a20 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1) and (a1 = 1) and (not (a15 = 1)) and (a6 = 1)
+		a12 := 0
+		a14 := 1
+		a27 := 0
+		a26 := 0
+	}
+	L1093 -> L754 {
+		assume (a18 = 1) and ((not (a22 = 1)) or ((a15 = 1) and (a4 = 1)) or (a25 = 1)) and (a5 = 1) and (not (a11 = 1)) and (a3 = 2) and (not (a7 = 1)) and (input = 3) and (((not (a12 = 1)) and (a6 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1))) and (a22 = 1) and (a0 = 1)
+		a26 := 0
+		a1 := 1
+		a11 := 1
+		a27 := 0
+		a6 := 0
+		a22 := 1
+		a12 := 0
+		a14 := 0
+	}
+	L238 -> L738 {
+		assume not ((((a29 = 1) and (a15 = 1)) or (a14 = 1)) and (a4 = 1) and (not (a5 = 1)) and (a18 = 1) and (a12 = 1) and (not (a2 = 1)) and (not (a23 = 1)) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (input = 4) and (not (a17 = 1)) and (a3 = 0) and (a6 = 1) and (a11 = 1))
+	}
+	L226 -> L754 {
+		assume not (a18 = 1)
+		a12 := 0
+		a29 := 1
+		a26 := 1
+		a27 := 1
+		a6 := 0
+		a1 := 1
+	}
+	L791 -> L994 {
+		assume not ((a16 = 1) and (a18 = 1) and (input = 2) and (((a5 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (a3 = 2) and (not (a11 = 1))) or ((not (a5 = 1)) and (a11 = 1) and (a12 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a3 = 0))) and (a10 = 1) and (a29 = 1) and (a0 = 1) and (a15 = 1) and (not (a14 = 1)) and (not (a2 = 1)))
+	}
+	L172 -> L535 {
+		assume not ((a18 = 1) and (not (a2 = 1)) and (input = 5) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((not (a12 = 1)) and (a26 = 1) and (a27 = 1))) and (not (a7 = 1)) and (a29 = 1) and (a0 = 1) and (a11 = 1) and (a6 = 1) and ((a7 = 1) or (not (a10 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a0 = 1))))
+	}
+	L11 -> L754 {
+		assume (not (a25 = 1)) and ((((a22 = 1) or (a8 = 1)) and (a18 = 1)) or (not (a15 = 1))) and (not (a12 = 1)) and (a6 = 1) and (a5 = 1) and (a11 = 1) and (a3 = 2) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a14 = 1)) and (a16 = 1) and (not (a20 = 1))
+		a27 := 1
+		a12 := 1
+		a3 := 0
+		a10 := 1
+		a26 := 1
+		a25 := 0
+		a16 := 1
+	}
+	L286 -> L754 {
+		assume a11 = 1
+		a26 := 1
+		a12 := 0
+		a27 := 0
+		a14 := 1
+		a5 := 1
+		a11 := 1
+		a3 := 0
+		a6 := 0
+	}
+	L379 -> L754 {
+		assume a15 = 1
+		a11 := 0
+		a0 := 0
+		a26 := 1
+		a6 := 0
+		a27 := 1
+		a5 := 1
+		a3 := 2
+	}
+	L663 -> L1198 {
+		assume not ((not (a26 = 1)) and (a6 = 1) and (a27 = 1) and (not (a12 = 1)) and (a3 = 1) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1))
+	}
+	L997 -> L1215 {
+		assume not ((not (a14 = 1)) and (a18 = 1) and (input = 4) and (((not (a11 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a12 = 1)) and (a3 = 2) and (a5 = 1)) or ((not (a5 = 1)) and (a3 = 0) and (a12 = 1) and (a26 = 1) and (a6 = 1) and (a27 = 1) and (a11 = 1))) and (not (a25 = 1)) and (not (a2 = 1)) and (a10 = 1) and (not (a7 = 1)) and (a10 = 1) and (not (a19 = 1)))
+	}
+	L744 -> L754 {
+		assume (a15 = 1) and (a3 = 2) and (a5 = 1) and (input = 1) and (((not (a12 = 1)) and (a6 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a6 = 1)) and (a12 = 1))) and (not (a11 = 1)) and (a29 = 1) and ((a8 = 1) or ((a18 = 1) and (not (a7 = 1)) and (a15 = 1) and (not (a19 = 1)) and (a22 = 1)))
+		a12 := 1
+		a27 := 1
+		a26 := 1
+		a25 := 0
+		a6 := 1
+		a3 := 0
+		a16 := 1
+		a10 := 1
+		a11 := 1
+	}
+	L217 -> L754 {
+		assume not (a2 = 1)
+		a6 := 0
+		a21 := 0
+		a29 := 0
+		a26 := 1
+		a8 := 1
+		a11 := 0
+		a27 := 1
+		a5 := 1
+		a12 := 1
+	}
+	L1218 -> L754 {
+		assume a23 = 1
+		a14 := 0
+		a29 := 1
+		a26 := 0
+		a27 := 1
+		a23 := 0
+	}
+	L327 -> L120 {
+		assume not ((not (a22 = 1)) and (a5 = 1) and (a3 = 2) and (not (a22 = 1)) and (a17 = 1) and (a10 = 1) and (a12 = 1) and (not (a11 = 1)) and (not (a15 = 1)) and (a18 = 1) and (input = 4) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a20 = 1) and (a6 = 1) and (not (a4 = 1)))
+	}
+	L3 -> L737 {
+		assume not ((a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (not (a12 = 1)) and (a3 = 0) and (not (a11 = 1)) and (a5 = 1) and (a18 = 1))
+	}
+	L1093 -> L1043 {
+		assume not ((a18 = 1) and ((not (a22 = 1)) or ((a15 = 1) and (a4 = 1)) or (a25 = 1)) and (a5 = 1) and (not (a11 = 1)) and (a3 = 2) and (not (a7 = 1)) and (input = 3) and (((not (a12 = 1)) and (a6 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a26 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1))) and (a22 = 1) and (a0 = 1))
+	}
+	L1170 -> L754 {
+		assume (a18 = 1) and (not (a14 = 1)) and (a4 = 1) and (a16 = 1) and (input = 3) and ((a26 = 1) or (not (a26 = 1))) and (a22 = 1) and (a11 = 1) and (a5 = 1) and (not (a6 = 1)) and (a27 = 1) and (a12 = 1) and (a22 = 1) and (a10 = 1) and (a0 = 1) and (a3 = 2)
+		a11 := 0
+		a17 := 0
+		a7 := 0
+		a26 := 1
+		a6 := 1
+		a20 := 0
+	}
+	L487 -> L641 {
+		assume not ((a26 = 1) and (a6 = 1) and (a27 = 1) and (a12 = 1) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L919 -> L754 {
+		assume (a1 = 1) and (a15 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (not (a14 = 1)) and (input = 3) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (a10 = 1) and (not (a6 = 1)) and (a5 = 1) and (a1 = 1) and (a3 = 2) and (not (a12 = 1)) and (a10 = 1) and (a18 = 1)
+		a26 := 1
+		a0 := 0
+		a27 := 1
+		a21 := 0
+	}
+	L416 -> L754 {
+		assume (not (a23 = 1)) and (((not (a2 = 1)) and (((a5 = 1) and (a29 = 1)) or (not (a1 = 1)) or (not (a22 = 1)))) or (a8 = 1)) and (a0 = 1) and (a18 = 1) and (not (a12 = 1)) and (not (a26 = 1)) and (a3 = 2) and (a27 = 1) and (input = 6) and (a11 = 1) and (not (a6 = 1))
+		a0 := 1
+		a7 := 0
+		a22 := 1
+	}
+	L138 -> L754 {
+		assume (a6 = 1) and (not (a19 = 1)) and (a0 = 1) and (not (a5 = 1)) and (input = 3) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (a10 = 1) and (not (a25 = 1)) and (a3 = 0) and (a11 = 1) and (a18 = 1) and (a4 = 1) and ((not (a4 = 1)) or (a15 = 1))
+		a20 := 1
+		a6 := 0
+		a5 := 1
+		a12 := 0
+		a3 := 2
+		a19 := 1
+		a27 := 1
+		a26 := 1
+		a21 := 1
+	}
+	L1195 -> L754 {
+		assume (((a3 = 2) and (a5 = 1) and ((a7 = 1) or (a22 = 1)) and (not (a6 = 1)) and (not (a27 = 1))) or (not (a4 = 1))) and (a12 = 1) and (a11 = 1) and (a18 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 6) and (not (a19 = 1)) and (not (a7 = 1)) and (a16 = 1) and (a0 = 1)
+		a27 := 1
+		a16 := 1
+		a3 := 0
+		a7 := 0
+		a6 := 1
+		a10 := 1
+		a26 := 1
+	}
+	L887 -> L754 {
+		assume (a3 = 2) and ((((a29 = 1) or (a14 = 1)) and (not (a6 = 1))) or (a23 = 1) or (not (a4 = 1))) and (a5 = 1) and (not (a27 = 1)) and (a12 = 1) and (not (a2 = 1)) and (a22 = 1) and (input = 1) and ((a26 = 1) or (not (a26 = 1))) and (a18 = 1) and (a11 = 1) and (not (a14 = 1))
+		a27 := 1
+		a14 := 0
+		a15 := 1
+		a3 := 0
+		a6 := 1
+		a10 := 1
+		a26 := 1
+	}
+	L1041 -> L1000 {
+		assume not (((not (a29 = 1)) or ((a4 = 1) and (a5 = 1) and ((a17 = 1) or (a22 = 1)) and (a1 = 1))) and (not (a12 = 1)) and (a26 = 1) and (a27 = 1) and (a3 = 2) and (a11 = 1) and (not (a8 = 1)) and (not (a25 = 1)) and (input = 5) and (a18 = 1) and (not (a6 = 1)))
+	}
+	L317 -> L754 {
+		assume a20 = 1
+		a14 := 0
+		a26 := 0
+		a11 := 0
+		a6 := 1
+		a15 := 1
+	}
+	L929 -> L891 {
+		assume (a18 = 1) and (a4 = 1) and ((a14 = 1) or ((not (a5 = 1)) and (a16 = 1)) or (not (a1 = 1))) and (a11 = 1) and (a12 = 1) and (a6 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 5) and (not (a8 = 1)) and (not (a14 = 1)) and (a3 = 0) and (not (a2 = 1))
+	}
+	L297 -> L135 {
+		assume not ((not (a25 = 1)) and (a15 = 1) and (((a5 = 1) and (a3 = 2) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (not (a11 = 1))) or ((a11 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1) and (a3 = 0) and (not (a5 = 1)))) and (input = 6) and ((a14 = 1) or ((not (a2 = 1)) and (a4 = 1) and (a0 = 1) and (a18 = 1) and (not (a19 = 1)))))
+	}
+	L957 -> L754 {
+		assume (a3 = 1) and (not (a6 = 1)) and (not (a14 = 1)) and (input = 5) and (not (a26 = 1)) and (a1 = 1) and (not (a8 = 1)) and (a27 = 1) and ((not (a16 = 1)) or ((not (a12 = 1)) and (a5 = 1) and (a29 = 1) and (not (a25 = 1)) and (a18 = 1))) and (a10 = 1) and (not (a11 = 1))
+		a17 := 0
+		a1 := 1
+		a25 := 0
+		a27 := 0
+	}
+	L1035 -> L172 {
+		assume not ((not (a20 = 1)) and (a15 = 1) and (input = 1) and (((a12 = 1) and (not (a27 = 1)) and (not (a26 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (not (a8 = 1)) and (a5 = 1) and (a11 = 1) and (not (a17 = 1)) and (a4 = 1) and (a6 = 1) and (not (a19 = 1)) and (a18 = 1) and (a3 = 2) and (a0 = 1))
+	}
+	L273 -> L167 {
+		assume not ((not (a2 = 1)) and ((a26 = 1) or (not (a26 = 1))) and (input = 1) and (not (a14 = 1)) and (a11 = 1) and (not (a17 = 1)) and (a18 = 1) and (a4 = 1) and (not (a6 = 1)) and (not (a8 = 1)) and (a27 = 1) and (a5 = 1) and ((a22 = 1) or (a23 = 1)) and (a12 = 1) and (a3 = 2))
+	}
+	L653 -> L754 {
+		assume (a27 = 1) and (a22 = 1) and (not (a17 = 1)) and (not (a20 = 1)) and (a3 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (a5 = 1) and (a29 = 1) and (a18 = 1) and (input = 1) and (not (a26 = 1)) and (not (a12 = 1)) and (not (a6 = 1)) and (a10 = 1) and (a4 = 1)
+		a7 := 0
+		a26 := 1
+		a6 := 1
+		a11 := 1
+		a4 := 1
+		a12 := 1
+		a3 := 0
+		a8 := 0
+	}
+	L336 -> L345 {
+		assume not ((not (a12 = 1)) and ((((a19 = 1) or ((a22 = 1) and (not (a6 = 1)))) and (a5 = 1)) or (not (a16 = 1))) and (not (a26 = 1)) and (a4 = 1) and (a16 = 1) and (input = 3) and (not (a11 = 1)) and (not (a25 = 1)) and (a27 = 1) and (a18 = 1) and (a10 = 1) and (a3 = 1))
+	}
+	L1197 -> L754 {
+		assume (a1 = 1) and (input = 6) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1) and (not (a12 = 1)))) and (a1 = 1) and (a5 = 1) and (a16 = 1) and (a3 = 2) and (not (a11 = 1)) and ((not (a1 = 1)) or ((not (a6 = 1)) and (a0 = 1) and (not (a20 = 1)))) and (a18 = 1) and (not (a17 = 1))
+		a3 := 0
+		a12 := 1
+		a26 := 1
+		a4 := 0
+		a27 := 0
+	}
+	L916 -> L1041 {
+		assume not ((a3 = 2) and (not (a11 = 1)) and (not (a17 = 1)) and ((a19 = 1) or ((a4 = 1) and (a1 = 1) and (not (a12 = 1)))) and (not (a7 = 1)) and (a5 = 1) and (a18 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 1) and (not (a23 = 1)) and (not (a6 = 1)) and (not (a2 = 1)))
+	}
+	L97 -> L796 {
+		assume not ((not (a19 = 1)) and (a16 = 1) and (not (a7 = 1)) and (not (a20 = 1)) and (input = 2) and (((not (a11 = 1)) and (a12 = 1) and (a27 = 1) and (a6 = 1) and (a26 = 1)) or ((a11 = 1) and (not (a27 = 1)) and (not (a6 = 1)) and (a26 = 1) and (not (a12 = 1))) or ((a11 = 1) and (not (a12 = 1)) and (not (a27 = 1)) and (not (a26 = 1)) and (not (a6 = 1)))) and (not (a17 = 1)) and (a18 = 1) and ((a17 = 1) or ((a15 = 1) and (a3 = 2) and (a5 = 1))))
+	}
+	L40 -> L566 {
+		assume not ((a26 = 1) and (a6 = 1) and (not (a27 = 1)) and (not (a12 = 1)) and (a3 = 1) and (a11 = 1) and (a5 = 1) and (a18 = 1))
+	}
+	L355 -> L273 {
+		assume not ((not (a20 = 1)) and (a5 = 1) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 5) and (not (a17 = 1)) and (a22 = 1) and (a3 = 2) and (not (a11 = 1)) and ((a25 = 1) or ((a18 = 1) and (a0 = 1) and (not (a14 = 1)) and (not (a6 = 1)))) and (a22 = 1))
+	}
+	L297 -> L754 {
+		assume (not (a25 = 1)) and (a15 = 1) and (((a5 = 1) and (a3 = 2) and (not (a26 = 1)) and (not (a6 = 1)) and (not (a27 = 1)) and (not (a12 = 1)) and (not (a11 = 1))) or ((a11 = 1) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1) and (a3 = 0) and (not (a5 = 1)))) and (input = 6) and ((a14 = 1) or ((not (a2 = 1)) and (a4 = 1) and (a0 = 1) and (a18 = 1) and (not (a19 = 1))))
+		a10 := 0
+		a8 := 1
+		a5 := 1
+		a12 := 1
+		a3 := 0
+		a11 := 0
+		a26 := 1
+		a27 := 1
+		a6 := 0
+	}
+	L442 -> L754 {
+		assume (a4 = 1) and (((not (a12 = 1)) and (a26 = 1) and (not (a6 = 1)) and (not (a27 = 1)) and (a11 = 1)) or ((not (a12 = 1)) and (not (a27 = 1)) and (not (a6 = 1)) and (not (a26 = 1)) and (a11 = 1)) or ((not (a11 = 1)) and (a6 = 1) and (a26 = 1) and (a27 = 1) and (a12 = 1))) and (input = 4) and (a5 = 1) and (a18 = 1) and (not (a19 = 1)) and ((a17 = 1) or ((not (a25 = 1)) and (a3 = 2) and (a29 = 1)) or (a23 = 1)) and (a1 = 1)
+		a6 := 1
+		a12 := 1
+		a26 := 1
+		a11 := 0
+		a8 := 0
+		a27 := 1
+		a22 := 1
+		a15 := 1
+	}
+	L354 -> L1197 {
+		assume not ((not (a11 = 1)) and (a5 = 1) and (input = 5) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1))) and (a23 = 1) and (a3 = 2) and (a23 = 1) and (not (a4 = 1)) and (a18 = 1) and (a12 = 1) and (a29 = 1) and (not (a22 = 1)) and (not (a0 = 1)) and (a19 = 1) and (a6 = 1))
+	}
+	L359 -> L245 {
+		assume not ((a22 = 1) and ((a29 = 1) or (not (a4 = 1)) or (a17 = 1)) and (a18 = 1) and (a11 = 1) and (not (a6 = 1)) and (a12 = 1) and (a3 = 2) and (a4 = 1) and (a5 = 1) and (a27 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 2) and (not (a8 = 1)) and (a15 = 1))
+	}
+	L478 -> L690 {
+		assume not ((a5 = 1) and (not (a11 = 1)) and (not (a23 = 1)) and (a29 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 2) and (not (a19 = 1)) and (not (a23 = 1)) and (not (a6 = 1)) and (not (a20 = 1)) and (not (a12 = 1)) and (a29 = 1) and (a22 = 1) and (a3 = 2) and (a18 = 1))
+	}
+	L640 -> L1218 {
+		assume (a3 = 2) and (a29 = 1) and (a10 = 1) and ((a17 = 1) or ((a15 = 1) and (a22 = 1) and (not (a12 = 1)) and (a29 = 1))) and (a6 = 1) and (not (a11 = 1)) and (((a26 = 1) and (not (a27 = 1))) or ((a27 = 1) and (a26 = 1)) or ((a27 = 1) and (not (a26 = 1)))) and (input = 4) and (a29 = 1) and (a5 = 1) and (a18 = 1)
+	}
+	L273 -> L754 {
+		assume (not (a2 = 1)) and ((a26 = 1) or (not (a26 = 1))) and (input = 1) and (not (a14 = 1)) and (a11 = 1) and (not (a17 = 1)) and (a18 = 1) and (a4 = 1) and (not (a6 = 1)) and (not (a8 = 1)) and (a27 = 1) and (a5 = 1) and ((a22 = 1) or (a23 = 1)) and (a12 = 1) and (a3 = 2)
+		a16 := 1
+		a26 := 1
+		a3 := 0
+		a4 := 1
+		a6 := 1
+		a2 := 0
+	}
+	L49 -> L589 {
+		assume not ((not (a26 = 1)) and (a5 = 1) and (a18 = 1) and (a4 = 1) and (not (a11 = 1)) and (not (a6 = 1)) and (a29 = 1) and (not (a23 = 1)) and (not (a7 = 1)) and (not (a25 = 1)) and (not (a27 = 1)) and (input = 1) and (a3 = 1) and (a10 = 1) and (not (a14 = 1)) and (not (a12 = 1)))
+	}
+	L745 -> L916 {
+		assume not ((not (a7 = 1)) and (a6 = 1) and (a5 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (a18 = 1) and (a12 = 1) and (not (a8 = 1)) and (((a4 = 1) and (a0 = 1) and (a3 = 2) and (a10 = 1) and (not (a11 = 1)) and (a0 = 1)) or (a8 = 1)))
+	}
+	L881 -> L754 {
+		assume not (a5 = 1)
+		a3 := 1
+		a6 := 0
+		a5 := 1
+		a13 := 0
+		a26 := 1
+		a2 := 1
+		a22 := 0
+		a27 := 0
+		a11 := 0
+	}
+	L718 -> L754 {
+		assume a10 = 1
+		a26 := 0
+		a27 := 1
+		a1 := 1
+		a2 := 0
+		a14 := 0
+	}
+	L1172 -> L787 {
+		assume not (((not (a22 = 1)) or (a19 = 1) or (not (a10 = 1)) or ((a12 = 1) and (not (a27 = 1)) and (a0 = 1) and (a18 = 1) and (a11 = 1))) and (not (a20 = 1)) and (a10 = 1) and (a5 = 1) and (not (a6 = 1)) and (a0 = 1) and (input = 5) and ((a26 = 1) or (not (a26 = 1))) and (a3 = 2))
+	}
+	L1171 -> L754 {
+		assume ((a26 = 1) or (not (a26 = 1))) and (input = 4) and (a5 = 1) and (a27 = 1) and (not (a19 = 1)) and (a18 = 1) and (a16 = 1) and ((not (a16 = 1)) or ((((a11 = 1) and (a15 = 1) and (a3 = 2) and (not (a6 = 1))) or (not (a22 = 1))) and (a12 = 1))) and (not (a25 = 1)) and (a16 = 1)
+		a16 := 1
+		a6 := 1
+		a3 := 0
+		a10 := 1
+		a26 := 1
+	}
+	L989 -> L613 {
+		assume not ((((not (a25 = 1)) and (a1 = 1) and (a0 = 1)) or (a7 = 1)) and (not (a6 = 1)) and (a29 = 1) and (a3 = 2) and (a11 = 1) and (a18 = 1) and (a27 = 1) and (not (a12 = 1)) and (input = 2) and (a29 = 1) and (not (a26 = 1)) and (not (a25 = 1)) and (a5 = 1))
+	}
+	L875 -> L11 {
+		assume not ((not (a11 = 1)) and (a18 = 1) and (not (a23 = 1)) and (a5 = 1) and (input = 1) and (((a12 = 1) and (not (a27 = 1)) and (not (a26 = 1))) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (not (a6 = 1)) and (not (a14 = 1)) and (a16 = 1) and (a3 = 2) and ((not (a10 = 1)) or (a19 = 1) or ((not (a7 = 1)) and (a0 = 1))))
+	}
+	L415 -> L754 {
+		assume (a0 = 1) and (not (a17 = 1)) and (a0 = 1) and (input = 5) and (((not (a26 = 1)) and (not (a27 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a2 = 1)) and (not (a12 = 1)) and (a1 = 1) and (((a18 = 1) and (a11 = 1) and (a22 = 1) and (a6 = 1) and (a5 = 1) and (a3 = 2)) or (not (a29 = 1)))
+		a20 := 0
+		a27 := 1
+		a2 := 0
+		a26 := 0
+		a6 := 0
+		a22 := 1
+	}
+	L738 -> L977 {
+		assume not ((a17 = 1) and (a20 = 1) and (not (a11 = 1)) and (a6 = 1) and (a18 = 1) and (input = 2) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a0 = 1)) and (a12 = 1) and (not (a16 = 1)) and (a5 = 1) and (a15 = 1) and (a3 = 2) and (not (a22 = 1)) and (a23 = 1))
+	}
+	L960 -> L226 {
+		assume (a18 = 1) and (((a22 = 1) and (a4 = 1)) or (a2 = 1)) and (a0 = 1) and (a11 = 1) and (a3 = 2) and (not (a8 = 1)) and (a5 = 1) and (a6 = 1) and (((not (a27 = 1)) and (not (a26 = 1)) and (a12 = 1)) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (input = 5) and (not (a2 = 1)) and (not (a25 = 1))
+	}
+	L120 -> L254 {
+		assume not ((a3 = 2) and (a6 = 1) and (not (a23 = 1)) and (not (a25 = 1)) and (((a26 = 1) and (a27 = 1)) or ((not (a26 = 1)) and (a27 = 1)) or ((a26 = 1) and (not (a27 = 1)))) and (input = 2) and (not (a11 = 1)) and (a16 = 1) and (a18 = 1) and (a5 = 1) and ((a25 = 1) or ((a4 = 1) and (a22 = 1))) and (not (a25 = 1)) and (not (a12 = 1)))
+	}
+	L250 -> L754 {
+		assume (a18 = 1) and (a5 = 1) and (not (a12 = 1)) and (not (a20 = 1)) and (input = 5) and (((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (a0 = 1) and (a3 = 2) and (not (a11 = 1)) and (((a22 = 1) and ((a14 = 1) or ((not (a6 = 1)) and ((a10 = 1) or (a14 = 1))))) or (a2 = 1))
+		a21 := 0
+		a27 := 1
+		a26 := 1
+		a3 := 1
+	}
+	L11 -> L812 {
+		assume not ((not (a25 = 1)) and ((((a22 = 1) or (a8 = 1)) and (a18 = 1)) or (not (a15 = 1))) and (not (a12 = 1)) and (a6 = 1) and (a5 = 1) and (a11 = 1) and (a3 = 2) and (input = 4) and (((not (a27 = 1)) and (not (a26 = 1))) or ((not (a26 = 1)) and (a27 = 1)) or ((not (a27 = 1)) and (a26 = 1))) and (not (a14 = 1)) and (a16 = 1) and (not (a20 = 1)))
+	}
+	L363 -> L1195 {
+		assume not ((a18 = 1) and (a6 = 1) and (input = 2) and (((not (a26 = 1)) and (not (a27 = 1)) and (a12 = 1)) or ((not (a12 = 1)) and (a27 = 1) and (a26 = 1))) and (not (a23 = 1)) and (a11 = 1) and (a0 = 1) and (not (a8 = 1)) and (((not (a7 = 1)) and (a3 = 2) and ((a15 = 1) or (a14 = 1)) and (a5 = 1)) or (not (a0 = 1))))
+	}
+	L430 -> L881 {
+		assume (a3 = 0) and (not (a5 = 1)) and (not (a14 = 1)) and ((((a0 = 1) or (a23 = 1)) and (not (a25 = 1))) or (not (a1 = 1)) or (not (a29 = 1))) and (a6 = 1) and (a11 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((not (a27 = 1)) and (a26 = 1)) or ((not (a26 = 1)) and (not (a27 = 1)))) and (input = 2) and (a18 = 1) and (not (a20 = 1)) and (not (a12 = 1))
+	}
+	L928 -> L857 {
+		assume not ((not (a27 = 1)) and (not (a23 = 1)) and (not (a11 = 1)) and (a12 = 1) and (not (a26 = 1)) and (a3 = 2) and (input = 4) and (a4 = 1) and (a15 = 1) and ((a23 = 1) or ((a6 = 1) and (not (a8 = 1)) and ((a23 = 1) or ((a18 = 1) and (a22 = 1))))) and (a5 = 1))
+	}
+	L1020 -> L90 {
+		assume not ((not (a25 = 1)) and (((a11 = 1) and (not (a14 = 1)) and (not (a27 = 1)) and (a15 = 1) and (a12 = 1) and (a5 = 1) and (a3 = 2) and (not (a2 = 1))) or (not (a15 = 1))) and (not (a6 = 1)) and (a22 = 1) and (a29 = 1) and ((a26 = 1) or (not (a26 = 1))) and (input = 4) and (a18 = 1))
+	}
+	L1091 -> L754 {
+		assume (a4 = 1) and (a6 = 1) and (a10 = 1) and (not (a11 = 1)) and (a12 = 1) and (not (a7 = 1)) and (a5 = 1) and (((a27 = 1) and (not (a26 = 1))) or ((a26 = 1) and (not (a27 = 1)))) and (input = 6) and (a3 = 2) and (a16 = 1) and (not (a23 = 1)) and (a18 = 1) and (a0 = 1) and (not (a19 = 1))
+		a19 := 0
+		a27 := 0
+		a26 := 0
+		a8 := 0
+	}
+	L1081 -> L6 {
+		assume not ((a1 = 1) and (input = 3) and (((a12 = 1) and (not (a26 = 1)) and (not (a27 = 1))) or ((a26 = 1) and (a27 = 1) and (not (a12 = 1)))) and (not (a7 = 1)) and (a18 = 1) and (a4 = 1) and (a6 = 1) and (a5 = 1) and ((a20 = 1) or (not (a1 = 1)) or ((a3 = 2) and ((a10 = 1) or (not (a10 = 1))) and (a11 = 1))))
+	}
+	L441 -> L359 {
+		assume not ((a3 = 2) and (a4 = 1) and (not (a17 = 1)) and (not (a19 = 1)) and (a26 = 1) and (a27 = 1) and (input = 3) and (a18 = 1) and (a0 = 1) and (a4 = 1) and (not (a17 = 1)) and (a5 = 1) and (not (a6 = 1)) and (a15 = 1) and (not (a12 = 1)) and (a11 = 1))
+	}
+	L710 -> L754 {
+		assume (a3 = 2) and (not (a17 = 1)) and (a18 = 1) and ((a17 = 1) or (a16 = 1)) and (a5 = 1) and (not (a25 = 1)) and (not (a11 = 1)) and (((not (a12 = 1)) and (not (a26 = 1)) and (a6 = 1) and (not (a27 = 1))) or ((a12 = 1) and (not (a6 = 1)) and (a26 = 1) and (a27 = 1))) and (input = 5) and (not (a7 = 1)) and (not (a19 = 1)) and (not (a7 = 1))
+		a3 := 0
+		a12 := 1
+		a26 := 1
+		a11 := 1
+		a15 := 1
+		a6 := 1
+		a27 := 1
+		a2 := 0
+		a23 := 0
+	}
+	L957 -> L49 {
+		assume not ((a3 = 1) and (not (a6 = 1)) and (not (a14 = 1)) and (input = 5) and (not (a26 = 1)) and (a1 = 1) and (not (a8 = 1)) and (a27 = 1) and ((not (a16 = 1)) or ((not (a12 = 1)) and (a5 = 1) and (a29 = 1) and (not (a25 = 1)) and (a18 = 1))) and (a10 = 1) and (not (a11 = 1)))
+	}
+	L949 -> L1231 {
+		assume not ((not (a6 = 1)) and (not (a8 = 1)) and (not (a7 = 1)) and (input = 4) and (a11 = 1) and (a5 = 1) and (not (a8 = 1)) and (a18 = 1) and (((not (a12 = 1)) and (((a3 = 2) and (a0 = 1)) or (not (a0 = 1)) or (not (a1 = 1))) and (a26 = 1) and (a27 = 1)) or (not (a16 = 1))))
+	}
+}

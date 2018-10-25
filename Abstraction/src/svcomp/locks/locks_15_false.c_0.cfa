@@ -1,0 +1,41 @@
+main process cfa {
+	var p2 : int
+	var tmp_15 : int
+	var tmp_1 : int
+	var cond : int
+
+	final loc L1
+	loc L6
+	loc L5
+	error loc L2
+	loc L7
+	init loc L0
+	loc L8
+
+	L5 -> L1 {
+		assume cond = 0
+	}
+	L8 -> L7 {
+		assume false
+	}
+	L5 -> L6 {
+		assume not (cond = 0)
+	}
+	L6 -> L7 {
+		assume p2 /= 0
+	}
+	L0 -> L7 {
+		havoc tmp_1
+		p2 := tmp_1
+	}
+	L6 -> L8 {
+		assume not (p2 /= 0)
+	}
+	L8 -> L2 {
+		assume not false
+	}
+	L7 -> L5 {
+		havoc tmp_15
+		cond := tmp_15
+	}
+}

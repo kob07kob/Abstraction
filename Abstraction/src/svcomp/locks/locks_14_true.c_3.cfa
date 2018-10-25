@@ -1,0 +1,156 @@
+main process cfa {
+	var p2 : int
+	var p11 : int
+	var p3 : int
+	var lk10 : int
+	var p4 : int
+	var p5 : int
+	var lk11 : int
+	var p10 : int
+	var lk4 : int
+	var lk3 : int
+	var lk2 : int
+	var p1 : int
+	var cond : int
+	var tmp_14 : int
+	var tmp_10 : int
+	var lk8 : int
+	var lk7 : int
+	var lk6 : int
+	var lk5 : int
+	var p6 : int
+	var p7 : int
+	var p8 : int
+	var p9 : int
+	var lk9 : int
+
+	loc L12
+	error loc L2
+	loc L28
+	loc L8
+	loc L19
+	loc L23
+	loc L5
+	loc L6
+	loc L27
+	loc L29
+	loc L10
+	loc L30
+	loc L3
+	loc L9
+	loc L16
+	loc L17
+	init loc L0
+	final loc L1
+	loc L14
+
+	L28 -> L19 {
+		assume p7 /= 0
+		lk7 := 1
+	}
+	L23 -> L3 {
+		assume p2 /= 0
+		lk2 := 1
+	}
+	L16 -> L8 {
+		assume p1 /= 0
+	}
+	L12 -> L29 {
+		assume not (p9 /= 0)
+	}
+	L28 -> L19 {
+		assume not (p7 /= 0)
+	}
+	L17 -> L14 {
+		assume p5 /= 0
+		lk5 := 1
+	}
+	L10 -> L16 {
+		assume not (cond = 0)
+		lk11 := 0
+	}
+	L17 -> L14 {
+		assume not (p5 /= 0)
+	}
+	L29 -> L8 {
+		assume p10 /= 0
+		lk10 := 1
+	}
+	L5 -> L9 {
+		assume p11 /= 0
+	}
+	L14 -> L28 {
+		assume not (p6 /= 0)
+	}
+	L9 -> L30 {
+		assume lk11 /= 1
+	}
+	L12 -> L29 {
+		assume p9 /= 0
+		lk9 := 1
+	}
+	L23 -> L3 {
+		assume not (p2 /= 0)
+	}
+	L10 -> L1 {
+		assume cond = 0
+	}
+	L27 -> L17 {
+		assume not (p4 /= 0)
+	}
+	L8 -> L5 {
+		assume not (p11 /= 0)
+	}
+	L8 -> L5 {
+		assume p11 /= 0
+		lk11 := 1
+	}
+	L5 -> L6 {
+		assume not (p11 /= 0)
+	}
+	L19 -> L12 {
+		assume p8 /= 0
+		lk8 := 1
+	}
+	L0 -> L6 {
+		havoc tmp_10
+		p11 := tmp_10
+	}
+	L19 -> L12 {
+		assume not (p8 /= 0)
+	}
+	L30 -> L2 {
+		assume not false
+	}
+	L27 -> L17 {
+		assume p4 /= 0
+		lk4 := 1
+	}
+	L30 -> L6 {
+		assume false
+	}
+	L6 -> L10 {
+		havoc tmp_14
+		cond := tmp_14
+	}
+	L14 -> L28 {
+		assume p6 /= 0
+		lk6 := 1
+	}
+	L3 -> L27 {
+		assume not (p3 /= 0)
+	}
+	L16 -> L23 {
+		assume not (p1 /= 0)
+	}
+	L9 -> L6 {
+		assume not (lk11 /= 1)
+	}
+	L29 -> L8 {
+		assume not (p10 /= 0)
+	}
+	L3 -> L27 {
+		assume p3 /= 0
+		lk3 := 1
+	}
+}

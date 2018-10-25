@@ -1,0 +1,783 @@
+main process cfa {
+	var tmp___9 : int
+	var s__state : int
+	var tmp_41 : int
+	var s__init_buf___0 : int
+	var skip : int
+	var tmp___5 : int
+	var tmp_25 : int
+	var tmp_37 : int
+	var s__hit : int
+	var tmp_0 : int
+	var tmp_21 : int
+	var tmp_33 : int
+	var __cil_tmp70 : int
+	var state : int
+	var __cil_tmp58 : int
+	var __cil_tmp66 : int
+	var tmp___8 : int
+	var s__debug : int
+	var cb : int
+	var tmp_40 : int
+	var s__s3__tmp__reuse_message : int
+	var tmp___4 : int
+	var tmp_24 : int
+	var __cil_tmp65 : int
+	var tmp_36 : int
+	var s__ctx__info_callback : int
+	var tmp_16 : int
+	var tmp_20 : int
+	var __cil_tmp61 : int
+	var tmp_32 : int
+	var tmp_12 : int
+	var __cil_tmp57 : int
+	var __cil_tmp69 : int
+	var tmp_7 : int
+	var s__info_callback : int
+	var s__s3__tmp__next_state___0 : int
+	var tmp___7 : int
+	var new_state : int
+	var tmp___3 : int
+	var __cil_tmp64 : int
+	var tmp_35 : int
+	var s__version : int
+	var tmp_2 : int
+	var __cil_tmp60 : int
+	var tmp_43 : int
+	var __cil_tmp72 : int
+	var tmp_23 : int
+	var s__s3__tmp__cert_req : int
+	var __cil_tmp68 : int
+	var tmp_39 : int
+	var tmp_6 : int
+	var tmp___6 : int
+	var buf : int
+	var s__s3__flags : int
+	var tmp_30 : int
+	var tmp_46 : int
+	var tmp_5 : int
+	var tmp_14 : int
+	var tmp_26 : int
+	var ret : int
+	var tmp_38 : int
+	var __cil_tmp71 : int
+	var tmp_42 : int
+	var tmp_22 : int
+	var tmp_34 : int
+	var blastFlag : int
+	var num1 : int
+	var __cil_tmp55 : int
+	var __cil_tmp67 : int
+	var s__s3__tmp__new_cipher__algorithms : int
+
+	loc L173
+	loc L26
+	loc L23
+	loc L34
+	loc L82
+	loc L31
+	loc L11
+	loc L15
+	init loc L0
+	loc L140
+	loc L67
+	loc L43
+	loc L170
+	loc L160
+	loc L188
+	loc L64
+	loc L70
+	loc L109
+	loc L152
+	loc L60
+	loc L106
+	loc L14
+	loc L81
+	loc L68
+	loc L113
+	loc L46
+	loc L93
+	loc L151
+	loc L53
+	loc L13
+	loc L24
+	loc L104
+	loc L129
+	loc L38
+	loc L29
+	loc L42
+	loc L95
+	loc L192
+	loc L133
+	loc L135
+	loc L172
+	loc L20
+	loc L91
+	loc L137
+	loc L154
+	loc L111
+	loc L168
+	loc L56
+	loc L47
+	loc L27
+	loc L103
+	loc L28
+	loc L186
+	loc L69
+	loc L116
+	loc L25
+	loc L21
+	loc L123
+	loc L22
+	loc L50
+	loc L102
+	loc L158
+	loc L146
+	loc L117
+	loc L136
+	loc L100
+	loc L159
+	loc L144
+	loc L87
+	loc L89
+	loc L44
+	loc L147
+	loc L153
+	loc L164
+	error loc L2
+	loc L74
+	loc L33
+	loc L105
+	loc L141
+	final loc L1
+	loc L165
+	loc L88
+	loc L90
+	loc L73
+	loc L85
+	loc L169
+	loc L61
+	loc L54
+	loc L76
+	loc L108
+	loc L16
+	loc L122
+	loc L176
+	loc L8
+	loc L97
+	loc L128
+	loc L185
+
+	L24 -> L1 {
+		assume ret <= 0
+	}
+	L82 -> L26 {
+		assume s__state /= state
+		new_state := s__state
+		s__state := state
+		s__state := new_state
+	}
+	L147 -> L31 {
+		assume not (s__state = 4561)
+	}
+	L151 -> L88 {
+		assume not (blastFlag = 2)
+	}
+	L140 -> L70 {
+		assume not (ret <= 0)
+		s__state := 4480
+	}
+	L61 -> L70 {
+		assume s__hit /= 0
+		s__state := 4512
+	}
+	L56 -> L104 {
+		assume blastFlag = 0
+		blastFlag := 1
+	}
+	L169 -> L74 {
+		assume s__state = 4099
+	}
+	L47 -> L46 {
+		assume s__state = 4465
+	}
+	L106 -> L1 {
+		assume ret <= 0
+	}
+	L93 -> L111 {
+		assume not (s__state = 4467)
+	}
+	L64 -> L50 {
+		assume not (s__info_callback /= 0)
+	}
+	L8 -> L1 {
+		assume ret <= 0
+	}
+	L67 -> L70 {
+		assume not (s__hit /= 0)
+		s__s3__tmp__next_state___0 := 4560
+	}
+	L185 -> L188 {
+		assume not (s__state = 4481)
+	}
+	L11 -> L38 {
+		assume not (s__state = 4368)
+	}
+	L144 -> L27 {
+		assume s__state = 4513
+	}
+	L165 -> L109 {
+		havoc tmp_37
+		ret := tmp_37
+	}
+	L64 -> L95 {
+		assume s__info_callback /= 0
+		cb := s__info_callback
+	}
+	L54 -> L135 {
+		havoc tmp_43
+		ret := tmp_43
+	}
+	L123 -> L70 {
+		s__state := 4416
+	}
+	L76 -> L91 {
+		assume blastFlag = 1
+		blastFlag := 2
+	}
+	L173 -> L67 {
+		assume not (ret <= 0)
+		s__state := 4352
+		__cil_tmp65 := s__s3__flags
+		__cil_tmp66 := __cil_tmp65 - 5
+		s__s3__flags := __cil_tmp66
+	}
+	L24 -> L70 {
+		assume not (ret <= 0)
+		s__state := 4448
+	}
+	L100 -> L141 {
+		assume not (s__debug /= 0)
+	}
+	L60 -> L87 {
+		assume not (s__state = 4417)
+	}
+	L116 -> L81 {
+		assume not (s__state = 4384)
+	}
+	L151 -> L88 {
+		assume blastFlag = 2
+		blastFlag := 3
+	}
+	L158 -> L123 {
+		assume (__cil_tmp64 + 256) /= 0
+		skip := 1
+	}
+	L108 -> L33 {
+		assume not (__cil_tmp61 = __cil_tmp60)
+	}
+	L158 -> L151 {
+		assume not ((__cil_tmp64 + 256) /= 0)
+		havoc tmp_34
+		ret := tmp_34
+	}
+	L85 -> L70 {
+		assume not ((__cil_tmp67 + 2) /= 0)
+	}
+	L33 -> L128 {
+		assume not (tmp___3 = 0)
+		s__init_buf___0 := buf
+	}
+	L103 -> L158 {
+		__cil_tmp64 := s__s3__tmp__new_cipher__algorithms
+	}
+	L133 -> L74 {
+		assume s__state = 12292
+	}
+	L53 -> L169 {
+		assume not (s__state = 20480)
+	}
+	L104 -> L1 {
+		assume ret <= 0
+	}
+	L122 -> L1 {
+		assume tmp___6 = 0
+	}
+	L172 -> L47 {
+		assume not (s__state = 4464)
+	}
+	L137 -> L76 {
+		havoc tmp_33
+		ret := tmp_33
+	}
+	L144 -> L136 {
+		assume not (s__state = 4513)
+	}
+	L87 -> L28 {
+		assume s__state = 4432
+	}
+	L169 -> L11 {
+		assume not (s__state = 4099)
+	}
+	L97 -> L144 {
+		assume not (s__state = 4512)
+	}
+	L43 -> L122 {
+		assume not (ret <= 0)
+		s__state := 4432
+	}
+	L95 -> L133 {
+		state := s__state
+	}
+	L89 -> L103 {
+		assume s__state = 4400
+	}
+	L133 -> L23 {
+		assume not (s__state = 12292)
+	}
+	L104 -> L70 {
+		assume not (ret <= 0)
+		s__state := 4384
+	}
+	L13 -> L53 {
+		assume not (s__state = 4096)
+	}
+	L23 -> L13 {
+		assume not (s__state = 16384)
+	}
+	L136 -> L29 {
+		assume not (s__state = 4528)
+	}
+	L25 -> L70 {
+		s__state := s__s3__tmp__next_state___0
+	}
+	L38 -> L69 {
+		assume s__state = 4369
+	}
+	L42 -> L46 {
+		assume s__state = 4466
+	}
+	L105 -> L21 {
+		assume not (__cil_tmp55 /= 768)
+		__cil_tmp57 := 0
+		__cil_tmp58 := s__init_buf___0
+	}
+	L117 -> L70 {
+		assume not (tmp___8 = 0)
+	}
+	L108 -> L1 {
+		assume __cil_tmp61 = __cil_tmp60
+	}
+	L153 -> L15 {
+		assume not (ret <= 0)
+	}
+	L34 -> L1 {
+		assume ret <= 0
+	}
+	L50 -> L95 {
+		assume s__ctx__info_callback /= 0
+		cb := s__ctx__info_callback
+	}
+	L31 -> L1 {
+		assume not (s__state = 4352)
+	}
+	L105 -> L1 {
+		assume __cil_tmp55 /= 768
+	}
+	L113 -> L1 {
+		assume __cil_tmp72 <= 0
+	}
+	L152 -> L147 {
+		assume not (s__state = 4560)
+	}
+	L159 -> L16 {
+		assume blastFlag = 5
+	}
+	L85 -> L70 {
+		assume (__cil_tmp67 + 2) /= 0
+		s__state := 3
+		__cil_tmp68 := s__s3__flags
+		__cil_tmp69 := 4 * __cil_tmp68
+		s__s3__flags := __cil_tmp69
+	}
+	L20 -> L43 {
+		assume not (blastFlag = 3)
+	}
+	L27 -> L8 {
+		havoc tmp_41
+		ret := tmp_41
+	}
+	L47 -> L42 {
+		assume not (s__state = 4465)
+	}
+	L176 -> L70 {
+		assume not (tmp___5 = 0)
+		s__state := 4368
+	}
+	L69 -> L56 {
+		havoc tmp_32
+		ret := tmp_32
+	}
+	L100 -> L34 {
+		assume s__debug /= 0
+		havoc tmp_46
+		ret := tmp_46
+	}
+	L44 -> L165 {
+		assume s__state = 4449
+	}
+	L160 -> L70 {
+		assume s__hit /= 0
+		s__state := 4560
+	}
+	L113 -> L25 {
+		assume not (__cil_tmp72 <= 0)
+	}
+	L46 -> L140 {
+		havoc tmp_38
+		ret := tmp_38
+	}
+	L152 -> L54 {
+		assume s__state = 4560
+	}
+	L185 -> L68 {
+		assume s__state = 4481
+	}
+	L29 -> L168 {
+		assume s__state = 4529
+	}
+	L38 -> L116 {
+		assume not (s__state = 4369)
+	}
+	L146 -> L97 {
+		assume not (s__state = 4497)
+	}
+	L21 -> L128 {
+		assume not (__cil_tmp58 = __cil_tmp57)
+	}
+	L109 -> L1 {
+		assume ret <= 0
+	}
+	L90 -> L70 {
+		assume not (s__s3__tmp__cert_req /= 0)
+		s__state := 4480
+	}
+	L50 -> L95 {
+		assume not (s__ctx__info_callback /= 0)
+	}
+	L22 -> L164 {
+		assume not (s__state = 4401)
+	}
+	L42 -> L93 {
+		assume not (s__state = 4466)
+	}
+	L154 -> L25 {
+		assume not (__cil_tmp70 > 0)
+	}
+	L20 -> L43 {
+		assume blastFlag = 3
+		blastFlag := 4
+	}
+	L116 -> L137 {
+		assume s__state = 4384
+	}
+	L122 -> L70 {
+		assume not (tmp___6 = 0)
+	}
+	L0 -> L64 {
+		havoc tmp_0
+		s__info_callback := tmp_0
+		havoc tmp_2
+		s__version := tmp_2
+		havoc tmp_5
+		s__hit := tmp_5
+		havoc tmp_6
+		s__debug := tmp_6
+		havoc tmp_7
+		s__ctx__info_callback := tmp_7
+		havoc tmp_12
+		s__s3__tmp__cert_req := tmp_12
+		havoc tmp_14
+		s__s3__tmp__reuse_message := tmp_14
+		havoc tmp_16
+		s__s3__tmp__new_cipher__algorithms := tmp_16
+		havoc tmp_20
+		tmp___3 := tmp_20
+		havoc tmp_21
+		tmp___4 := tmp_21
+		havoc tmp_22
+		tmp___5 := tmp_22
+		havoc tmp_23
+		tmp___6 := tmp_23
+		havoc tmp_24
+		tmp___7 := tmp_24
+		havoc tmp_25
+		tmp___8 := tmp_25
+		havoc tmp_26
+		tmp___9 := tmp_26
+		s__state := 12292
+		blastFlag := 0
+		cb := 0
+		skip := 0
+	}
+	L109 -> L90 {
+		assume not (ret <= 0)
+	}
+	L176 -> L1 {
+		assume tmp___5 = 0
+	}
+	L146 -> L186 {
+		assume s__state = 4497
+	}
+	L76 -> L192 {
+		assume not (blastFlag = 1)
+	}
+	L170 -> L1 {
+		assume tmp___7 = 0
+	}
+	L188 -> L146 {
+		assume not (s__state = 4496)
+	}
+	L28 -> L159 {
+		havoc tmp_36
+		ret := tmp_36
+	}
+	L23 -> L74 {
+		assume s__state = 16384
+	}
+	L60 -> L129 {
+		assume s__state = 4417
+	}
+	L141 -> L26 {
+		assume not (cb /= 0)
+	}
+	L8 -> L170 {
+		assume not (ret <= 0)
+		s__state := 4528
+	}
+	L135 -> L61 {
+		assume not (ret <= 0)
+	}
+	L43 -> L1 {
+		assume ret <= 0
+	}
+	L129 -> L20 {
+		havoc tmp_35
+		ret := tmp_35
+	}
+	L67 -> L85 {
+		assume s__hit /= 0
+		s__s3__tmp__next_state___0 := 3
+		__cil_tmp67 := s__s3__flags
+	}
+	L81 -> L89 {
+		assume not (s__state = 4385)
+	}
+	L111 -> L185 {
+		assume not (s__state = 4480)
+	}
+	L164 -> L129 {
+		assume s__state = 4416
+	}
+	L87 -> L14 {
+		assume not (s__state = 4432)
+	}
+	L159 -> L24 {
+		assume not (blastFlag = 5)
+	}
+	L91 -> L1 {
+		assume ret <= 0
+	}
+	L170 -> L117 {
+		assume not (tmp___7 = 0)
+	}
+	L11 -> L69 {
+		assume s__state = 4368
+	}
+	L21 -> L108 {
+		assume __cil_tmp58 = __cil_tmp57
+		havoc tmp_30
+		buf := tmp_30
+		__cil_tmp60 := 0
+		__cil_tmp61 := buf
+	}
+	L93 -> L46 {
+		assume s__state = 4467
+	}
+	L16 -> L1 {
+		assume false
+	}
+	L29 -> L152 {
+		assume not (s__state = 4529)
+	}
+	L97 -> L27 {
+		assume s__state = 4512
+	}
+	L102 -> L26 {
+		assume not (skip = 0)
+	}
+	L128 -> L176 {
+		assume not (tmp___4 = 0)
+	}
+	L153 -> L1 {
+		assume ret <= 0
+	}
+	L31 -> L154 {
+		assume s__state = 4352
+		__cil_tmp70 := num1
+	}
+	L61 -> L70 {
+		assume not (s__hit /= 0)
+		s__state := 3
+	}
+	L81 -> L137 {
+		assume s__state = 4385
+	}
+	L192 -> L91 {
+		assume not (blastFlag = 4)
+	}
+	L117 -> L1 {
+		assume tmp___8 = 0
+	}
+	L73 -> L44 {
+		assume not (s__state = 4448)
+	}
+	L22 -> L103 {
+		assume s__state = 4401
+	}
+	L73 -> L165 {
+		assume s__state = 4448
+	}
+	L154 -> L113 {
+		assume __cil_tmp70 > 0
+		__cil_tmp71 := tmp___9
+		num1 := __cil_tmp71
+		__cil_tmp72 := num1
+	}
+	L88 -> L1 {
+		assume ret <= 0
+	}
+	L188 -> L186 {
+		assume s__state = 4496
+	}
+	L14 -> L28 {
+		assume s__state = 4433
+	}
+	L111 -> L68 {
+		assume s__state = 4480
+	}
+	L70 -> L26 {
+		assume not (s__s3__tmp__reuse_message = 0)
+	}
+	L91 -> L160 {
+		assume not (ret <= 0)
+	}
+	L14 -> L73 {
+		assume not (s__state = 4433)
+	}
+	L136 -> L168 {
+		assume s__state = 4528
+	}
+	L89 -> L22 {
+		assume not (s__state = 4400)
+	}
+	L140 -> L1 {
+		assume ret <= 0
+	}
+	L16 -> L2 {
+		assume not false
+	}
+	L74 -> L105 {
+		__cil_tmp55 := s__version + 65280
+	}
+	L192 -> L91 {
+		assume blastFlag = 4
+		blastFlag := 5
+	}
+	L90 -> L70 {
+		assume s__s3__tmp__cert_req /= 0
+		s__state := 4464
+	}
+	L102 -> L100 {
+		assume skip = 0
+	}
+	L53 -> L74 {
+		assume s__state = 20480
+	}
+	L128 -> L1 {
+		assume tmp___4 = 0
+	}
+	L147 -> L54 {
+		assume s__state = 4561
+	}
+	L34 -> L141 {
+		assume not (ret <= 0)
+	}
+	L135 -> L1 {
+		assume ret <= 0
+	}
+	L186 -> L106 {
+		havoc tmp_40
+		ret := tmp_40
+	}
+	L68 -> L153 {
+		havoc tmp_39
+		ret := tmp_39
+	}
+	L44 -> L172 {
+		assume not (s__state = 4449)
+	}
+	L33 -> L1 {
+		assume tmp___3 = 0
+	}
+	L88 -> L123 {
+		assume not (ret <= 0)
+	}
+	L15 -> L70 {
+		assume s__s3__tmp__cert_req = 1
+		s__state := 4496
+	}
+	L82 -> L26 {
+		assume not (s__state /= state)
+	}
+	L13 -> L74 {
+		assume s__state = 4096
+	}
+	L70 -> L102 {
+		assume s__s3__tmp__reuse_message = 0
+	}
+	L56 -> L104 {
+		assume not (blastFlag = 0)
+	}
+	L164 -> L60 {
+		assume not (s__state = 4416)
+	}
+	L26 -> L95 {
+		skip := 0
+	}
+	L106 -> L70 {
+		assume not (ret <= 0)
+		s__state := 4512
+	}
+	L173 -> L1 {
+		assume ret <= 0
+	}
+	L15 -> L70 {
+		assume not (s__s3__tmp__cert_req = 1)
+		s__state := 4512
+	}
+	L141 -> L82 {
+		assume cb /= 0
+	}
+	L160 -> L70 {
+		assume not (s__hit /= 0)
+		s__state := 4400
+	}
+	L172 -> L46 {
+		assume s__state = 4464
+	}
+	L168 -> L173 {
+		havoc tmp_42
+		ret := tmp_42
+	}
+}

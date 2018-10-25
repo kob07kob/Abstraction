@@ -19,16 +19,18 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 	PartitioningTactic<LabelType> pTactic;
 	WideningTactic<LabelType> wTactic;
 	LabelType staticLabel;
+	CFA programCFA;
 
-	public AbstractionAnalysis(final PartitioningTactic<LabelType> pt, final WideningTactic<LabelType> wt,
-			final LabelType initialLabel) {
+	public AbstractionAnalysis(final CFA program, final PartitioningTactic<LabelType> pt,
+			final WideningTactic<LabelType> wt, final LabelType initialLabel) {
 		pTactic = pt;
 		wTactic = wt;
 		staticLabel = initialLabel;
+		programCFA = program;
 	}
 
 	@Override
-	public AnalysisResult analyze(final CFA programCFA) {
+	public AnalysisResult analyze() {
 		final Map<CFA.Loc, LabelType> abstractLocations = new HashMap<>();
 
 		@SuppressWarnings("unchecked")
@@ -43,12 +45,12 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 			final Map<CFA.Loc, LabelType> abstractLocations, final CFA.Loc errorLoc) {
 		if (abstractLocations.containsKey(errorLoc)) {
 			// TODO reached error state
-			return new AnalysisResult();
+			return new AnalysisResult(true);
 		}
 		if (previousAbstractLocations.equals(abstractLocations)) {
 			// TODO finished abstractions (no more locations will be reached and no
 			// errorstate was found)
-			return new AnalysisResult();
+			return new AnalysisResult(false);
 		}
 
 		// get the outedges from those locations which changed from the previous one

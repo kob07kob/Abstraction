@@ -1,0 +1,176 @@
+main process cfa {
+	var p3 : int
+	var lk13 : int
+	var p12 : int
+	var p10 : int
+	var lk11 : int
+	var p5 : int
+	var lk4 : int
+	var lk2 : int
+	var p1 : int
+	var tmp_15 : int
+	var lk7 : int
+	var lk5 : int
+	var p7 : int
+	var p9 : int
+	var lk9 : int
+	var p11 : int
+	var p2 : int
+	var lk12 : int
+	var p4 : int
+	var lk10 : int
+	var lk3 : int
+	var p13 : int
+	var cond : int
+	var tmp_12 : int
+	var lk8 : int
+	var lk6 : int
+	var p6 : int
+	var p8 : int
+
+	loc L10
+	loc L22
+	loc L8
+	loc L3
+	loc L17
+	loc L29
+	loc L13
+	loc L21
+	loc L14
+	final loc L1
+	loc L11
+	loc L5
+	loc L31
+	loc L23
+	loc L20
+	error loc L2
+	loc L6
+	loc L12
+	loc L26
+	loc L25
+	init loc L0
+
+	L5 -> L6 {
+		assume not (p10 /= 0)
+	}
+	L12 -> L5 {
+		assume p9 /= 0
+		lk9 := 1
+	}
+	L6 -> L17 {
+		assume p11 /= 0
+		lk11 := 1
+	}
+	L8 -> L29 {
+		assume not (p1 /= 0)
+	}
+	L20 -> L11 {
+		assume p3 /= 0
+		lk3 := 1
+	}
+	L31 -> L12 {
+		assume p8 /= 0
+		lk8 := 1
+	}
+	L13 -> L8 {
+		assume not (cond = 0)
+		lk13 := 0
+	}
+	L17 -> L26 {
+		assume not (p12 /= 0)
+	}
+	L26 -> L21 {
+		assume p13 /= 0
+		lk13 := 1
+	}
+	L12 -> L5 {
+		assume not (p9 /= 0)
+	}
+	L25 -> L14 {
+		assume p5 /= 0
+		lk5 := 1
+	}
+	L0 -> L10 {
+		havoc tmp_12
+		p13 := tmp_12
+	}
+	L8 -> L26 {
+		assume p1 /= 0
+	}
+	L14 -> L22 {
+		assume p6 /= 0
+		lk6 := 1
+	}
+	L21 -> L23 {
+		assume p13 /= 0
+	}
+	L3 -> L10 {
+		assume false
+	}
+	L31 -> L12 {
+		assume not (p8 /= 0)
+	}
+	L11 -> L25 {
+		assume not (p4 /= 0)
+	}
+	L21 -> L10 {
+		assume not (p13 /= 0)
+	}
+	L29 -> L20 {
+		assume p2 /= 0
+		lk2 := 1
+	}
+	L20 -> L11 {
+		assume not (p3 /= 0)
+	}
+	L23 -> L10 {
+		assume not (lk13 /= 1)
+	}
+	L22 -> L31 {
+		assume not (p7 /= 0)
+	}
+	L26 -> L21 {
+		assume not (p13 /= 0)
+	}
+	L22 -> L31 {
+		assume p7 /= 0
+		lk7 := 1
+	}
+	L5 -> L6 {
+		assume p10 /= 0
+		lk10 := 1
+	}
+	L17 -> L26 {
+		assume p12 /= 0
+		lk12 := 1
+	}
+	L3 -> L2 {
+		assume not false
+	}
+	L6 -> L17 {
+		assume not (p11 /= 0)
+	}
+	L14 -> L22 {
+		assume not (p6 /= 0)
+	}
+	L10 -> L13 {
+		havoc tmp_15
+		cond := tmp_15
+	}
+	L25 -> L14 {
+		assume not (p5 /= 0)
+	}
+	L11 -> L25 {
+		assume p4 /= 0
+		lk4 := 1
+	}
+	L13 -> L1 {
+		assume cond = 0
+	}
+	L29 -> L20 {
+		assume not (p2 /= 0)
+	}
+	L23 -> L3 {
+		assume lk13 /= 1
+	}
+}

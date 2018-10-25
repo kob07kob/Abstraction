@@ -6,9 +6,13 @@ import Utils.Interval;
 import Utils.StmtApplier;
 import hu.bme.mit.theta.core.decl.VarDecl;
 import hu.bme.mit.theta.core.stmt.AssignStmt;
+import hu.bme.mit.theta.core.stmt.AssumeStmt;
 import hu.bme.mit.theta.core.stmt.HavocStmt;
 import hu.bme.mit.theta.core.stmt.SkipStmt;
 import hu.bme.mit.theta.core.stmt.Stmt;
+import hu.bme.mit.theta.core.type.Expr;
+import hu.bme.mit.theta.core.type.booltype.BoolType;
+import hu.bme.mit.theta.core.utils.ExprUtils;
 
 public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresentation> {
 
@@ -30,9 +34,17 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 				return Interval.initialInterval();
 			}
 		}
-		/*
-		 * if(stmt instanceof AssumeStmt) { ((AssumeStmt) stmt).getCond() }
-		 */
+
+		if (stmt instanceof AssumeStmt) {
+			final Expr<BoolType> expr = ((AssumeStmt) stmt).getCond();
+			if (ExprUtils.getVars(expr).contains(var)) {
+				// ExprUtils. must simplify so it is in var <=>... () form to return true result
+				return Interval.basicSection(interval, applier.transform(expr));
+			} else {
+				return interval;
+			}
+		}
+
 		// TODO apply assumeStmt
 		if (stmt instanceof AssignStmt<?>) {
 			if (((AssignStmt<?>) stmt).getVarDecl().equals(var)) {

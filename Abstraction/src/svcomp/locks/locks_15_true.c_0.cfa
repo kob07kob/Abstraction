@@ -1,0 +1,196 @@
+main process cfa {
+	var p3 : int
+	var p12 : int
+	var lk13 : int
+	var p5 : int
+	var p10 : int
+	var lk11 : int
+	var lk4 : int
+	var lk2 : int
+	var lk15 : int
+	var p1 : int
+	var p14 : int
+	var tmp_15 : int
+	var lk7 : int
+	var lk5 : int
+	var p7 : int
+	var p9 : int
+	var lk9 : int
+	var p2 : int
+	var lk12 : int
+	var p11 : int
+	var p4 : int
+	var lk10 : int
+	var p15 : int
+	var lk3 : int
+	var p13 : int
+	var lk14 : int
+	var cond : int
+	var tmp_14 : int
+	var lk8 : int
+	var lk6 : int
+	var p6 : int
+	var p8 : int
+
+	loc L28
+	loc L13
+	loc L19
+	loc L3
+	loc L27
+	loc L35
+	loc L38
+	loc L4
+	error loc L2
+	init loc L0
+	loc L20
+	loc L8
+	loc L25
+	loc L30
+	loc L32
+	loc L7
+	loc L9
+	loc L12
+	loc L29
+	loc L39
+	final loc L1
+	loc L14
+	loc L37
+
+	L3 -> L29 {
+		assume not (p5 /= 0)
+	}
+	L8 -> L12 {
+		assume not (p13 /= 0)
+	}
+	L32 -> L35 {
+		assume not (lk15 /= 1)
+	}
+	L19 -> L28 {
+		assume not (p3 /= 0)
+	}
+	L30 -> L19 {
+		assume p2 /= 0
+		lk2 := 1
+	}
+	L7 -> L38 {
+		assume not (p9 /= 0)
+	}
+	L20 -> L35 {
+		assume not (p15 /= 0)
+	}
+	L27 -> L25 {
+		assume p1 /= 0
+	}
+	L39 -> L8 {
+		assume p12 /= 0
+		lk12 := 1
+	}
+	L9 -> L7 {
+		assume p8 /= 0
+		lk8 := 1
+	}
+	L37 -> L9 {
+		assume not (p7 /= 0)
+	}
+	L4 -> L2 {
+		assume not false
+	}
+	L27 -> L30 {
+		assume not (p1 /= 0)
+	}
+	L7 -> L38 {
+		assume p9 /= 0
+		lk9 := 1
+	}
+	L14 -> L27 {
+		assume not (cond = 0)
+		lk15 := 0
+	}
+	L28 -> L3 {
+		assume p4 /= 0
+		lk4 := 1
+	}
+	L12 -> L25 {
+		assume not (p14 /= 0)
+	}
+	L13 -> L39 {
+		assume not (p11 /= 0)
+	}
+	L20 -> L32 {
+		assume p15 /= 0
+	}
+	L30 -> L19 {
+		assume not (p2 /= 0)
+	}
+	L37 -> L9 {
+		assume p7 /= 0
+		lk7 := 1
+	}
+	L4 -> L35 {
+		assume false
+	}
+	L32 -> L4 {
+		assume lk15 /= 1
+	}
+	L12 -> L25 {
+		assume p14 /= 0
+		lk14 := 1
+	}
+	L38 -> L13 {
+		assume p10 /= 0
+		lk10 := 1
+	}
+	L25 -> L20 {
+		assume p15 /= 0
+		lk15 := 1
+	}
+	L3 -> L29 {
+		assume p5 /= 0
+		lk5 := 1
+	}
+	L25 -> L20 {
+		assume not (p15 /= 0)
+	}
+	L29 -> L37 {
+		assume not (p6 /= 0)
+	}
+	L38 -> L13 {
+		assume not (p10 /= 0)
+	}
+	L29 -> L37 {
+		assume p6 /= 0
+		lk6 := 1
+	}
+	L13 -> L39 {
+		assume p11 /= 0
+		lk11 := 1
+	}
+	L8 -> L12 {
+		assume p13 /= 0
+		lk13 := 1
+	}
+	L39 -> L8 {
+		assume not (p12 /= 0)
+	}
+	L0 -> L35 {
+		havoc tmp_14
+		p15 := tmp_14
+	}
+	L28 -> L3 {
+		assume not (p4 /= 0)
+	}
+	L9 -> L7 {
+		assume not (p8 /= 0)
+	}
+	L35 -> L14 {
+		havoc tmp_15
+		cond := tmp_15
+	}
+	L19 -> L28 {
+		assume p3 /= 0
+		lk3 := 1
+	}
+	L14 -> L1 {
+		assume cond = 0
+	}
+}
