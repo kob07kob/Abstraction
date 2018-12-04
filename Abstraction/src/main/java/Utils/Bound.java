@@ -53,7 +53,7 @@ public class Bound {
 	public static Bound max(final Bound b1, final Bound b2) {
 		if (b1.isInfinite() == 1 || b2.isInfinite() == 1) {
 			return new Bound(true, 1);
-		} else if ((b1.infinite && b1.value < 0) || (b1.value < b2.value && !b2.infinite)) {
+		} else if ((b1.isInfinite() == -1) || (b1.isSmaller(b2))) {
 			return b2;
 		} else
 			return b1;
@@ -65,10 +65,17 @@ public class Bound {
 	public static Bound min(final Bound b1, final Bound b2) {
 		if (b1.isInfinite() == -1 || b2.isInfinite() == -1) {
 			return new Bound(true, -1);
-		} else if ((b1.isInfinite() == 1) || (b1.value > b2.value && !b2.infinite)) {
+		} else if ((b1.isInfinite() == 1) || (b1.isBigger(b2))) {
 			return b2;
 		} else
 			return b1;
+	}
+
+	public static Bound abs(final Bound b1) {
+		if (b1.isInfinite() == 0) {
+			return new Bound(false, Math.abs(b1.value));
+		} else
+			return new Bound(true, 1);
 	}
 
 	public boolean isSmaller(final Bound than) {
@@ -111,6 +118,22 @@ public class Bound {
 
 	public static Bound negativeInfinite() {
 		return new Bound(true, -1);
+	}
+
+	public Bound increase(final int diff) {
+		if (infinite) {
+			return new Bound(infinite, value);
+		}
+		return new Bound(false, value + diff);
+	}
+
+	@Override
+	public String toString() {
+		if (isInfinite() == 1)
+			return "INF";
+		if (isInfinite() == -1)
+			return "-INF";
+		return value + "";
 	}
 
 }

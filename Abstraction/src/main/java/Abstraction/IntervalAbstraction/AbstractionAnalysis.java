@@ -1,5 +1,9 @@
 package Abstraction.IntervalAbstraction;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,17 +24,31 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 	WideningTactic<LabelType> wTactic;
 	LabelType staticLabel;
 	CFA programCFA;
+	boolean write = false;
 
+	/*
+	 * @program: the analyzed CFA
+	 *
+	 * @pt: partition tactic
+	 *
+	 * @wt: widening tactic (same generic type as partition tactic)
+	 *
+	 * @initialLabel: the initial label for the locations
+	 *
+	 * @analyze: true: deep step by step analysis to file
+	 */
 	public AbstractionAnalysis(final CFA program, final PartitioningTactic<LabelType> pt,
-			final WideningTactic<LabelType> wt, final LabelType initialLabel) {
+			final WideningTactic<LabelType> wt, final LabelType initialLabel, final boolean analize) {
 		pTactic = pt;
 		wTactic = wt;
 		staticLabel = initialLabel;
 		programCFA = program;
+		write = analize;
 	}
 
 	@Override
 	public AnalysisResult analyze() {
+
 		final Map<CFA.Loc, LabelType> abstractLocations = new HashMap<>();
 
 		@SuppressWarnings("unchecked")
@@ -41,16 +59,40 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 		return nextIteration(new HashMap<CFA.Loc, LabelType>(), abstractLocations, programCFA.getErrorLoc());
 	}
 
+	@SuppressWarnings("unchecked")
 	public AnalysisResult nextIteration(final Map<CFA.Loc, LabelType> previousAbstractLocations,
 			final Map<CFA.Loc, LabelType> abstractLocations, final CFA.Loc errorLoc) {
-		if (abstractLocations.containsKey(errorLoc)) {
-			// TODO reached error state
-			return new AnalysisResult(true);
+
+		if (write) {
+			final File f = new File("src/analize.txt");
+			try {
+				final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
+				abstractLocations.forEach((loc, label) -> {
+					try {
+						bw.append(loc.toString() + " : " + label.toString());
+						bw.newLine();
+					} catch (final IOException e) {
+						e.printStackTrace();
+					}
+				});
+				bw.newLine();
+				bw.append("next iteration");
+				bw.newLine();
+				bw.close();
+			} catch (final IOException e) {
+				e.printStackTrace();
+			}
 		}
-		if (previousAbstractLocations.equals(abstractLocations)) {
-			// TODO finished abstractions (no more locations will be reached and no
-			// errorstate was found)
+		if (abstractLocations.containsKey(errorLoc)) {
+			// reached error state
+			// System.out.println(errorLoc.toString() + " : " +
+			// abstractLocations.get(errorLoc).toString());
 			return new AnalysisResult(false);
+		}
+		if (isFixpoint(previousAbstractLocations, abstractLocations)) {
+			// finished abstractions (no more locations will be reached and no
+			// errorstate was found)
+			return new AnalysisResult(true);
 		}
 
 		// get the outedges from those locations which changed from the previous one
@@ -58,14 +100,40 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 
 		// during one iteration we put the changes into the next one so there wont be
 		// reflectal changes inside one iteration...
-		final Map<CFA.Loc, LabelType> nextAbstractLocations = abstractLocations;
+		final Map<CFA.Loc, LabelType> nextAbstractLocations = new HashMap<>();
+		nextAbstractLocations.putAll(abstractLocations);
 
 		for (final CFA.Edge edge : edges) {
-			nextAbstractLocations.put(edge.getTarget(), newIntervalRepresentation(abstractLocations, edge));
+			final LabelType label = newIntervalRepresentation(abstractLocations, edge);
+			if (label.isValid()) {
+				// if we have multiple edges that changes the same location we put the union of
+				// the edges
+				if (nextAbstractLocations.containsKey(edge.getTarget())) {
+					nextAbstractLocations.put(edge.getTarget(),
+							(LabelType) label.addLabel(nextAbstractLocations.get(edge.getTarget())));
+				} else {
+					nextAbstractLocations.put(edge.getTarget(), label);
+				}
+			} else {
+			}
 		}
-
 		return nextIteration(abstractLocations, nextAbstractLocations, errorLoc);
 
+	}
+
+	// if we have a new location than we are not at a fixpoint or if we have a
+	// different label to any of the locations
+	private boolean isFixpoint(final Map<Loc, LabelType> previousAbstractLocations,
+			final Map<Loc, LabelType> abstractLocations) {
+		for (final Map.Entry<CFA.Loc, LabelType> entry : abstractLocations.entrySet()) {
+			if (previousAbstractLocations.containsKey(entry.getKey())) {
+				if (!previousAbstractLocations.get(entry.getKey()).equals(entry.getValue())) {
+					return false;
+				}
+			} else
+				return false;
+		}
+		return true;
 	}
 
 	private LabelType newIntervalRepresentation(final Map<Loc, LabelType> abstractLocations, final Edge edge) {
@@ -78,7 +146,6 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 			return wTactic.wideningConvert(abstractLocations.get(edge.getSource()), edge.getStmt(),
 					abstractLocations.get(edge.getTarget()));
 		} else {
-			// még nem volt felcimkézve (labelling)
 			return simpleConvert(abstractLocations.get(edge.getSource()), edge.getStmt());
 		}
 	}

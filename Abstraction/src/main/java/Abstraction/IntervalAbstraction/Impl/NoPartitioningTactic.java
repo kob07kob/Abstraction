@@ -18,7 +18,7 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 
 	@Override
 	public IntervalRepresentation addStmtToLabel(final IntervalRepresentation sourceInterval, final Stmt stmt) {
-		final IntervalRepresentation newInterval = sourceInterval;
+		final IntervalRepresentation newInterval = sourceInterval.copy();
 		final StmtApplier stmtApplier = new StmtApplier(sourceInterval.getMap());
 		for (final VarDecl<?> var : sourceInterval.getVars()) {
 			newInterval.setVarInterval(var, applyStmt(stmt, sourceInterval.getVarInterval(var), var, stmtApplier));
@@ -29,6 +29,8 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 	public Interval applyStmt(final Stmt stmt, final Interval interval, final VarDecl<?> var,
 			final StmtApplier applier) {
 
+		applier.setSearchedVar(var);
+
 		if (stmt instanceof HavocStmt) {
 			if (((HavocStmt<?>) stmt).getVarDecl().equals(var)) {
 				return Interval.initialInterval();
@@ -36,8 +38,24 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 		}
 
 		if (stmt instanceof AssumeStmt) {
-			final Expr<BoolType> expr = ((AssumeStmt) stmt).getCond();
+			Expr<BoolType> expr = ((AssumeStmt) stmt).getCond();
+
+			if (ExprUtils.getVars(expr).size() == 0) {
+				// this means the assumption can be decided (usually it is a true or a false
+				// expression)
+				if (!applier.transform(expr).isValid()) {
+					return Interval.invalidInterval();
+				} else {
+					return interval;
+				}
+			}
 			if (ExprUtils.getVars(expr).contains(var)) {
+				expr = ExprUtils.simplify(expr);
+
+				// System.out.println("for var: " + var.getName() + " from interval: " +
+				// interval.toString()
+				// + " to interval: " + applier.transform(expr));
+
 				// ExprUtils. must simplify so it is in var <=>... () form to return true result
 				return Interval.basicSection(interval, applier.transform(expr));
 			} else {
@@ -45,11 +63,17 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 			}
 		}
 
-		// TODO apply assumeStmt
 		if (stmt instanceof AssignStmt<?>) {
+
 			if (((AssignStmt<?>) stmt).getVarDecl().equals(var)) {
-				return Interval.basicSection(interval, applier.transform(((AssignStmt<?>) stmt).getExpr()));
+
+				// System.out.println("for var: " + var.getName() + " from interval: " +
+				// interval.toString()
+				// + " to interval: " + applier.transform(((AssignStmt<?>) stmt).getExpr()));
+
+				return applier.transform(((AssignStmt<?>) stmt).getExpr());
 			}
+
 		}
 
 		if (stmt instanceof SkipStmt) {

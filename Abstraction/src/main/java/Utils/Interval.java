@@ -11,17 +11,25 @@ public class Interval {
 		setInterval(lower, upper);
 	}
 
+	public static Interval of(final Bound lower, final Bound upper) {
+		return new Interval(lower, upper);
+	}
+
 	public void setInterval(final Bound lower, final Bound upper) {
 		lowerBound = lower;
 		upperBound = upper;
 	}
 
 	public boolean inside(final int number) {
-		if ((lowerBound.isInfinite() == -1 || number > lowerBound.getValue())
-				&& (upperBound.isInfinite() == 1 || number < upperBound.getValue())) {
+		if ((lowerBound.isInfinite() == -1 || number >= lowerBound.getValue())
+				&& (upperBound.isInfinite() == 1 || number <= upperBound.getValue())) {
 			return true;
 		}
 		return false;
+	}
+
+	public static Interval invalidInterval() {
+		return new Interval(Bound.of(1), Bound.of(-1));
 	}
 
 	/*
@@ -29,13 +37,9 @@ public class Interval {
 	 * (3;4)
 	 */
 	public static Interval basicSection(final Interval i1, final Interval i2) {
-		final Interval section = new Interval(Bound.max(i1.lowerBound, i2.lowerBound),
-				Bound.min(i1.upperBound, i2.upperBound));
-		if (section.lowerBound.isBigger(section.upperBound))
-			return null;
-		else
-			return section;
-
+		if (!i1.isValid() || !i2.isValid())
+			return Interval.invalidInterval();
+		return new Interval(Bound.max(i1.lowerBound, i2.lowerBound), Bound.min(i1.upperBound, i2.upperBound));
 	}
 
 	/*
@@ -44,8 +48,8 @@ public class Interval {
 	 */
 	public static Interval basicSection(final Collection<Interval> intervals) {
 		if (intervals.size() == 0)
-			return null;
-		Interval section = intervals.iterator().next();
+			return Interval.invalidInterval();
+		Interval section = Interval.initialInterval();
 		for (final Interval i : intervals) {
 			section = basicSection(section, i);
 
@@ -59,7 +63,13 @@ public class Interval {
 	 * (2;17)
 	 */
 	public static Interval basicUnion(final Interval i1, final Interval i2) {
-		return new Interval(Bound.min(i1.lowerBound, i2.lowerBound), Bound.max(i1.upperBound, i2.upperBound));
+		if (!i1.isValid() && !i2.isValid())
+			return Interval.invalidInterval();
+		if (!i1.isValid())
+			return Interval.of(i2.getLowerBound(), i2.getUpperBound());
+		if (!i2.isValid())
+			return Interval.of(i1.getLowerBound(), i1.getUpperBound());
+		return Interval.of(Bound.min(i1.lowerBound, i2.lowerBound), Bound.max(i1.upperBound, i2.upperBound));
 
 	}
 
@@ -69,8 +79,8 @@ public class Interval {
 	 */
 	public static Interval basicUnion(final Collection<Interval> intervals) {
 		if (intervals.size() == 0)
-			return null;
-		Interval union = intervals.iterator().next();
+			return Interval.invalidInterval();
+		Interval union = Interval.invalidInterval();
 		for (final Interval i : intervals) {
 			union = basicUnion(union, i);
 
@@ -124,9 +134,89 @@ public class Interval {
 		return intervals;
 	}
 
+	public boolean isValid() {
+		if (lowerBound.isInfinite() == 1 || upperBound.isInfinite() == -1)
+			return false;
+		return !lowerBound.isBigger(upperBound);
+	}
+
+	@Override
+	public String toString() {
+		return "(" + lowerBound.toString() + ";" + upperBound.toString() + ")";
+	}
+
+	@Override
+	public boolean equals(final Object o) {
+		if (o instanceof Interval) {
+			return lowerBound.equals(((Interval) o).getLowerBound())
+					&& upperBound.equals(((Interval) o).getUpperBound());
+		}
+		return false;
+	}
+
 	public boolean isInfinite() {
 		if (lowerBound.isInfinite() != 0 || upperBound.isInfinite() != 0)
 			return true;
 		return false;
+	}
+
+	public static Interval basicComplementer(final Interval interval) {
+		return Interval.basicSubstract(Interval.initialInterval(), interval);
+	}
+
+	public static Interval basicSubstract(final Interval from, final Interval that) {
+		if (from.isValid() && that.isValid()) {
+
+			// thatL ... fromL ... fromU ... thatU
+			if (Bound.min(from.lowerBound, that.lowerBound).equals(that.lowerBound)
+					&& Bound.max(from.upperBound, that.upperBound).equals(that.upperBound)) {
+				return Interval.invalidInterval();
+			}
+
+			// we eliminate the bounds as well
+			final Bound thatLowerBound = that.lowerBound.increase(-1);
+			final Bound thatUpperBound = that.upperBound.increase(1);
+
+			// if fromL ... -INF<thatL ... thatU<INF ... fromU
+			if (Bound.min(from.lowerBound, thatLowerBound).equals(from.lowerBound)
+					&& Bound.max(from.upperBound, thatUpperBound).equals(from.upperBound)
+					&& thatUpperBound.isInfinite() == 0 && thatLowerBound.isInfinite() == 0) {
+				// if (from.lowerBound.isSmaller(thatLowerBound) &&
+				// from.getUpperBound().isBigger(thatUpperBound)) {
+				return new Interval(from.lowerBound, from.upperBound);
+			}
+			// if fromL ... -INF<thatL ... thatU==INF== fromU
+			else if (Bound.min(from.lowerBound, thatLowerBound).equals(from.lowerBound)
+					&& Bound.max(from.upperBound, thatUpperBound).equals(from.upperBound)
+					&& thatUpperBound.isInfinite() == 1 && thatLowerBound.isInfinite() == 0) {
+				return new Interval(from.lowerBound, thatLowerBound);
+			}
+			// if fromL==-INF==thatL ... thatU<INF... fromU
+			else if (Bound.min(from.lowerBound, thatLowerBound).equals(from.lowerBound)
+					&& Bound.max(from.upperBound, thatUpperBound).equals(from.upperBound)
+					&& thatUpperBound.isInfinite() == 0 && thatLowerBound.isInfinite() == -1) {
+				return new Interval(thatUpperBound, from.upperBound);
+			}
+			// if fromL... fromU ... thatL ... thatU OR if thatL ... thatU ... fromL ...
+			// fromU
+			else if (Bound.min(from.lowerBound, thatUpperBound).equals(thatUpperBound)
+					|| Bound.max(from.upperBound, thatLowerBound).equals(thatLowerBound)) {
+				return new Interval(from.lowerBound, from.upperBound);
+			}
+			// if fromL... thatL ... fromU ... thatU
+			else if (Bound.min(from.lowerBound, thatLowerBound).equals(from.lowerBound)
+					&& Bound.max(from.upperBound, thatUpperBound).equals(thatUpperBound)) {
+				return new Interval(from.lowerBound, thatLowerBound);
+			}
+			// if thatL ...fromL ... thatU ... fromU
+			else if (Bound.min(from.lowerBound, thatLowerBound).equals(thatLowerBound)
+					&& Bound.max(from.upperBound, thatUpperBound).equals(from.upperBound)) {
+				return new Interval(thatUpperBound, from.upperBound);
+			}
+		}
+		if (!that.isValid())
+			return new Interval(from.lowerBound, from.upperBound);
+
+		return Interval.invalidInterval();
 	}
 }

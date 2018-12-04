@@ -8,6 +8,10 @@ public class AnalysisResult {
 		this.safe = safe;
 	}
 
+	public boolean isSafe() {
+		return safe;
+	}
+
 	@Override
 	public String toString() {
 		if (safe) {

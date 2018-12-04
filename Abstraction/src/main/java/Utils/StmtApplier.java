@@ -11,20 +11,37 @@ import hu.bme.mit.theta.core.decl.VarDecl;
 import hu.bme.mit.theta.core.type.Expr;
 import hu.bme.mit.theta.core.type.abstracttype.AddExpr;
 import hu.bme.mit.theta.core.type.abstracttype.DivExpr;
+import hu.bme.mit.theta.core.type.abstracttype.EqExpr;
 import hu.bme.mit.theta.core.type.abstracttype.GeqExpr;
 import hu.bme.mit.theta.core.type.abstracttype.GtExpr;
 import hu.bme.mit.theta.core.type.abstracttype.LeqExpr;
 import hu.bme.mit.theta.core.type.abstracttype.LtExpr;
 import hu.bme.mit.theta.core.type.abstracttype.MulExpr;
+import hu.bme.mit.theta.core.type.abstracttype.NeqExpr;
 import hu.bme.mit.theta.core.type.abstracttype.SubExpr;
 import hu.bme.mit.theta.core.type.anytype.RefExpr;
 import hu.bme.mit.theta.core.type.booltype.AndExpr;
+import hu.bme.mit.theta.core.type.booltype.FalseExpr;
+import hu.bme.mit.theta.core.type.booltype.NotExpr;
 import hu.bme.mit.theta.core.type.booltype.OrExpr;
+import hu.bme.mit.theta.core.type.booltype.TrueExpr;
+import hu.bme.mit.theta.core.type.inttype.IntAddExpr;
+import hu.bme.mit.theta.core.type.inttype.IntDivExpr;
+import hu.bme.mit.theta.core.type.inttype.IntEqExpr;
+import hu.bme.mit.theta.core.type.inttype.IntGeqExpr;
+import hu.bme.mit.theta.core.type.inttype.IntGtExpr;
+import hu.bme.mit.theta.core.type.inttype.IntLeqExpr;
 import hu.bme.mit.theta.core.type.inttype.IntLitExpr;
+import hu.bme.mit.theta.core.type.inttype.IntLtExpr;
+import hu.bme.mit.theta.core.type.inttype.IntMulExpr;
+import hu.bme.mit.theta.core.type.inttype.IntNeqExpr;
+import hu.bme.mit.theta.core.type.inttype.IntSubExpr;
+import hu.bme.mit.theta.core.utils.ExprUtils;
 
 public class StmtApplier {
 	private final DispatchTable<Interval> table;
 	private final Map<VarDecl<?>, Interval> varsIntervals;
+	private VarDecl<?> searchedVar;
 
 	public StmtApplier(final Map<VarDecl<?>, Interval> vars) {
 		varsIntervals = vars;
@@ -36,15 +53,35 @@ public class StmtApplier {
 
 				.addCase(OrExpr.class, this::transformOr)
 
+				.addCase(TrueExpr.class, this::transformTrue)
+
+				.addCase(FalseExpr.class, this::transformFalse)
+
 				// .addCase(FalseExpr.class, this::transformFalse)
 
 				// .addCase(TrueExpr.class, this::transformTrue)
 
 				// AbstractExprs
 
-				// .addCase(EqualityExpressionImpl.class, this::transformEquality)
+				.addCase(EqExpr.class, this::transformEqual)
+
+				.addCase(IntEqExpr.class, this::transformEqual)
+
+				.addCase(NotExpr.class, this::transformNot)
+
+				.addCase(IntNeqExpr.class, this::transformNotEqual)
+
+				.addCase(NeqExpr.class, this::transformNotEqual)
 
 				// .addCase(InequalityExpressionImpl.class, this::transformInEquality)
+
+				.addCase(IntLtExpr.class, this::transformLess)
+
+				.addCase(IntLeqExpr.class, this::transformLessEqual)
+
+				.addCase(IntGeqExpr.class, this::transformGreaterEqual)
+
+				.addCase(IntGtExpr.class, this::transformGreater)
 
 				.addCase(LtExpr.class, this::transformLess)
 
@@ -54,15 +91,15 @@ public class StmtApplier {
 
 				.addCase(GtExpr.class, this::transformGreater)
 
-				.addCase(DivExpr.class, this::transformDivide)
+				.addCase(DivExpr.class, this::transformDivide).addCase(IntDivExpr.class, this::transformDivide)
 
-				.addCase(MulExpr.class, this::transformMultiply)
+				.addCase(MulExpr.class, this::transformMultiply).addCase(IntMulExpr.class, this::transformMultiply)
 
 				// .addCase(NotExpressionImpl.class, this::transformNot)
 
-				.addCase(AddExpr.class, this::transformAdd)
+				.addCase(AddExpr.class, this::transformAdd).addCase(IntAddExpr.class, this::transformAdd)
 
-				.addCase(SubExpr.class, this::transformSub)
+				.addCase(SubExpr.class, this::transformSub).addCase(IntSubExpr.class, this::transformSub)
 
 				// EXPRS
 
@@ -94,7 +131,44 @@ public class StmtApplier {
 	}
 
 	public Interval notfound(final Object expr) {
+		throw new IllegalStateException("Class not found: " + expr.getClass());
+	}
+
+	private Interval transformNot(final NotExpr expression) {
+		// Not a!=b === a==b
+		if (expression.getOp() instanceof NeqExpr<?>) {
+			return transform(IntEqExpr.create(((NeqExpr<?>) expression.getOp()).getLeftOp(),
+					((NeqExpr<?>) expression.getOp()).getRightOp()));
+		}
+		// Not a==b === a!=b
+
+		if (expression.getOp() instanceof EqExpr<?>) {
+			return transform(IntNeqExpr.create(((EqExpr<?>) expression.getOp()).getLeftOp(),
+					((EqExpr<?>) expression.getOp()).getRightOp()));
+		}
+
+		// Not true === false
+		if (expression.getOp() instanceof TrueExpr) {
+			return Interval.invalidInterval();
+		}
+		// Not false === true
+		if (expression.getOp() instanceof FalseExpr) {
+			return varsIntervals.get(searchedVar);
+		}
+
+		final Boolean incorrect = NoIncorrectValuePossible.instance.transform(expression.getOp());
+		if (!incorrect)
+			return Interval.basicSubstract(varsIntervals.get(searchedVar), transform(expression.getOp()));
+		else
+			return varsIntervals.get(searchedVar);
+	}
+
+	private Interval transformTrue(final TrueExpr expression) {
 		return Interval.initialInterval();
+	}
+
+	private Interval transformFalse(final FalseExpr expression) {
+		return Interval.invalidInterval();
 	}
 
 	private Interval transformAnd(final AndExpr expression) {
@@ -102,58 +176,163 @@ public class StmtApplier {
 	}
 
 	private Interval transformOr(final OrExpr expression) {
-		return Interval.basicUnion(transformExpressions(expression.getOps()));
+
+		return Interval.basicSection(transformExpressions(expression.getOps()));
+		// return
+		// Interval.basicSection(Interval.basicUnion(transformExpressions(expression.getOps())),
+		// varsIntervals.get(searchedVar));
+	}
+
+	public Interval transformNotEqual(final NeqExpr<?> expr) {
+
+		final int simple = isSimple(expr.getLeftOp(), expr.getRightOp());
+		if (simple != 0) {
+			final Interval left = transform(expr.getLeftOp());
+			final Interval right = transform(expr.getRightOp());
+			if (simple == -1) {
+				return Interval.basicSubstract(left, right);
+			}
+			if (simple == 1)
+				return Interval.basicSubstract(right, left);
+		}
+		return varsIntervals.get(searchedVar);
+	}
+
+	public Interval transformEqual(final EqExpr<?> expr) {
+
+		if (isSimpleForEqual(expr.getLeftOp(), expr.getRightOp()) != 0) {
+			final Interval left = transform(expr.getLeftOp());
+			final Interval right = transform(expr.getRightOp());
+			return Interval.basicSection(left, right);
+		}
+
+		return varsIntervals.get(searchedVar);
 	}
 
 	public Interval transformLess(final LtExpr<?> expr) {
-		final Interval left = transform(expr.getLeftOp());
-		final Interval right = transform(expr.getRightOp());
-		return new Interval(left.getLowerBound(), right.getUpperBound());
+		final int simple = isSimple(expr.getLeftOp(), expr.getRightOp());
+		if (simple != 0) {
+			final Interval left = transform(expr.getLeftOp());
+			final Interval right = transform(expr.getRightOp());
+			if (simple == -1)
+				return Interval.of(left.getLowerBound(),
+						Bound.min(right.getUpperBound().increase(-1), left.getUpperBound()));
+			else
+				return Interval.of(Bound.max(left.getLowerBound().increase(1), right.getLowerBound()),
+						right.getUpperBound());
+		}
+
+		return varsIntervals.get(searchedVar);
 	}
 
 	public Interval transformLessEqual(final LeqExpr<?> expr) {
+
 		final Interval left = transform(expr.getLeftOp());
 		final Interval right = transform(expr.getRightOp());
-		return new Interval(left.getLowerBound(), right.getUpperBound());
+
+		if (isSimple(expr.getLeftOp(), expr.getRightOp()) == -1) {
+			return Interval.of(left.getLowerBound(), Bound.min(left.getUpperBound(), right.getUpperBound()));
+		}
+
+		if (isSimple(expr.getLeftOp(), expr.getRightOp()) == 1) {
+			return Interval.of(Bound.max(left.getUpperBound(), right.getLowerBound()), right.getUpperBound());
+		}
+
+		return varsIntervals.get(searchedVar);
 	}
 
 	public Interval transformGreater(final GtExpr<?> expr) {
-		final Interval left = transform(expr.getLeftOp());
-		final Interval right = transform(expr.getRightOp());
-		return new Interval(right.getLowerBound(), left.getUpperBound());
+		final int simple = isSimple(expr.getLeftOp(), expr.getRightOp());
+		if (simple != 0) {
+			final Interval left = transform(expr.getLeftOp());
+			final Interval right = transform(expr.getRightOp());
+			if (simple == -1)
+				return new Interval(Bound.max(right.getLowerBound().increase(1), left.getLowerBound()),
+						left.getUpperBound());
+			else
+				return new Interval(right.getLowerBound(),
+						Bound.min(left.getUpperBound().increase(-1), right.getUpperBound()));
+		}
+
+		return varsIntervals.get(searchedVar);
+	}
+
+	/*
+	 * @return -1 if left is the variable, 1 if right, 0 if none
+	 */
+	public int isSimple(final Expr<?> left, final Expr<?> right) {
+
+		if (left instanceof RefExpr<?>) {
+			if (((RefExpr<?>) left).getDecl().equals(searchedVar)) {
+
+				final Boolean Incorrect = NoIncorrectValuePossible.instance.transform(right);
+				if (!ExprUtils.getVars(right).contains(searchedVar) && !Incorrect) {
+					return -1;
+				}
+			}
+		}
+		if (right instanceof RefExpr<?>) {
+			if (((RefExpr<?>) right).getDecl().equals(searchedVar)) {
+				final Boolean Incorrect = NoIncorrectValuePossible.instance.transform(left);
+				if (!ExprUtils.getVars(left).contains(searchedVar) && !Incorrect) {
+					return 1;
+				}
+			}
+		}
+		return 0;
+	}
+
+	public int isSimpleForEqual(final Expr<?> left, final Expr<?> right) {
+
+		if (left instanceof RefExpr<?>) {
+			if (((RefExpr<?>) left).getDecl().equals(searchedVar)) {
+				if (!ExprUtils.getVars(right).contains(searchedVar)) {
+					return -1;
+				}
+			}
+		}
+		if (right instanceof RefExpr<?>) {
+			if (((RefExpr<?>) right).getDecl().equals(searchedVar)) {
+				if (!ExprUtils.getVars(left).contains(searchedVar)) {
+					return 1;
+				}
+			}
+		}
+		return 0;
 	}
 
 	public Interval transformGreaterEqual(final GeqExpr<?> expr) {
+
 		final Interval left = transform(expr.getLeftOp());
 		final Interval right = transform(expr.getRightOp());
-		return new Interval(right.getLowerBound(), left.getUpperBound());
+		// left is the variable
+		if (isSimple(expr.getLeftOp(), expr.getRightOp()) == -1) {
+			return new Interval(Bound.max(right.getLowerBound(), left.getLowerBound()), left.getUpperBound());
+		}
+
+		// right is the variable
+		if (isSimple(expr.getLeftOp(), expr.getRightOp()) == 1) {
+			return new Interval(right.getLowerBound(), Bound.min(right.getUpperBound(), left.getUpperBound()));
+		}
+		return varsIntervals.get(searchedVar);
 	}
 
 	public Interval transformDivide(final DivExpr<?> expr) {
 		final Interval leftOperand = transform(expr.getLeftOp());
 		final Interval rightOperand = transform(expr.getRightOp());
-		if (leftOperand.isNegative() && leftOperand.isPositive() && rightOperand.isNegative()
-				&& rightOperand.isPositive()) {
-			return Interval.initialInterval();
-		}
-		if (leftOperand.isNegative() && leftOperand.isPositive() && !rightOperand.isNegative()
-				&& rightOperand.isPositive()) {
-			final Bound lower = Bound.negativeInfinite();
-			if (leftOperand.getLowerBound().isInfinite() != -1
-					&& rightOperand.getLowerBound().isBigger(new Bound(false, 0))) {
-				lower.setBound(false, leftOperand.getLowerBound().getValue() / rightOperand.getLowerBound().getValue());
+		if (leftOperand.getLowerBound().isInfinite() == 0 && leftOperand.getUpperBound().isInfinite() == 0) {
+			final int A = Bound.max(Bound.abs(leftOperand.getLowerBound()), Bound.abs(leftOperand.getUpperBound()))
+					.getValue();
+			// the smallest value is 1 (we do not consider 0)
+			int B = 1;
+			// right operand is (-x, -y) or (x, y) so just positive or just negative -> the
+			// smallest absolute value is on one Bound
+			if (!rightOperand.inside(0)) {
+				B = Bound.min(Bound.abs(rightOperand.getLowerBound()), Bound.abs(rightOperand.getUpperBound()))
+						.getValue();
 			}
-			final Bound upper = Bound.positiveInfinite();
-			if (rightOperand.getUpperBound().isInfinite() != 1
-					&& rightOperand.getLowerBound().isBigger(new Bound(false, 0))) {
-				upper.setBound(false,
-						rightOperand.getUpperBound().getValue() / rightOperand.getLowerBound().getValue());
-			}
-			return new Interval(lower, upper);
+			return Interval.of(Bound.of((-1) * A / B), Bound.of(A / B));
 		}
-
-		// TODO finish divide appliance
-
 		return Interval.initialInterval();
 	}
 
@@ -164,9 +343,9 @@ public class StmtApplier {
 			if (i.isInfinite()) {
 				return Interval.initialInterval();
 			}
-			bound *= Math.abs(Bound.max(i.getLowerBound(), i.getUpperBound()).getValue());
+			bound *= Bound.max(Bound.abs(i.getLowerBound()), Bound.abs(i.getUpperBound())).getValue();
 		}
-		return new Interval(Bound.of(-bound), Bound.of(bound));
+		return Interval.of(Bound.of(-bound), Bound.of(bound));
 	}
 
 	public Interval transformAdd(final AddExpr<?> expression) {
@@ -209,16 +388,19 @@ public class StmtApplier {
 		Bound upperBound = Bound.positiveInfinite();
 		if (left.getUpperBound().isInfinite() == 0 && right.getLowerBound().isInfinite() == 0) {
 			upperBound = Bound.of(left.getUpperBound().getValue() - right.getLowerBound().getValue());
-		}
-		if (left.getUpperBound().isInfinite() == -1 || right.getLowerBound().isInfinite() == 1) {
-			upperBound = Bound.negativeInfinite();
-		}
+		} /*
+			 * lowerBound can't be +INf upperBound can't be -Inf if
+			 * (left.getUpperBound().isInfinite() == -1 ||
+			 * right.getLowerBound().isInfinite() == 1) { upperBound =
+			 * Bound.negativeInfinite(); }
+			 */
 		if (left.getLowerBound().isInfinite() == 0 && right.getUpperBound().isInfinite() == 0) {
 			lowerBound = Bound.of(left.getLowerBound().getValue() - right.getUpperBound().getValue());
-		}
-		if (left.getLowerBound().isInfinite() == 1 || right.getUpperBound().isInfinite() == -1) {
-			lowerBound = Bound.positiveInfinite();
-		}
+		} /*
+			 * lowerBound can't be +INf upperBound can't be -Inf if
+			 * (left.getLowerBound().isInfinite() == 1 || right.getUpperBound().isInfinite()
+			 * == -1) { lowerBound = Bound.positiveInfinite(); }
+			 */
 
 		return new Interval(lowerBound, upperBound);
 	}
@@ -232,7 +414,6 @@ public class StmtApplier {
 				return Interval.initialInterval();
 		}
 		if (expr.getDecl() instanceof ConstDecl<?>) {
-			// final ConstDecl<?> var = (ConstDecl<?>) expr.getDecl();
 			return Interval.initialInterval();
 		}
 		return Interval.initialInterval();
@@ -240,7 +421,11 @@ public class StmtApplier {
 
 	public Interval transformIntLit(final IntLitExpr expr) {
 		final int val = expr.getValue();
-		return new Interval(Bound.of(val), Bound.of(val));
+		return Interval.of(Bound.of(val), Bound.of(val));
+	}
+
+	public void setSearchedVar(final VarDecl<?> var) {
+		searchedVar = var;
 	}
 
 }
