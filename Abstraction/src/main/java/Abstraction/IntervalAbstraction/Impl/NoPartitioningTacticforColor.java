@@ -1,6 +1,9 @@
 package Abstraction.IntervalAbstraction.Impl;
 
-import Abstraction.IntervalAbstraction.IntervalRepresentation;
+import java.util.HashMap;
+import java.util.Map;
+
+import Abstraction.IntervalAbstraction.IntervalRepresentationWithColor;
 import Abstraction.IntervalAbstraction.PartitioningTactic;
 import Utils.Interval;
 import Utils.StmtApplier;
@@ -15,17 +18,26 @@ import hu.bme.mit.theta.core.type.Expr;
 import hu.bme.mit.theta.core.type.booltype.BoolType;
 import hu.bme.mit.theta.core.utils.ExprUtils;
 
-public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresentation> {
+public class NoPartitioningTacticforColor implements PartitioningTactic<IntervalRepresentationWithColor> {
 
 	@Override
-	public IntervalRepresentation addStmtToLabel(final IntervalRepresentation sourceInterval, final Stmt stmt,
-			final Loc sourceLoc) {
-		final IntervalRepresentation newInterval = sourceInterval.copy();
-		final StmtApplier stmtApplier = new StmtApplier(sourceInterval.getMap());
-		for (final VarDecl<?> var : sourceInterval.getVars()) {
-			newInterval.setVarInterval(var, applyStmt(stmt, sourceInterval.getVarInterval(var), var, stmtApplier));
-		}
-		return newInterval;
+	public IntervalRepresentationWithColor addStmtToLabel(final IntervalRepresentationWithColor sourceInterval,
+			final Stmt stmt, final Loc sourceLoc) {
+		final IntervalRepresentationWithColor newInterval = sourceInterval.createEmpty();
+
+		// sourceInterval.getMap().forEach((loc, map) -> {
+		for (final Loc loc : sourceInterval.getMap().keySet()) {
+			final StmtApplier stmtApplier = new StmtApplier(sourceInterval.getMap().get(loc));
+
+			final Map<VarDecl<?>, Interval> map = new HashMap<>();
+
+			for (final VarDecl<?> var : sourceInterval.getVars()) {
+				map.put(var, applyStmt(stmt, sourceInterval.getVarIntervalforLoc(var, loc), var, stmtApplier));
+			}
+			newInterval.getMap().put(loc, map);
+		} // );
+
+		return newInterval.merge2OneLocation(sourceLoc);
 	}
 
 	public Interval applyStmt(final Stmt stmt, final Interval interval, final VarDecl<?> var,
@@ -87,7 +99,7 @@ public class NoPartitioningTactic implements PartitioningTactic<IntervalRepresen
 	}
 
 	@Override
-	public IntervalRepresentation mergePartitions(final IntervalRepresentation labels) {
+	public IntervalRepresentationWithColor mergePartitions(final IntervalRepresentationWithColor labels) {
 		return labels;
 	}
 

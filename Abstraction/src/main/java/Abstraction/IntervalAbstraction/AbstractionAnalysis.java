@@ -144,9 +144,9 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 
 			// the widening tactic depends on the concrete implementation
 			return wTactic.wideningConvert(abstractLocations.get(edge.getSource()), edge.getStmt(),
-					abstractLocations.get(edge.getTarget()));
+					abstractLocations.get(edge.getTarget()), edge.getSource());
 		} else {
-			return simpleConvert(abstractLocations.get(edge.getSource()), edge.getStmt());
+			return simpleConvert(abstractLocations.get(edge.getSource()), edge.getStmt(), edge.getSource());
 		}
 	}
 
@@ -166,8 +166,8 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 	}
 
 	// if there is no widening possible
-	private LabelType simpleConvert(final LabelType sourceLabel, final Stmt stmt) {
-		final LabelType newReps = pTactic.addStmtToLabel(sourceLabel, stmt);
+	private LabelType simpleConvert(final LabelType sourceLabel, final Stmt stmt, final Loc sourceLoc) {
+		final LabelType newReps = pTactic.addStmtToLabel(sourceLabel, stmt, sourceLoc);
 
 		return pTactic.mergePartitions(newReps);
 	}
