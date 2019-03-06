@@ -22,7 +22,8 @@ public class AbstractAnalysisTester {
 	@Test
 	public void test() throws FileNotFoundException, IOException {
 		// eca/Problem01_label32_false-unreach-call.c_0
-		final CFA program = CfaDslManager.createCfa(new FileInputStream("src/svcomp/myown/vardependent_true.cfa"));
+		final CFA program = CfaDslManager
+				.createCfa(new FileInputStream("src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa"));
 
 		final AbstractionAnalysis<IntervalRepresentation> abs = new AbstractionAnalysis<>(program,
 				new NoPartitioningTactic(), new NoWideningTactic(), new IntervalRepresentation(program.getVars()),
@@ -35,7 +36,8 @@ public class AbstractAnalysisTester {
 	@Test
 	public void test4Color() throws FileNotFoundException, IOException {
 		// eca/Problem01_label32_false-unreach-call.c_0
-		final CFA program = CfaDslManager.createCfa(new FileInputStream("src/svcomp/locks/locks_15_false.c_10.cfa"));
+		final CFA program = CfaDslManager
+				.createCfa(new FileInputStream("src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa"));
 
 		final AbstractionAnalysis<IntervalRepresentationWithColor> abs = new AbstractionAnalysis<>(program,
 				new NoPartitioningTacticforColor(), new NoWideningTactic4Color(),
@@ -52,7 +54,7 @@ public class AbstractAnalysisTester {
 		int resultIsSafe = 0;
 		int falsePositive = 0;
 		int good = 0;
-		final File dir = new File("src/svcomp/locks/");
+		final File dir = new File("src/svcomp/eca/");
 		for (final File source : dir.listFiles()) {
 			System.out.println("analizing " + source.getName());
 			sum++;

@@ -3,13 +3,19 @@ package Utils;
 public class AnalysisResult {
 
 	boolean safe;
+	int iteration;
 
-	public AnalysisResult(final boolean safe) {
+	public AnalysisResult(final boolean safe, final int iterationNumber) {
 		this.safe = safe;
+		this.iteration = iterationNumber;
 	}
 
 	public boolean isSafe() {
 		return safe;
+	}
+
+	public int getIterationCount() {
+		return iteration;
 	}
 
 	@Override

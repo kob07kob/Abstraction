@@ -1,0 +1,6 @@
+src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	109	time(milis):	539
+src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	109	time(milis):	416
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	96
+src/svcomp/locks/locks_5_true.c_0.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	14	time(milis):	114
+src/svcomp/myown/vardependent_true.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	88
+src/svcomp/myown/vardependent_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	84

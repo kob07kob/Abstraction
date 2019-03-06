@@ -177,10 +177,9 @@ public class StmtApplier {
 
 	private Interval transformOr(final OrExpr expression) {
 
-		return Interval.basicSection(transformExpressions(expression.getOps()));
-		// return
-		// Interval.basicSection(Interval.basicUnion(transformExpressions(expression.getOps())),
-		// varsIntervals.get(searchedVar));
+		// return Interval.basicSection(transformExpressions(expression.getOps()));
+		return Interval.basicSection(Interval.basicUnion(transformExpressions(expression.getOps())),
+				varsIntervals.get(searchedVar));
 	}
 
 	public Interval transformNotEqual(final NeqExpr<?> expr) {

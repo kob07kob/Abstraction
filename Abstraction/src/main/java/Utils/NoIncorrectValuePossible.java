@@ -113,6 +113,9 @@ public class NoIncorrectValuePossible {
 				.build();
 	}
 
+	/*
+	 * returns true if the expression can add incorrect values!
+	 */
 	public Boolean transform(final Expr<?> expr) {
 		// return false;
 		return table.dispatch(expr);

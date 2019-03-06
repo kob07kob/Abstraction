@@ -20,6 +20,7 @@ import hu.bme.mit.theta.core.stmt.Stmt;
 public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements AbstractionInterface {
 	// <T extends AbstractionLabel>
 
+	int iteration;
 	PartitioningTactic<LabelType> pTactic;
 	WideningTactic<LabelType> wTactic;
 	LabelType staticLabel;
@@ -44,6 +45,7 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 		staticLabel = initialLabel;
 		programCFA = program;
 		write = analize;
+		iteration = 0;
 	}
 
 	@Override
@@ -55,6 +57,8 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 		final LabelType initReps = (LabelType) staticLabel.createInitialLabel(programCFA.getVars());
 
 		abstractLocations.put(programCFA.getInitLoc(), initReps);
+
+		iteration = 1;
 
 		return nextIteration(new HashMap<CFA.Loc, LabelType>(), abstractLocations, programCFA.getErrorLoc());
 	}
@@ -87,12 +91,12 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 			// reached error state
 			// System.out.println(errorLoc.toString() + " : " +
 			// abstractLocations.get(errorLoc).toString());
-			return new AnalysisResult(false);
+			return new AnalysisResult(false, iteration);
 		}
 		if (isFixpoint(previousAbstractLocations, abstractLocations)) {
 			// finished abstractions (no more locations will be reached and no
 			// errorstate was found)
-			return new AnalysisResult(true);
+			return new AnalysisResult(true, iteration);
 		}
 
 		// get the outedges from those locations which changed from the previous one
@@ -117,6 +121,7 @@ public class AbstractionAnalysis<LabelType extends AbstractionLabel> implements 
 			} else {
 			}
 		}
+		iteration++;
 		return nextIteration(abstractLocations, nextAbstractLocations, errorLoc);
 
 	}
