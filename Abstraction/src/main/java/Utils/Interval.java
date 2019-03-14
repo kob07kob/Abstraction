@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.HashSet;
 
 import Abstraction.IntervalAbstraction.IntervalRepresentation;
+import Abstraction.IntervalAbstraction.IntervalRepresentationWithColor;
+import hu.bme.mit.theta.cfa.CFA.Loc;
 import hu.bme.mit.theta.core.decl.VarDecl;
 
 public class Interval {
@@ -239,6 +241,22 @@ public class Interval {
 	public static Interval getWidenedInterval(final IntervalRepresentation sourceLabel,
 			final IntervalRepresentation newLabel, final VarDecl<?> var) {
 		final int dir = sourceLabel.getWideningDirection4Var(newLabel, var);
+		switch (dir) {
+		case -1:
+			return Interval.of(Bound.negativeInfinite(), newLabel.getVarInterval(var).getUpperBound());
+		case 0:
+			return Interval.initialInterval();
+		case 1:
+			return Interval.of(newLabel.getVarInterval(var).getLowerBound(), Bound.positiveInfinite());
+		default:
+			return Interval.of(newLabel.getVarInterval(var).getLowerBound(),
+					newLabel.getVarInterval(var).getUpperBound());
+		}
+	}
+
+	public static Interval getWidenedInterval(final IntervalRepresentationWithColor sourceLabel,
+			final IntervalRepresentationWithColor newLabel, final VarDecl<?> var, final Loc sourceLoc) {
+		final int dir = sourceLabel.getWideningDirection4Var(newLabel, var, sourceLoc);
 		switch (dir) {
 		case -1:
 			return Interval.of(Bound.negativeInfinite(), newLabel.getVarInterval(var).getUpperBound());

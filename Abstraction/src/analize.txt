@@ -1,111 +1,152 @@
-L0 : variable Name: p2 interval: (-INF;INF)
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
 
 next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
- : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-
-next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L17 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
- : variable Name: p2 interval: (-INF;INF)
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
 
 next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L17 : variable Name: p2 interval: (-INF;INF)
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L18 : variable Name: p2 interval: (0;0)
-variable Name: tmp_4 interval: (-INF;INF)
-
- : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-
-next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L17 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L18 : variable Name: p2 interval: (0;0)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L19 : variable Name: p2 interval: (0;0)
-variable Name: tmp_4 interval: (-INF;INF)
-
- : variable Name: p2 interval: (-INF;INF)
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
 
 next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L17 : variable Name: p2 interval: (-INF;INF)
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L18 : variable Name: p2 interval: (0;10000)
+L18 : color: L17
+variable Name: p2 interval: (0;0)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L19 : variable Name: p2 interval: (0;0)
-variable Name: tmp_4 interval: (-INF;INF)
-
- : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-
-next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L17 : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L18 : variable Name: p2 interval: (0;10000)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L19 : variable Name: p2 interval: (0;9999)
-variable Name: tmp_4 interval: (-INF;INF)
-
- : variable Name: p2 interval: (-INF;INF)
-variable Name: tmp_4 interval: (-INF;INF)
-
-L16 : variable Name: p2 interval: (10000;10000)
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
 
 next iteration
-L0 : variable Name: p2 interval: (-INF;INF)
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L17 : variable Name: p2 interval: (-INF;INF)
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
- : variable Name: p2 interval: (-INF;INF)
+L18 : color: L17
+variable Name: p2 interval: (0;0)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L18 : variable Name: p2 interval: (0;10000)
+L19 : color: L18
+variable Name: p2 interval: (0;0)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L19 : variable Name: p2 interval: (0;9999)
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
 variable Name: tmp_4 interval: (-INF;INF)
 
-L16 : variable Name: p2 interval: (10000;10000)
+
+next iteration
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L18 : color: L17
+variable Name: p2 interval: (0;0)
+variable Name: tmp_4 interval: (-INF;INF)
+color: L19
+variable Name: p2 interval: (-INF;10000)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L19 : color: L18
+variable Name: p2 interval: (0;0)
+variable Name: tmp_4 interval: (-INF;INF)
+
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+
+next iteration
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L18 : color: L17
+variable Name: p2 interval: (0;0)
+variable Name: tmp_4 interval: (-INF;INF)
+color: L19
+variable Name: p2 interval: (-INF;10000)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L19 : color: L18
+variable Name: p2 interval: (-INF;9999)
+variable Name: tmp_4 interval: (-INF;INF)
+
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L16 : color: L18
+variable Name: p2 interval: (10000;10000)
+variable Name: tmp_4 interval: (-INF;INF)
+
+
+next iteration
+L0 : color: initalAbstract
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L17 : color: 
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+ : color: L0
+variable Name: p2 interval: (-INF;INF)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L18 : color: L17
+variable Name: p2 interval: (0;0)
+variable Name: tmp_4 interval: (-INF;INF)
+color: L19
+variable Name: p2 interval: (-INF;10000)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L19 : color: L18
+variable Name: p2 interval: (-INF;9999)
+variable Name: tmp_4 interval: (-INF;INF)
+
+L16 : color: L18
+variable Name: p2 interval: (10000;10000)
 variable Name: tmp_4 interval: (-INF;INF)
 
 

@@ -11,9 +11,8 @@ import Abstraction.IntervalAbstraction.IntervalRepresentation;
 import Abstraction.IntervalAbstraction.IntervalRepresentationWithColor;
 import Abstraction.IntervalAbstraction.Impl.NoPartitioningTactic;
 import Abstraction.IntervalAbstraction.Impl.NoPartitioningTacticforColor;
-import Abstraction.IntervalAbstraction.Impl.NoWideningTactic;
-import Abstraction.IntervalAbstraction.Impl.NoWideningTactic4Color;
 import Abstraction.IntervalAbstraction.Impl.SimpleWideningTactic;
+import Abstraction.IntervalAbstraction.Impl.SimpleWideningTactic4Color;
 import hu.bme.mit.theta.cfa.CFA;
 import hu.bme.mit.theta.cfa.dsl.CfaDslManager;
 
@@ -26,7 +25,7 @@ public class AbstractAnalysisTester {
 		final CFA program = CfaDslManager.createCfa(new FileInputStream("src/svcomp/myown/long_cycle_true.cfa"));
 
 		final AbstractionAnalysis<IntervalRepresentation> abs = new AbstractionAnalysis<>(program,
-				new NoPartitioningTactic(), new NoWideningTactic(), new IntervalRepresentation(program.getVars()),
+				new NoPartitioningTactic(), new SimpleWideningTactic(), new IntervalRepresentation(program.getVars()),
 				true);
 
 		System.out.println(abs.analyze());
@@ -49,16 +48,16 @@ public class AbstractAnalysisTester {
 	@Test
 	public void test4Color() throws FileNotFoundException, IOException {
 		// eca/Problem01_label32_false-unreach-call.c_0
-		final CFA program = CfaDslManager
-				.createCfa(new FileInputStream("src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa"));
+		final CFA program = CfaDslManager.createCfa(new FileInputStream("src/svcomp/myown/long_cycle_true.cfa"));
 
 		final AbstractionAnalysis<IntervalRepresentationWithColor> abs = new AbstractionAnalysis<>(program,
-				new NoPartitioningTacticforColor(), new NoWideningTactic4Color(),
+				new NoPartitioningTacticforColor(), new SimpleWideningTactic4Color(),
 				new IntervalRepresentationWithColor(program.getVars()), true);
 
 		System.out.println(abs.analyze());
 	}
 
+	@Ignore
 	@Test
 	public void locks() throws FileNotFoundException, IOException {
 		int sum = 0;
@@ -66,7 +65,7 @@ public class AbstractAnalysisTester {
 		int resultIsSafe = 0;
 		int falsePositive = 0;
 		int good = 0;
-		final File dir = new File("src/svcomp/locks/");
+		final File dir = new File("src/svcomp/myown/");
 		for (final File source : dir.listFiles()) {
 			System.out.println("analizing " + source.getName());
 			sum++;
@@ -99,7 +98,6 @@ public class AbstractAnalysisTester {
 		System.out.println("TP Rate: " + (double) (resultIsSafe - falsePositive) * 100 / shouldBeSafe);
 	}
 
-	@Ignore
 	@Test
 	public void locks4Color() throws FileNotFoundException, IOException {
 		int sum = 0;
@@ -107,13 +105,13 @@ public class AbstractAnalysisTester {
 		int resultIsSafe = 0;
 		int falsePositive = 0;
 		int good = 0;
-		final File dir = new File("src/svcomp/ssh/");
+		final File dir = new File("src/svcomp/eca/");
 		for (final File source : dir.listFiles()) {
 			System.out.println("analizing " + source.getName());
 			sum++;
 			final CFA program = CfaDslManager.createCfa(new FileInputStream(source));
 			final AbstractionAnalysis<IntervalRepresentationWithColor> abs = new AbstractionAnalysis<>(program,
-					new NoPartitioningTacticforColor(), new NoWideningTactic4Color(),
+					new NoPartitioningTacticforColor(), new SimpleWideningTactic4Color(),
 					new IntervalRepresentationWithColor(program.getVars()), false);
 			if (source.getName().contains("true"))
 				shouldBeSafe++;

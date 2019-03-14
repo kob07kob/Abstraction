@@ -97,6 +97,30 @@ public class IntervalRepresentationWithColor extends AbstractionLabel {
 		}
 	}
 
+	public int getWideningDirection4Var(final IntervalRepresentationWithColor newIntervalRepresentation,
+			final VarDecl<?> var, final Loc sourceLoc) {
+		if (intervals.containsKey(sourceLoc)) {
+			return intervals.get(sourceLoc).get(var).isWidenedBy(newIntervalRepresentation.getVarInterval(var));
+		}
+		return 2;
+	}
+
+	public Collection<VarDecl<?>> getWidenedVariables(final IntervalRepresentationWithColor newIntervalRepresentation,
+			final Loc sourceLoc) {
+		final Collection<VarDecl<?>> widenedVariables = new HashSet<>();
+
+		for (final VarDecl<?> var : variables) {
+			if (intervals.containsKey(sourceLoc)) {
+				if (intervals.get(sourceLoc).get(var)
+						.isWidenedBy(newIntervalRepresentation.getVarIntervalforLoc(var, sourceLoc)) != 2) {
+					widenedVariables.add(var);
+				}
+			}
+		}
+
+		return widenedVariables;
+	}
+
 	public Collection<VarDecl<?>> getVars() {
 		return variables;
 	}

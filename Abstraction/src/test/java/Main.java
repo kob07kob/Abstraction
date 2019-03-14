@@ -21,6 +21,8 @@ import Abstraction.IntervalAbstraction.Impl.NoPartitioningTactic;
 import Abstraction.IntervalAbstraction.Impl.NoPartitioningTacticforColor;
 import Abstraction.IntervalAbstraction.Impl.NoWideningTactic;
 import Abstraction.IntervalAbstraction.Impl.NoWideningTactic4Color;
+import Abstraction.IntervalAbstraction.Impl.SimpleWideningTactic;
+import Abstraction.IntervalAbstraction.Impl.SimpleWideningTactic4Color;
 import Utils.AnalysisResult;
 import hu.bme.mit.theta.cfa.CFA;
 import hu.bme.mit.theta.cfa.dsl.CfaDslManager;
@@ -37,7 +39,7 @@ public class Main {
 	private String pTactic = "";
 
 	@Parameter(names = { "-widening",
-			"-wt" }, description = "widening tactic: Use NoWt for no partitioning tactic (no other implemented yet)")
+			"-wt" }, description = "widening tactic: Use NoWt for no partitioning tactic use SimpleWt for simple widening tactic (no other implemented yet)")
 	private String wTactic = "";
 
 	@Parameter(names = { "-absType",
@@ -96,6 +98,9 @@ public class Main {
 			case "NoWt":
 				wt = new NoWideningTactic();
 				break;
+			case "SimpleWt":
+				wt = new SimpleWideningTactic();
+				break;
 			default:
 				System.out.println("This widening tactic is not implemented!");
 			}
@@ -128,6 +133,9 @@ public class Main {
 			switch (main.wTactic) {
 			case "NoWt":
 				wt2 = new NoWideningTactic4Color();
+				break;
+			case "SimpleWt":
+				wt2 = new SimpleWideningTactic4Color();
 				break;
 			default:
 				System.out.println("This widening tactic is not implemented!");
