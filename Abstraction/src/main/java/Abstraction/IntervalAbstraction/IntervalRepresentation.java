@@ -27,6 +27,21 @@ public class IntervalRepresentation extends AbstractionLabel {
 		}
 	}
 
+	public int getWideningDirection4Var(final IntervalRepresentation newIntervalRepresentation, final VarDecl<?> var) {
+		return intervals.get(var).isWidenedBy(newIntervalRepresentation.getVarInterval(var));
+	}
+
+	public Collection<VarDecl<?>> getWidenedVariables(final IntervalRepresentation newIntervalRepresentation) {
+		final Collection<VarDecl<?>> widenedVariables = new HashSet<>();
+
+		for (final VarDecl<?> var : variables) {
+			if (intervals.get(var).isWidenedBy(newIntervalRepresentation.getVarInterval(var)) != 2) {
+				widenedVariables.add(var);
+			}
+		}
+
+		return widenedVariables;
+	}
 	/*
 	 * @Override public AbstractionLabel createInitialLabel(final
 	 * Collection<VarDecl<?>> vars) { return new IntervalRepresentation(vars); }

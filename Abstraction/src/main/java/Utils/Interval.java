@@ -3,6 +3,9 @@ package Utils;
 import java.util.Collection;
 import java.util.HashSet;
 
+import Abstraction.IntervalAbstraction.IntervalRepresentation;
+import hu.bme.mit.theta.core.decl.VarDecl;
+
 public class Interval {
 	private Bound lowerBound;
 	private Bound upperBound;
@@ -18,6 +21,19 @@ public class Interval {
 	public void setInterval(final Bound lower, final Bound upper) {
 		lowerBound = lower;
 		upperBound = upper;
+	}
+
+	// 0 if both bound is widened -1 if lower, 1 if upper (2 if not widened at
+	// all...)
+	public int isWidenedBy(final Interval other) {
+		if (other.getLowerBound().isSmaller(lowerBound) && other.getUpperBound().isBigger(upperBound))
+			return 0;
+		else if (other.getLowerBound().isSmaller(lowerBound))
+			return -1;
+		else if (other.getUpperBound().isBigger(upperBound))
+			return 1;
+		else
+			return 2;
 	}
 
 	public boolean inside(final int number) {
@@ -218,5 +234,21 @@ public class Interval {
 			return new Interval(from.lowerBound, from.upperBound);
 
 		return Interval.invalidInterval();
+	}
+
+	public static Interval getWidenedInterval(final IntervalRepresentation sourceLabel,
+			final IntervalRepresentation newLabel, final VarDecl<?> var) {
+		final int dir = sourceLabel.getWideningDirection4Var(newLabel, var);
+		switch (dir) {
+		case -1:
+			return Interval.of(Bound.negativeInfinite(), newLabel.getVarInterval(var).getUpperBound());
+		case 0:
+			return Interval.initialInterval();
+		case 1:
+			return Interval.of(newLabel.getVarInterval(var).getLowerBound(), Bound.positiveInfinite());
+		default:
+			return Interval.of(newLabel.getVarInterval(var).getLowerBound(),
+					newLabel.getVarInterval(var).getUpperBound());
+		}
 	}
 }
