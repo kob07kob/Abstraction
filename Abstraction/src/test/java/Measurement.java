@@ -22,6 +22,25 @@ public class Measurement {
 		main.source = "src/svcomp/locks/locks_5_true.c_0.cfa";
 		JCommander.newBuilder().addObject(main).build().parse(args);
 
+		final String[] task1 = { "-src", main.source, "-wt", "NoWt", "-absType", "Interval" };
+		final String[] task2 = { "-src", main.source, "-wt", "SimpleWt", "-absType", "Interval" };
+		final String[] task3 = { "-src", main.source, "-wt", "NoWt", "-absType", "Color" };
+		final String[] task4 = { "-src", main.source, "-wt", "SimpleWt", "-absType", "Color" };
+		final String[][] tasks = { task1, task2, task3, task4 };
+
+		for (final String[] task : tasks) {
+			try {
+				Main.main(task);
+			} catch (final Exception e) {
+				System.err.println(e);
+			}
+			try {
+				Thread.sleep(1000);
+			} catch (final InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 }

@@ -158,6 +158,17 @@ public class Main {
 
 		if (result == null) {
 			System.out.println("Something went wrong, analysis could not be complete!");
+			final File f = new File("src/log.txt");
+			try {
+				final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
+				bw.append(main.source + " " + analysisType + ": "
+						+ "Something went wrong, analysis could not be complete!");
+				bw.newLine();
+				bw.close();
+			} catch (final IOException e) {
+				System.out.println("IO error during writing result!");
+				e.printStackTrace();
+			}
 		} else {
 			System.out.println("Analysis finished succesfully!");
 

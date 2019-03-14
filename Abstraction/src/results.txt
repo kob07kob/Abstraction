@@ -1,11 +1,66 @@
-src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	109	time(milis):	539
-src/svcomp/eca/Problem01_label38_false-unreach-call.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	109	time(milis):	416
-src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	96
-src/svcomp/locks/locks_5_true.c_0.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	14	time(milis):	114
+src/svcomp/myown/add_cycle_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	101
+src/svcomp/myown/add_cycle_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	7	time(milis):	100
+src/svcomp/myown/add_cycle_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	112
+src/svcomp/myown/add_cycle_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	7	time(milis):	127
+src/svcomp/myown/add_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	10	time(milis):	106
+src/svcomp/myown/add_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	107
+src/svcomp/myown/add_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	10	time(milis):	95
+src/svcomp/myown/add_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	111
+src/svcomp/myown/eqneq_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	95
+src/svcomp/myown/eqneq_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	90
+src/svcomp/myown/eqneq_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	91
+src/svcomp/myown/eqneq_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	90
+src/svcomp/myown/eqneq_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	94
+src/svcomp/myown/eqneq_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	93
+src/svcomp/myown/eqneq_true.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	88
+src/svcomp/myown/eqneq_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	91
+src/svcomp/myown/fallse_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	82
+src/svcomp/myown/fallse_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	88
+src/svcomp/myown/fallse_true.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	82
+src/svcomp/myown/fallse_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	82
+src/svcomp/myown/false_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	85
+src/svcomp/myown/false_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	82
+src/svcomp/myown/false_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	87
+src/svcomp/myown/false_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	82
+src/svcomp/myown/gtleq_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	92
+src/svcomp/myown/gtleq_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	89
+src/svcomp/myown/gtleq_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	88
+src/svcomp/myown/gtleq_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	130
+src/svcomp/myown/gtleq_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	92
+src/svcomp/myown/gtleq_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	90
+src/svcomp/myown/gtleq_true.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	90
+src/svcomp/myown/gtleq_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	87
+src/svcomp/myown/long_cycle_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	8	time(milis):	95
+src/svcomp/myown/long_cycle_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	8	time(milis):	140
+src/svcomp/myown/morevariables_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	80
+src/svcomp/myown/morevariables_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	90
+src/svcomp/myown/morevariables_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	84
+src/svcomp/myown/morevariables_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	85
+src/svcomp/myown/my_false_0.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	117
+src/svcomp/myown/my_false_0.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	91
+src/svcomp/myown/my_false_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	88
+src/svcomp/myown/my_false_0.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	91
+src/svcomp/myown/my_true_0.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	87
+src/svcomp/myown/my_true_0.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	108
+src/svcomp/myown/my_true_0.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	89
+src/svcomp/myown/my_true_0.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	90
+src/svcomp/myown/not_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	92
+src/svcomp/myown/not_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	94
+src/svcomp/myown/not_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	104
+src/svcomp/myown/not_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	5	time(milis):	86
+src/svcomp/myown/not_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	86
+src/svcomp/myown/not_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	87
+src/svcomp/myown/not_true.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	92
+src/svcomp/myown/not_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	91
+src/svcomp/myown/sub_false.cfa	Color NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	7	time(milis):	97
+src/svcomp/myown/sub_false.cfa	Color NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	6	time(milis):	93
+src/svcomp/myown/sub_false.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	7	time(milis):	88
+src/svcomp/myown/sub_false.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	6	time(milis):	103
+src/svcomp/myown/true_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	82
+src/svcomp/myown/true_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	88
+src/svcomp/myown/true_true.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	69
+src/svcomp/myown/true_true.cfa	Interval NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	83
+src/svcomp/myown/vardependent_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	101
+src/svcomp/myown/vardependent_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	83
 src/svcomp/myown/vardependent_true.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	88
-src/svcomp/myown/vardependent_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	84
-src/svcomp/myown/vardependent_true.cfa	Color NoPt NoWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	97
-src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	99
-src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	92
-src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	97
-src/svcomp/myown/my_true_0.cfa	Interval NoPt NoWt	result:	Error State is unreachable	number of iteration:	6	time(milis):	86
+src/svcomp/myown/vardependent_true.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	85
