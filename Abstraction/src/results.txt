@@ -64,3 +64,15 @@ src/svcomp/myown/vardependent_true.cfa	Color NoPt NoWt	result:	Error State is un
 src/svcomp/myown/vardependent_true.cfa	Color NoPt SimpleWt	result:	Error State is unreachable	number of iteration:	9	time(milis):	83
 src/svcomp/myown/vardependent_true.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	88
 src/svcomp/myown/vardependent_true.cfa	Interval NoPt SimpleWt	result:	Error state reachable with current abstratcion!	number of iteration:	8	time(milis):	85
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	97
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	106
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	88
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	90
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	84
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	89
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	96
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	91
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	90
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	114
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	84
+src/svcomp/locks/locks_5_true.c_0.cfa	Interval NoPt NoWt	result:	Error state reachable with current abstratcion!	number of iteration:	13	time(milis):	85

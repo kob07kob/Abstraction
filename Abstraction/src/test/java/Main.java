@@ -6,7 +6,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
@@ -60,132 +65,152 @@ public class Main {
 
 		JCommander.newBuilder().addObject(main).build().parse(args);
 
-		final String analysisType = main.absType + " " + main.pTactic + " " + main.wTactic;
+		final Runnable stuffToDo = new Thread() {
+			@Override
+			public void run() {
+				final String analysisType = main.absType + " " + main.pTactic + " " + main.wTactic;
 
-		CFA program;
+				CFA program;
+				try {
+					program = CfaDslManager.createCfa(new FileInputStream(main.source));
+				} catch (final FileNotFoundException e) {
+					System.out.println("FileNotFoundException!");
+					e.printStackTrace();
+					return;
+				} catch (final IOException e) {
+					System.out.println("IOException!");
+					e.printStackTrace();
+					return;
+				}
+
+				final Stopwatch stopwatch = Stopwatch.createUnstarted();
+
+				AnalysisResult result = null;
+
+				switch (main.absType) {
+				case "Interval":
+					PartitioningTactic<IntervalRepresentation> pt = null;
+					WideningTactic<IntervalRepresentation> wt = null;
+
+					switch (main.pTactic) {
+					case "NoPt":
+						pt = new NoPartitioningTactic();
+						break;
+					default:
+						System.out.println("This partitioning tactic is not implemented!");
+					}
+					if (pt == null)
+						break;
+
+					switch (main.wTactic) {
+					case "NoWt":
+						wt = new NoWideningTactic();
+						break;
+					case "SimpleWt":
+						wt = new SimpleWideningTactic();
+						break;
+					default:
+						System.out.println("This widening tactic is not implemented!");
+					}
+					if (wt == null)
+						break;
+
+					final AbstractionAnalysis<IntervalRepresentation> abs = new AbstractionAnalysis<>(program, pt, wt,
+							new IntervalRepresentation(program.getVars()), false);
+
+					stopwatch.start();
+					result = abs.analyze();
+					stopwatch.stop();
+
+					break;
+
+				case "Color":
+					PartitioningTactic<IntervalRepresentationWithColor> pt2 = null;
+					WideningTactic<IntervalRepresentationWithColor> wt2 = null;
+
+					switch (main.pTactic) {
+					case "NoPt":
+						pt2 = new NoPartitioningTacticforColor();
+						break;
+					default:
+						System.out.println("This partitioning tactic is not implemented!");
+					}
+					if (pt2 == null)
+						break;
+
+					switch (main.wTactic) {
+					case "NoWt":
+						wt2 = new NoWideningTactic4Color();
+						break;
+					case "SimpleWt":
+						wt2 = new SimpleWideningTactic4Color();
+						break;
+					default:
+						System.out.println("This widening tactic is not implemented!");
+					}
+					if (wt2 == null)
+						break;
+
+					final AbstractionAnalysis<IntervalRepresentationWithColor> abs2 = new AbstractionAnalysis<>(program,
+							pt2, wt2, new IntervalRepresentationWithColor(program.getVars()), false);
+
+					stopwatch.start();
+					result = abs2.analyze();
+					stopwatch.stop();
+
+					break;
+
+				default:
+					System.out.println("This abstraction type is not implemented yet!");
+				}
+
+				if (result == null) {
+					System.out.println("Something went wrong, analysis could not be complete!");
+					final File f = new File("src/log.txt");
+					try {
+						final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
+						bw.append(main.source + " " + analysisType + ": "
+								+ "Something went wrong, analysis could not be complete!");
+						bw.newLine();
+						bw.close();
+					} catch (final IOException e) {
+						System.out.println("IO error during writing result!");
+						e.printStackTrace();
+					}
+				} else {
+					System.out.println("Analysis finished succesfully!");
+
+					final File f = new File("src/results.txt");
+					try {
+						final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
+						bw.append(main.source + "\t" + analysisType + "\tresult:\t" + result.toString()
+								+ "\tnumber of iteration:\t" + result.getIterationCount() + "\ttime(milis):\t"
+								+ stopwatch.elapsed(TimeUnit.MILLISECONDS));
+						bw.newLine();
+						bw.close();
+					} catch (final IOException e) {
+						System.out.println("IO error during writing result!");
+						e.printStackTrace();
+					}
+				}
+
+			}
+		};
+
+		final ExecutorService executor = Executors.newSingleThreadExecutor();
+		final Future future = executor.submit(stuffToDo);
+		executor.shutdown();
 		try {
-			program = CfaDslManager.createCfa(new FileInputStream(main.source));
-		} catch (final FileNotFoundException e) {
-			System.out.println("FileNotFoundException!");
-			e.printStackTrace();
-			return;
-		} catch (final IOException e) {
-			System.out.println("IOException!");
-			e.printStackTrace();
-			return;
+			future.get(5, TimeUnit.MINUTES);
+		} catch (final InterruptedException ie) {
+			/* Handle the interruption. Or ignore it. */
+		} catch (final ExecutionException ee) {
+			/* Handle the error. Or ignore it. */
+		} catch (final TimeoutException te) {
+			/* Handle the timeout. Or ignore it. */
+			System.out.println("the analysis stopped due to over timeout");
+			System.exit(1);
 		}
-
-		final Stopwatch stopwatch = Stopwatch.createUnstarted();
-
-		AnalysisResult result = null;
-
-		switch (main.absType) {
-		case "Interval":
-			PartitioningTactic<IntervalRepresentation> pt = null;
-			WideningTactic<IntervalRepresentation> wt = null;
-
-			switch (main.pTactic) {
-			case "NoPt":
-				pt = new NoPartitioningTactic();
-				break;
-			default:
-				System.out.println("This partitioning tactic is not implemented!");
-			}
-			if (pt == null)
-				break;
-
-			switch (main.wTactic) {
-			case "NoWt":
-				wt = new NoWideningTactic();
-				break;
-			case "SimpleWt":
-				wt = new SimpleWideningTactic();
-				break;
-			default:
-				System.out.println("This widening tactic is not implemented!");
-			}
-			if (wt == null)
-				break;
-
-			final AbstractionAnalysis<IntervalRepresentation> abs = new AbstractionAnalysis<>(program, pt, wt,
-					new IntervalRepresentation(program.getVars()), false);
-
-			stopwatch.start();
-			result = abs.analyze();
-			stopwatch.stop();
-
-			break;
-
-		case "Color":
-			PartitioningTactic<IntervalRepresentationWithColor> pt2 = null;
-			WideningTactic<IntervalRepresentationWithColor> wt2 = null;
-
-			switch (main.pTactic) {
-			case "NoPt":
-				pt2 = new NoPartitioningTacticforColor();
-				break;
-			default:
-				System.out.println("This partitioning tactic is not implemented!");
-			}
-			if (pt2 == null)
-				break;
-
-			switch (main.wTactic) {
-			case "NoWt":
-				wt2 = new NoWideningTactic4Color();
-				break;
-			case "SimpleWt":
-				wt2 = new SimpleWideningTactic4Color();
-				break;
-			default:
-				System.out.println("This widening tactic is not implemented!");
-			}
-			if (wt2 == null)
-				break;
-
-			final AbstractionAnalysis<IntervalRepresentationWithColor> abs2 = new AbstractionAnalysis<>(program, pt2,
-					wt2, new IntervalRepresentationWithColor(program.getVars()), false);
-
-			stopwatch.start();
-			result = abs2.analyze();
-			stopwatch.stop();
-
-			break;
-
-		default:
-			System.out.println("This abstraction type is not implemented yet!");
-		}
-
-		if (result == null) {
-			System.out.println("Something went wrong, analysis could not be complete!");
-			final File f = new File("src/log.txt");
-			try {
-				final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
-				bw.append(main.source + " " + analysisType + ": "
-						+ "Something went wrong, analysis could not be complete!");
-				bw.newLine();
-				bw.close();
-			} catch (final IOException e) {
-				System.out.println("IO error during writing result!");
-				e.printStackTrace();
-			}
-		} else {
-			System.out.println("Analysis finished succesfully!");
-
-			final File f = new File("src/results.txt");
-			try {
-				final BufferedWriter bw = new BufferedWriter(new FileWriter(f, true));
-				bw.append(main.source + "\t" + analysisType + "\tresult:\t" + result.toString()
-						+ "\tnumber of iteration:\t" + result.getIterationCount() + "\ttime(milis):\t"
-						+ stopwatch.elapsed(TimeUnit.MILLISECONDS));
-				bw.newLine();
-				bw.close();
-			} catch (final IOException e) {
-				System.out.println("IO error during writing result!");
-				e.printStackTrace();
-			}
-		}
-
 	}
 
 }
